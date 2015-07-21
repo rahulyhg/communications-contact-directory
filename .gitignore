@@ -10,7 +10,7 @@
 /Cheffile.lock
 /pkg/*
 /tmp
-/vendor
+public/assets/vendor
 
 .sass-cache
 *css.map
