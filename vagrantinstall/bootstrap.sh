@@ -39,6 +39,13 @@ inst 'Build Essentials Development Tools' build-essential
 inst 'Make' make
 ################################################################################
 
+# Build essentials are required for some things like Redis
+inst 'Build Essentials Development Tools' build-essential
+
+# Install make
+inst 'Make' make
+################################################################################
+
 
 # Miscellaneous apps and requirements ##########################################
 # Install NodeJs
@@ -47,8 +54,16 @@ inst 'NodeJS' nodejs
 # Install the Node Package Manager
 inst 'Node Package Manager' npm
 
+# Fixes missing node/nodejs in path
+ln -s /usr/bin/nodejs /usr/bin/node
+
 # install With Bower, Grunt, and Gulp here
 npm install -g bower
+
+# Fixes issue using bower behind a firewall/proxy
+# See: https://github.com/bower/bower/issues/731
+git config --global url.https://github.com/.insteadOf git://github.com/
+
 npm install -g grunt
 npm install -g gulp
 ################################################################################
@@ -121,7 +136,6 @@ curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin
 mv /usr/local/bin/composer.phar /usr/local/bin/composer
 echo "Adding /vagrant/bin to path."
 echo 'export PATH="/home/vagrant/.composer/vendor/bin:$PATH"' >> /home/vagrant/.bashrc
-composer global require drush/drush
 echo Composer update
 composer global update
 ################################################################################
