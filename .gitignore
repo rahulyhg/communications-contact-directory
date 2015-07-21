@@ -11,3 +11,6 @@
 /pkg/*
 /tmp
 /vendor
+
+.sass-cache
+*css.map
