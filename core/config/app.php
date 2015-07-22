@@ -4,6 +4,17 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Custom site variables
+    |--------------------------------------------------------------------------
+    |
+    */
+
+    'site_title' => env('SITE_TITLE', 'Communications Contact Directory'),
+    'site_description' => env('SITE_DESCRIPTION', 'Communications Contact Directory'),
+    'google_analytics' => env('GOOGLE_ANALYTICS', 'ua-test'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Debug Mode
     |--------------------------------------------------------------------------
     |
