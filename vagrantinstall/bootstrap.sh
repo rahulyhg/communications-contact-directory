@@ -82,23 +82,62 @@ inst 'Nginx' nginx
 # overwrite the nginx default server configuration for the vagrant app
 sudo cat > /etc/nginx/sites-available/default <<'EOF'
 server {
-  listen 80 default_server;
-  listen [::]:80 default_server ipv6only=on;
-
-  root /vagrant/public;
-  index index.php index.html index.htm;
-
   server_name localhost;
+  root /vagrant/public;
+
+  gzip_static on;
+  location = /favicon.ico {
+    log_not_found off;
+    access_log off;
+  }
+
+  location = /robots.txt {
+    allow all;
+    log_not_found off;
+    access_log off;
+  }
+
+  location ~* \.(txt|log)$ {
+    allow 192.168.0.0/16;
+    deny all;
+  }
+
+  location ~ \..*/.*\.php$ {
+    return 403;
+  }
+
+  location ~ ^/sites/.*/private/ {
+    return 403;
+  }
+
+  location ~ (^|/)\. {
+    return 403;
+  }
 
   location / {
-    try_files $uri $uri/ =404;
+    try_files $uri @rewrite;
+  }
+
+  location @rewrite {
+    rewrite ^ /index.php;
   }
 
   location ~ \.php$ {
     fastcgi_split_path_info ^(.+\.php)(/.+)$;
+    #NOTE: You should have "cgi.fix_pathinfo = 0;" in php.ini
     fastcgi_pass unix:/var/run/php5-fpm.sock;
     fastcgi_index index.php;
     include fastcgi_params;
+    fastcgi_intercept_errors on;
+  }
+
+  location ~ ^/sites/.*/files/styles/ {
+    try_files $uri @rewrite;
+  }
+
+  location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+    expires max;
+    log_not_found off;
   }
 }
 EOF
