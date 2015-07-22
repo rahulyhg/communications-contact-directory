@@ -1,9 +1,36 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-VAGRANTFILE_API_VERSION = "2"
-INSTALL_DIR = 'vagrantinstall'
+# Configuration Settings #######################################################
+# Change the following settings before provisioning
 
+# Vagrant version
+  VAGRANTFILE_API_VERSION = "2"
+
+# Directories
+  INSTALL_DIR =  'vagrantinstall'
+  BINARIES_DIR = 'bin'
+
+# Simple uncomment ONE of the following WEB_STACK options to use that web stack
+  WEB_STACK = 'amp' # Apache2, MySQL, and PHP
+# WEB_STACK = 'emp' # Nginx, MySQL, and PHP-FPM
+
+# Operating system
+  VM_BOX = "ubuntu/trusty32"
+# VM_BOX = "ubuntu/trusty64"
+
+# Ports that services will be forwarded to
+  SSH_PORT = 8022
+  WEB_PORT = 8080
+  SQL_PORT = 3306
+
+# Allocate this amount of memory for the VM
+  MEMORY = "1024"
+################################################################################
+
+
+# Provisioner, you should leave the following alone and just change above
+# configuration settings
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   ##############################################################################
@@ -11,8 +38,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Instructions: Simply un-remark the box you want to use, or add a new one.
   # Notes: One box, and only one box can be un-remarked.
   ##############################################################################
-  config.vm.box = "ubuntu/trusty32"
-  # config.vm.box = "ubuntu/trusty64"
+  config.vm.box = VM_BOX
 
 
   ##############################################################################
@@ -32,9 +58,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  config.vm.network "forwarded_port", guest: 80, host: 8080
-  config.vm.network "forwarded_port", guest: 22, host: 2022
-  config.vm.network "forwarded_port", guest: 3306, host: 33336
+  config.vm.network "forwarded_port", guest: 22,   host: SSH_PORT
+  config.vm.network "forwarded_port", guest: 80,   host: WEB_PORT
+  config.vm.network "forwarded_port", guest: 3306, host: SQL_PORT
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -64,7 +90,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   vb.gui = true
   #
   # Use VBoxManage to customize the VM. For example to change memory:
-  vb.customize ["modifyvm", :id, "--memory", "1024"]
+  vb.customize ["modifyvm", :id, "--memory", MEMORY]
   end
   #
   # View the documentation for the provider you're using for more
