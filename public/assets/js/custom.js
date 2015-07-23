@@ -1,7 +1,5 @@
 $(document).ready(function(){
-
-  // cool code
-
+  $('.data-table').dataTable();
 });
 
 

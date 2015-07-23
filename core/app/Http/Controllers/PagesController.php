@@ -15,4 +15,10 @@ class PagesController extends Controller
       $page_active = "home";
       return view('pages.home', compact('title','page_active'));
     }
+    public function table()
+    {
+      $title = "Table Page";
+      $page_active = "table";
+      return view('pages.table', compact('title','page_active'));
+    }
 }

@@ -12,6 +12,7 @@
 */
 
 Route::get('/','PagesController@home');
+Route::get('/table','PagesController@table');
 
 Route::controllers([
   'auth' => 'Auth\AuthController',

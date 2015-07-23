@@ -1,9 +1,341 @@
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* Fonts */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* @import url(http://fonts.googleapis.com/css?family=Raleway); */
 /* This is the custom override CSS. */
 /* Edit sass/custom.scss and compile with SASS. */
 /* Ex command: sass --watch public/assets/scss/custom.scss:public/assets/css/custom.css --style compact */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* fonts
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* colors
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+$standout: rgb(0,120,174);
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* css resets
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+* { margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body { font-family: "Source Sans Pro", Arial, Helvetica, sans-serif; }
+
+p, ul, ol { font-size: 20px; font-family: "Source Sans Pro", Arial, Helvetica, sans-serif; line-height: 28px; }
+
+code { font-size: 16px; font-family: "Inconsolata", Courier, monospace; background-color: #959595; color: #222222; padding: 4px; border-radius: 0px; }
+
+a { color: rgb(196,87,15); }
+
+a:hover { color: rgb(196,87,15); }
+
+a:visited { color: rgb(196,87,15); }
+
+thead, tfoot {
+  background-color: rgb(242, 240, 237);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Bootstrap overrides
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media (min-width: 768px) {
+  .half-container {
+    width: 640px;
+  }
+}
+
+.nav {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+.navbar {
+  min-height: 85px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid transparent;
+  background-color: #fff;
+  border-bottom: none;
+}
+
+/*.navbar-brand {
+  font-weight: 100;
+  font-family: Lobster, cursive;
+  padding-top: 10px;
+  font-size: 24px;
+  line-height: 30px;
+}*/
+
+.navbar-nohover {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  padding-top: 12px;
+  font-size: 20px;
+  line-height: 30px;
+  color: darken( $standout, 10% );
+}
+
+.navbar-nav {
+  padding-top: 16px;
+}
+
+.navbar-nav>li>a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.navbar-nav>li.active, .navbar-nav>li.active>a:hover, .navbar-nav>li.active>a {
+  background-color: $standout;
+  color: #fff;
+}
+
+.navbar-nav>li>a:hover {
+  color: #aaa;
+  text-decoration: none;
+  background-color: #eee;
+  color: #bbb;
+}
+
+.navbar-nav>.active>a,
+.navbar-nav>.active>a:focus,
+.navbar-nav>.active>a:hover {
+  color: #bbb;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.navbar-collapse.in {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  overflow-x: visible;
+  -webkit-overflow-scrolling: touch;
+  border-top: none;
+}
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: #ddd;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 0px;
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 0px;
+  background-color: #aaa;
+}
+
+@media (max-width: 640px) {
+  .nav-tabs>li>a {
+    /*override the bootstrap borders for tab links*/
+    border: none;
+    border-radius: 0;
+    margin-right: 0px;
+    padding: 5px 8px;
+  }
+}
+
+@media (min-width: 640px) {
+  .nav-tabs>li>a {
+    /*override the bootstrap borders for tab links*/
+    border: none;
+    border-radius: 0;
+    margin-right: 0px;
+    padding: 20px 25px;
+  }
+}
+
+.nav-tabs>li>a:hover {
+  border: none;
+  background-color: #ddd;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: rgb(196,87,15);
+  border-color: rgb(196,87,15);
+}
+
+.panel {
+  border-radius: 0px;
+  height: 230px;
+}
+
+@media (max-width: 768px) {
+  .panel {
+    height: inherit;
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* custom id's and classes
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media (min-width: 640px) {
+  h1.page-title {
+    font-weight: 400;
+    font-family: "Raleway", "Times New Roman", Times, serif;
+    font-size: 48px;
+    padding-bottom: 12px;
+    color: $standout;
+  }
+
+  h2.page-subtitle {
+    font-weight: 100;
+    font-size: 36px;
+    font-family: "Raleway", "Times New Roman", Times, serif;
+  }
+}
+
+@media (max-width: 640px) {
+  h1.page-title {
+    font-weight: 400;
+    font-family: "Raleway", "Times New Roman", Times, serif;
+    font-size: 24px;
+    color: $standout;
+  }
+
+  h2.page-subtitle {
+    font-weight: 100;
+    font-size: 18px;
+    font-family: "Raleway", "Times New Roman", Times, serif;
+  }
+}
+
+.copy-section {
+  background-color: #fff;
+  /*margin-top: 10px;*/
+  margin-bottom: 36px;
+}
+
+.copy-section h1 {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.copy-section h2 {
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.copy-section p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.copy-section ul {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-left: 24px;
+}
+
+.pre-post-padding {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.header-section {
+  background-color: rgb(242, 240, 237);
+}
+
+.footer-section {
+  padding-top: 24px;
+  padding-bottom: 48px;
+  background-color: rgb(65, 65, 65);
+  color: rgb(242, 240, 237);
+}
+
+.footer-section a, .footer-section a:hover, .footer-section a:visited {
+  color: #aaa;
+}
+
+.tab-container {
+  background-color: rgb(242, 240, 237);
+}
+
+.video-title {
+  color: #aaa;
+  text-align: center;
+}
+
+.heading-break {
+  padding-top: 36px;
+}
+
+@media (min-width: 1200px) {
+  .splash-page {
+    margin-top: 200px;
+  }
+}
+
+.panel-heading {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+p.organization {
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+p.email {
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+p.phone {
+  font-size: 14px;
+}
+
+@media (max-width: 992px) {
+  .panel-heading {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .panel-heading {
+    font-size: 14px;
+  }
+}
+
+.search-bar {
+  padding: 12px;
+  margin: 2px 2px 12px 2px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+}
+
+.form-control {
+  border-radius: 0px;
+}
+
+.btn {
+  border-radius: 0px;
+}
+
+.pagination {
+  border-radius: 0px;
+}
+
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+  margin-left: 0;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
