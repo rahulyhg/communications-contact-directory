@@ -17,3 +17,8 @@ Route::controllers([
   'auth' => 'Auth\AuthController',
   'password' => 'Auth\PasswordController'
 ]);
+
+// helper routes for auth
+Route::get('sign-in','Auth\AuthController@getLogin');
+Route::get('sign-out','Auth\AuthController@getLogout');
+Route::get('reset','Auth\PasswordController@getEmail');
