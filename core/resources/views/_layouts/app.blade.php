@@ -8,7 +8,7 @@
   @include('_includes/header')
 
   <div class="page-content">
-    <div class="wrapper">
+    <div class="copy-section">
       @yield('content')
     </div>
   </div>
