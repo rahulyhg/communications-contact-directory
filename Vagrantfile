@@ -22,7 +22,7 @@
 # Ports that services will be forwarded to
   SSH_PORT = 8022
   WEB_PORT = 8080
-  SQL_PORT = 3306
+  SQL_PORT = 33306
 
 # Allocate this amount of memory for the VM
   MEMORY = "1024"
