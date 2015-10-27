@@ -16,9 +16,9 @@
     "tests"
   ],
   "dependencies": {
-    "fontawesome": "~4.3.0",
+    "fontawesome": "~4.4.0",
     "jquery": "~2.1.4",
-    "bootstrap": "~3.3.4",
-    "datatables": "~1.10.7"
+    "bootstrap": "~3.3.5",
+    "datatables": "~1.10.9"
   }
 }
