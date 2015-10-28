@@ -13,8 +13,13 @@
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a href="#">Active Link</a></li>
-          <li><a href="#about">Link</a></li>
-          <li><a href="#contact">Link</a></li>
+          <li>
+            @if (Auth::check())
+            <a href="/sign-out"><i class="fa fa-sign-out"></i>&nbsp;Sign-Out</a>
+            @else
+            <a href="/sign-in"><i class="fa fa-sign-in"></i>&nbsp;Sign-in</a>
+            @endif
+          </li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
