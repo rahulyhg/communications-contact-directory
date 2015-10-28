@@ -24,8 +24,7 @@ Route::controllers([
 |--------------------------------------------------------------------------
 */
 Route::group(['middleware' => 'auth'], function () {
-  Route::get('/','PagesController@home');
-  Route::get('/table','PagesController@table');
+  // management tools go here.
 });
 
 
@@ -34,6 +33,9 @@ Route::group(['middleware' => 'auth'], function () {
 | Place routes that DO NOT require authentication here
 |--------------------------------------------------------------------------
 */
+Route::get('/','PagesController@table');
+// Route::get('/table','PagesController@table');
+
 Route::get('sign-in','Auth\AuthController@getLogin');
 Route::get('sign-out','Auth\AuthController@getLogout');
 Route::get('reset','Auth\PasswordController@getEmail');
