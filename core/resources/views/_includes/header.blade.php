@@ -12,7 +12,9 @@
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#">Active Link</a></li>
+          <li{!! ($page_active == 'table') ? " class='active'" : "" !!}><a href="/directory">Directory</a></li>
+          <li{!! ($page_active == 'about') ? " class='active'" : "" !!}><a href="/about">About</a></li>
+          <li{!! ($page_active == 'contact') ? " class='active'" : "" !!}><a href="/contact">Contact</a></li>
           <li>
             @if (Auth::check())
             <a href="/sign-out"><i class="fa fa-sign-out"></i>&nbsp;Sign-Out</a>
