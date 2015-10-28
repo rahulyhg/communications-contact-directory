@@ -19,9 +19,9 @@
 
 html, body { height: 100%; }
 
-body { font-family: "Source Sans Pro", Arial, Helvetica, sans-serif; }
+body { font-family: "Source Sans Pro", "Times New Roman", times, sans-serif; }
 
-p, ul, ol { font-size: 20px; font-family: "Source Sans Pro", Arial, Helvetica, sans-serif; line-height: 28px; }
+p, ul, ol, address { font-size: 20px; font-family: "Source Sans Pro", "Times New Roman", times, sans-serif; line-height: 28px; }
 
 code { font-size: 16px; font-family: "Inconsolata", Courier, monospace; background-color: #959595; color: #222222; padding: 4px; border-radius: 0px; }
 
@@ -37,13 +37,13 @@ thead, tfoot { background-color: #f2f0ed; }
 /* Bootstrap overrides
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media (min-width: 768px) { .half-container { width: 640px; } }
-.nav { font-family: "Raleway", Arial, Helvetica, sans-serif; font-weight: 100; }
+.nav { font-family: Raleway, Arial, Helvetica, sans-serif; font-weight: 100; }
 
-.navbar { min-height: 85px; margin-bottom: 20px; border-bottom: 1px solid transparent; background-color: #fff; border-bottom: none; }
+.navbar { margin-bottom: 12px; border-bottom: 1px solid transparent; background-color: #fff; border-bottom: none; }
 
 /*.navbar-brand { font-weight: 100; font-family: Lobster, cursive; padding-top: 10px; font-size: 24px; line-height: 30px;
 }*/
-.navbar-nohover { font-family: "Raleway", Arial, Helvetica, sans-serif; font-weight: 100; padding-top: 12px; font-size: 20px; line-height: 30px; color: #00557b; }
+.navbar-nohover { font-family: Raleway, Arial, Helvetica, sans-serif; font-weight: 100; padding-top: 12px; font-size: 20px; line-height: 30px; color: #00557b; }
 
 .navbar-nav { padding-top: 16px; }
 
@@ -73,10 +73,10 @@ thead, tfoot { background-color: #f2f0ed; }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* custom id's and classes
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-@media (min-width: 640px) { h1.page-title { font-weight: 400; font-family: "Raleway", "Times New Roman", Times, serif; font-size: 48px; padding-bottom: 12px; color: #0078ae; }
-  h2.page-subtitle { font-weight: 100; font-size: 36px; font-family: "Raleway", "Times New Roman", Times, serif; } }
-@media (max-width: 640px) { h1.page-title { font-weight: 400; font-family: "Raleway", "Times New Roman", Times, serif; font-size: 24px; color: #0078ae; }
-  h2.page-subtitle { font-weight: 100; font-size: 18px; font-family: "Raleway", "Times New Roman", Times, serif; } }
+@media (min-width: 640px) { h1.page-title { font-weight: 400; font-family: Raleway, Arial, Helvetica, sans-serif; font-size: 30px; color: #0078ae; margin-top: 10px; margin-bottom: 6px; }
+  h2.page-subtitle { font-weight: 100; font-size: 26px; font-family: Raleway, Arial, Helvetica, sans-serif; margin-top: 10px; margin-bottom: 6px; } }
+@media (max-width: 640px) { h1.page-title { font-weight: 400; font-family: Raleway, Arial, Helvetica, sans-serif; font-size: 24px; color: #0078ae; }
+  h2.page-subtitle { font-weight: 100; font-size: 18px; font-family: Raleway, Arial, Helvetica, sans-serif; } }
 .copy-section { background-color: #fff; /*margin-top: 10px;*/ margin-bottom: 36px; }
 
 .copy-section h1 { font-weight: 400; font-size: 24px; }
@@ -87,9 +87,11 @@ thead, tfoot { background-color: #f2f0ed; }
 
 .copy-section ul { font-size: 16px; line-height: 1.6; margin-left: 24px; }
 
-.pre-post-padding { padding-top: 36px; padding-bottom: 36px; }
+.pre-post-padding { padding-top: 24px; padding-bottom: 24px; }
 
-.header-section { background-color: #f2f0ed; }
+.header-section { background-color: #f2f0ed; margin-bottom: 20px; }
+
+.footer-section h3 { font-size: 20px; font-family: Raleway, Arial, Helvetica, sans-serif; }
 
 .footer-section { padding-top: 24px; padding-bottom: 48px; background-color: #414141; color: #f2f0ed; }
 

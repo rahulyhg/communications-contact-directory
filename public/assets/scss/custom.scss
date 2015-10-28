@@ -9,8 +9,13 @@
 /* fonts
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+$sansSerifPrimary : "Source Sans Pro", "Times New Roman", times, sans-serif;;
+
 @import url(http://fonts.googleapis.com/css?family=Raleway);
+$sansSerifSecondary : Raleway, Arial, Helvetica, sans-serif;;
+
 @import url(http://fonts.googleapis.com/css?family=Inconsolata);
+$monospacePrimary : "Inconsolata", Courier, monospace;
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* colors
@@ -24,11 +29,11 @@ $standout: rgb(0,120,174);
 
 html, body { height: 100%; }
 
-body { font-family: "Source Sans Pro", Arial, Helvetica, sans-serif; }
+body { font-family: $sansSerifPrimary; }
 
-p, ul, ol { font-size: 20px; font-family: "Source Sans Pro", Arial, Helvetica, sans-serif; line-height: 28px; }
+p, ul, ol, address { font-size: 20px; font-family: $sansSerifPrimary; line-height: 28px; }
 
-code { font-size: 16px; font-family: "Inconsolata", Courier, monospace; background-color: #959595; color: #222222; padding: 4px; border-radius: 0px; }
+code { font-size: 16px; font-family: $monospacePrimary; background-color: #959595; color: #222222; padding: 4px; border-radius: 0px; }
 
 a { color: rgb(196,87,15); }
 
@@ -50,13 +55,13 @@ thead, tfoot {
 }
 
 .nav {
-  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-family: $sansSerifSecondary;
   font-weight: 100;
 }
 
 .navbar {
-  min-height: 85px;
-  margin-bottom: 20px;
+  // min-height: 85px;
+  margin-bottom: 12px;
   border-bottom: 1px solid transparent;
   background-color: #fff;
   border-bottom: none;
@@ -71,7 +76,7 @@ thead, tfoot {
 }*/
 
 .navbar-nohover {
-  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-family: $sansSerifSecondary;
   font-weight: 100;
   padding-top: 12px;
   font-size: 20px;
@@ -186,23 +191,26 @@ thead, tfoot {
 @media (min-width: 640px) {
   h1.page-title {
     font-weight: 400;
-    font-family: "Raleway", "Times New Roman", Times, serif;
-    font-size: 48px;
-    padding-bottom: 12px;
+    font-family: $sansSerifSecondary;
+    font-size: 30px;
     color: $standout;
+    margin-top: 10px;
+    margin-bottom: 6px;
   }
 
   h2.page-subtitle {
     font-weight: 100;
-    font-size: 36px;
-    font-family: "Raleway", "Times New Roman", Times, serif;
+    font-size: 26px;
+    font-family: $sansSerifSecondary;
+    margin-top: 10px;
+    margin-bottom: 6px;
   }
 }
 
 @media (max-width: 640px) {
   h1.page-title {
     font-weight: 400;
-    font-family: "Raleway", "Times New Roman", Times, serif;
+    font-family: $sansSerifSecondary;
     font-size: 24px;
     color: $standout;
   }
@@ -210,7 +218,7 @@ thead, tfoot {
   h2.page-subtitle {
     font-weight: 100;
     font-size: 18px;
-    font-family: "Raleway", "Times New Roman", Times, serif;
+    font-family: $sansSerifSecondary;
   }
 }
 
@@ -242,12 +250,18 @@ thead, tfoot {
 }
 
 .pre-post-padding {
-  padding-top: 36px;
-  padding-bottom: 36px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header-section {
   background-color: rgb(242, 240, 237);
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  font-family: $sansSerifSecondary;
 }
 
 .footer-section {
