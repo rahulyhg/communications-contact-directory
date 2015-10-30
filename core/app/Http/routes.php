@@ -39,3 +39,14 @@ Route::get('/','PagesController@table');
 Route::get('sign-in','Auth\AuthController@getLogin');
 Route::get('sign-out','Auth\AuthController@getLogout');
 Route::get('reset','Auth\PasswordController@getEmail');
+
+
+/*
+|--------------------------------------------------------------------------
+| Unused routes
+|--------------------------------------------------------------------------
+*/
+// Authentication registration routes...
+// Route::get('auth/register', 'Auth\AuthController@getRegister');
+// Authentication password reset routes...
+// Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
