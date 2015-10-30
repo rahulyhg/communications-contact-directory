@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
@@ -16,8 +16,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-      $title = "Administration Dashboard";
-      $page_active = "home";
+      $title = "Dashboard Home";
+      $page_active = "dashboard";
       return view('admin.dashboard', compact('title','page_active'));
     }
 
