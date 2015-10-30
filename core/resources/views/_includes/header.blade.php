@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar navbar-static-top">
+  <nav class="navbar navbar-static-top navbar-public">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -8,10 +8,10 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/"><img src="{{ asset('assets/img/logo.jpg') }}" height="60" /></a>
+        <a class="navbar-brand" href="/"><img src="{{ asset('assets/img/logo.jpg') }}" class="brand-logo" /></a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right navbar-public">
           <li{!! (isset($page_active) AND $page_active == 'table') ? " class='active'" : "" !!}><a href="/directory"><i class="fa fa-users"></i>&nbsp;Directory</a></li>
           <li{!! (isset($page_active) AND $page_active == 'about') ? " class='active'" : "" !!}><a href="/about"><i class="fa fa-info-circle"></i>&nbsp;About</a></li>
           <li{!! (isset($page_active) AND $page_active == 'contact') ? " class='active'" : "" !!}><a href="/contact"><i class="fa fa-comments-o"></i>&nbsp;Contact</a></li>
@@ -22,7 +22,7 @@
             </a>
             <ul class="dropdown-menu">
               <li><a href="/account"><i class="fa fa-user"></i>&nbsp;My Account</a></li>
-              <li><a href="/admin"><i class="fa fa-briefcase"></i>&nbsp;Admin</a></li>
+              <li><a href="/admin"><i class="fa fa-cogs"></i>&nbsp;Admin</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="/sign-out"><i class="fa fa-sign-out"></i>&nbsp;Sign-out</a></li>
             </ul>
