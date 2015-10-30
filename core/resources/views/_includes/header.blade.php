@@ -16,7 +16,7 @@
           <li{!! (isset($page_active) AND $page_active == 'about') ? " class='active'" : "" !!}><a href="/about"><i class="fa fa-info-circle"></i>&nbsp;About</a></li>
           <li{!! (isset($page_active) AND $page_active == 'contact') ? " class='active'" : "" !!}><a href="/contact"><i class="fa fa-comments-o"></i>&nbsp;Contact</a></li>
           @if (Auth::check())
-          <li class="dropdown">
+          <li class="dropdown{!! (isset($page_active) AND $page_active == 'account') ? " active" : "" !!}">
             <a href="/sign-out" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               <i class="fa fa-caret-down"></i>&nbsp;{{{ Auth::user()->first_name }}}
             </a>

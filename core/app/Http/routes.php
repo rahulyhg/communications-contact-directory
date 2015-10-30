@@ -24,7 +24,7 @@ Route::controllers([
 |--------------------------------------------------------------------------
 */
 Route::group(['middleware' => 'auth'], function () {
-  // Route::get('account','AccountController@index');
+  Route::get('account','Account\AccountController@index');
   Route::get('admin','Admin\AdminController@index');
   // Route::get('admin/directory','Admin\AdminController@directory');
   // Route::get('admin/users','Admin\AdminController@users');
