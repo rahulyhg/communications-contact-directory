@@ -24,7 +24,7 @@ Route::controllers([
 |--------------------------------------------------------------------------
 */
 Route::group(['middleware' => 'auth'], function () {
-  // management tools go here.
+  Route::get('/admin','AdminController@index');
 });
 
 

@@ -10,28 +10,32 @@ use App\Http\Controllers\Controller;
 class PagesController extends Controller
 {
   // homepage
-  public function home() {
+  public function home()
+  {
     $title = "Home Page";
     $page_active = "home";
     return view('pages.home', compact('title','page_active'));
   }
 
   // page that displays the table output
-  public function table() {
+  public function table()
+  {
     $title = "Table Page";
     $page_active = "table";
     return view('pages.table', compact('title','page_active'));
   }
 
   // page that displays the table output
-  public function about() {
+  public function about()
+  {
     $title = "About Page";
     $page_active = "about";
     return view('pages.about', compact('title','page_active'));
   }
 
   // page that displays the table output
-  public function contact() {
+  public function contact()
+  {
     $title = "Contact Page";
     $page_active = "contact";
     return view('pages.contact', compact('title','page_active'));
