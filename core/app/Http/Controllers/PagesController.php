@@ -22,4 +22,18 @@ class PagesController extends Controller
     $page_active = "table";
     return view('pages.table', compact('title','page_active'));
   }
+
+  // page that displays the table output
+  public function about() {
+    $title = "About Page";
+    $page_active = "about";
+    return view('pages.about', compact('title','page_active'));
+  }
+
+  // page that displays the table output
+  public function contact() {
+    $title = "Contact Page";
+    $page_active = "contact";
+    return view('pages.contact', compact('title','page_active'));
+  }
 }
