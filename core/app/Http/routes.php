@@ -24,7 +24,11 @@ Route::controllers([
 |--------------------------------------------------------------------------
 */
 Route::group(['middleware' => 'auth'], function () {
-  Route::get('/admin','AdminController@index');
+  // Route::get('account','AccountController@index');
+  Route::get('admin','Admin\AdminController@index');
+  // Route::get('admin/directory','Admin\AdminController@directory');
+  // Route::get('admin/users','Admin\AdminController@users');
+  // Route::get('admin/cms','AdminController@cms');
 });
 
 
@@ -34,7 +38,7 @@ Route::group(['middleware' => 'auth'], function () {
 |--------------------------------------------------------------------------
 */
 Route::get('/','PagesController@table');
-Route::get('/directory','PagesController@table');
+Route::get('directory','PagesController@table');
 Route::get('contact','PagesController@contact');
 Route::get('about','PagesController@about');
 // Route::get('/table','PagesController@table');

@@ -8,14 +8,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Project name</a>
+      <a class="navbar-brand" href="/admin">Admin Panel{{ (isset($title)) ? " :: ".$title : "" }}</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/admin">Dashboard</a></li>
-        <li><a href="/admin/directory">Directory</a></li>
-        <li><a href="/admin/users">Users</a></li>
-        <li><a href="/">Front End</a></li>
+        <li><a href="/" target="_blank"><i class="fa fa-external-link-square"></i>&nbsp;Jump to the Front End</a></li>
       </ul>
     </div>
   </div>
