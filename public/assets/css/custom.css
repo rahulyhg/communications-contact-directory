@@ -1,7 +1,7 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* This is the custom override CSS. */
 /* Edit sass/custom.scss and compile with SASS. */
-/* Ex command: sass --watch public/assets/scss/custom.scss:public/assets/css/custom.css --style compact */
+/* Ex command: sass public/assets/scss/custom.scss:public/assets/css/custom.css --style compact */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* fonts
@@ -51,7 +51,7 @@ thead, tfoot { background-color: #f2f0ed; }
 
 .navbar-nav > li.active, .navbar-nav > li.active > a:hover, .navbar-nav > li.active > a { background-color: #0078ae; color: #fff; }
 
-.navbar-nav > li > a:hover { color: #aaa; text-decoration: none; background-color: #eee; color: #bbb; }
+.navbar-nav > li > a:hover { color: #aaa; text-decoration: none; background-color: #eee; color: #0078ae; }
 
 .navbar-nav > .active > a, .navbar-nav > .active > a:focus, .navbar-nav > .active > a:hover { color: #bbb; text-decoration: none; background-color: transparent; }
 
