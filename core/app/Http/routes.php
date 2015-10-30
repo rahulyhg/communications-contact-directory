@@ -34,6 +34,9 @@ Route::group(['middleware' => 'auth'], function () {
 |--------------------------------------------------------------------------
 */
 Route::get('/','PagesController@table');
+Route::get('/directory','PagesController@table');
+Route::get('contact','PagesController@contact');
+Route::get('about','PagesController@about');
 // Route::get('/table','PagesController@table');
 
 Route::get('sign-in','Auth\AuthController@getLogin');
