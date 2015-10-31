@@ -17,7 +17,8 @@ You'll probably want the following:
     $ vagrant up
 
 ### Configure the database
-Open the file `core/config/database.php` and fill in the connection variables -- namely, host, database, username and password.  Note your database name here.
+1. Copy the `core/config/database.example.php` to `core/config/database.php`.
+2. Open the file `core/config/database.php` in an editor and fill in the connection variables -- namely, **host**, **database**, **username** and **password**; note your database name here.
 
 ### Access the application using SSH
     $ vagrant ssh
@@ -32,3 +33,5 @@ Open the file `core/config/database.php` and fill in the connection variables --
     $ cd /vagrant/core/
     $ composer install
 
+### Test
+Browse to [http://localhost:8080/](http://localhost:8080/).
