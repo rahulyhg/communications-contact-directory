@@ -35,3 +35,11 @@ You'll probably want the following:
 
 ### Test
 Browse to [http://localhost:8080/](http://localhost:8080/).
+
+### Note
+If you see an error similar to:
+` No supported encrypter found. The cipher and / or key length are invalid.`, you will need to generate a key using this command:
+
+    $ php artisan key:generate
+      Application key [new_key] set successfully.
+Once you have the `[new_key]`, you need to enter that key in `core/config/app.php` by replacing the value in the line that looks like this: `'key' => env('APP_KEY', 'SomeRandomString')`.
