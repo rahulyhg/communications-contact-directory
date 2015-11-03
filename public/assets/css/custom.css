@@ -148,4 +148,6 @@ p.phone { font-size: 14px; }
 
 .admin-sidebar li > a:hover { background-color: #434343; color: white; }
 
+.action-bar { background-color: #434343; color: white; padding: 6px 12px; margin-top: 12px; margin-bottom: 22px; }
+
 /*# sourceMappingURL=custom.css.map */

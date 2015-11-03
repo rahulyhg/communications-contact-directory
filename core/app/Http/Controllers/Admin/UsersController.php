@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
+use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -18,7 +19,9 @@ class UsersController extends Controller
     {
       $title = "User Management";
       $page_active = "users";
-      return view('admin.users', compact('title','page_active'));
+      $users = User::all();
+
+      return view('admin.users', compact('title','page_active','users'));
     }
 
     /**

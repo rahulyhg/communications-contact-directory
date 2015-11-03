@@ -1,13 +1,44 @@
 @extends('_layouts/admin')
 
 @section('content')
-<section class="copy-section">
-  <div class="container">
+<div class="container">
 
-    <div class="col-md-12">
-      <h1 class="page-title">{{ $title }}</h1>
-    </div><!-- /.col -->
+  <div class="row">
+    <h1 class="page-title">{{ $title }}</h1>
+    <div class="action-bar">Action Bar</div>
+    <div class="content">
+      @if ($users)
+      <table class="table">
+        <caption>Optional table caption.</caption>
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+            <th>Admin</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
 
-  </div><!-- /.half-container -->
-</section><!-- /.copy-section -->
+        @foreach ($users as $user)
+        <tr>
+          <td>{{ $user->first_name }}</td>
+          <td>{{ $user->last_name }}</td>
+          <td>{{ $user->email }}</td>
+          <td>{{ $user->admin }}</td>
+          <td>Edit | Disable</td>
+        </tr>
+
+        @endforeach
+        </tbody>
+      </table>
+
+      @else
+      <h3>No Users</h3>
+      @endif
+    </div><!-- /.content -->
+  </div><!-- /.row -->
+
+</div><!-- /.container -->
 @stop

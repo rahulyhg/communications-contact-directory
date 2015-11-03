@@ -425,3 +425,11 @@ p.phone {
   background-color: lighten( $adminDark, 20% );
   color: lighten( $coreColor, 15% );
 }
+
+.action-bar {
+  background-color: lighten( $adminDark, 20% );
+  color: lighten( $coreColor, 15% );
+  padding: 6px 12px;
+  margin-top: 12px;
+  margin-bottom: 22px;
+}
