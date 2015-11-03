@@ -142,6 +142,10 @@ p.phone { font-size: 14px; }
 
 .alert-danger { background-color: #f2f0ed; border-color: #ddd7cf; }
 
-.sidebar { position: fixed; top: 50px; bottom: 0; left: 0; z-index: 1000; display: block; overflow-x: hidden; overflow-y: auto; background-color: #f5f5f5; padding-top: 12px; }
+.sidebar { position: fixed; top: 50px; bottom: 0; left: 0; z-index: 1000; display: block; overflow-x: hidden; overflow-y: auto; background-color: #e1f6ff; padding-top: 12px; }
+
+.admin-sidebar li.active > a { background-color: #101010; color: white; }
+
+.admin-sidebar li > a:hover { background-color: #434343; color: white; }
 
 /*# sourceMappingURL=custom.css.map */

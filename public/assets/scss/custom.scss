@@ -21,7 +21,8 @@ $monospacePrimary : "Inconsolata", Courier, monospace;
 /* colors
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 $standout: rgb(0,120,174);
-$coreColor : rgb(242, 240, 237);
+$coreColor: rgb(242, 240, 237);
+$adminDark: #101010;
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* css resets
@@ -411,6 +412,16 @@ p.phone {
   display: block;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: #f5f5f5;
+  background-color: lighten( $standout, 60% );
   padding-top: 12px;
+}
+
+.admin-sidebar li.active>a {
+  background-color: $adminDark;
+  color: lighten( $coreColor, 15% );
+}
+
+.admin-sidebar li>a:hover {
+  background-color: lighten( $adminDark, 20% );
+  color: lighten( $coreColor, 15% );
 }
