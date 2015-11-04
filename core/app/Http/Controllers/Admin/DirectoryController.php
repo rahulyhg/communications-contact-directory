@@ -18,7 +18,7 @@ class DirectoryController extends Controller
     {
       $title = "Directory Management";
       $page_active = "directory";
-      return view('admin.directory', compact('title','page_active'));
+      return view('admin.directory.index', compact('title','page_active'));
     }
 
     /**

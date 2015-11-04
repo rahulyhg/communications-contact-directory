@@ -21,7 +21,7 @@ class UsersController extends Controller
       $page_active = "users";
       $users = User::all();
 
-      return view('admin.users', compact('title','page_active','users'));
+      return view('admin.user.index', compact('title','page_active','users'));
     }
 
     /**
@@ -68,7 +68,7 @@ class UsersController extends Controller
       $page_active = "users";
       $user = User::find($id);
 
-      return view('admin.edit_user', compact('title','page_active','user'));
+      return view('admin.user.edit', compact('title','page_active','user'));
     }
 
     /**

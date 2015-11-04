@@ -18,7 +18,7 @@ class CmsController extends Controller
     {
       $title = "Content Management";
       $page_active = "cms";
-      return view('admin.cms', compact('title','page_active'));
+      return view('admin.cms.index', compact('title','page_active'));
     }
 
     /**
