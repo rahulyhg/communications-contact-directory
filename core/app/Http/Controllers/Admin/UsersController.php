@@ -31,7 +31,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -53,7 +53,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        return $id;
+        //
     }
 
     /**
@@ -64,7 +64,11 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+      $title = "Edit User";
+      $page_active = "users";
+      $user = User::find($id);
+
+      return view('admin.edit_user', compact('title','page_active','user'));
     }
 
     /**
