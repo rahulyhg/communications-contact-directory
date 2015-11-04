@@ -27,6 +27,7 @@ Route::group(['middleware' => 'auth'], function () {
   Route::get('account','Account\AccountController@index');
   Route::get('admin','Admin\DashboardController@index');
   Route::get('admin/users','Admin\UsersController@index');
+  Route::get('admin/users/{id}','Admin\UsersController@show');
   Route::get('admin/directory','Admin\DirectoryController@index');
   Route::get('admin/cms','Admin\CmsController@index');
 });
