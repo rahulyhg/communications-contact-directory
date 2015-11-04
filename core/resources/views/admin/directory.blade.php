@@ -1,13 +1,13 @@
 @extends('_layouts/admin')
 
 @section('content')
-<section class="copy-section">
-  <div class="container">
+<div class="container">
+  <div class="row">
+    <div class="content">
 
-    <div class="col-md-12">
-      <h1 class="page-title">{{ $title }}</h1>
-    </div><!-- /.col -->
+    <h1 class="page-title">{{ $title }}</h1>
 
-  </div><!-- /.half-container -->
-</section><!-- /.copy-section -->
+    </div><!-- /.content -->
+  </div><!-- /.row -->
+</div><!-- /.container -->
 @stop
