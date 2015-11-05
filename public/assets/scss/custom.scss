@@ -433,3 +433,15 @@ p.phone {
   margin-top: 12px;
   margin-bottom: 22px;
 }
+
+.dropdown-menu {
+  min-width: 200px;
+}
+
+.dropdown-menu>li>a {
+  font-size: 1.2em;
+}
+
+.admin-nav-link {
+  font-size: 0.8em;
+}

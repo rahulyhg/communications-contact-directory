@@ -150,4 +150,10 @@ p.phone { font-size: 14px; }
 
 .action-bar { background-color: #434343; color: white; padding: 6px 12px; margin-top: 12px; margin-bottom: 22px; }
 
+.dropdown-menu { min-width: 200px; }
+
+.dropdown-menu > li > a { font-size: 1.2em; }
+
+.admin-nav-link { font-size: 0.8em; }
+
 /*# sourceMappingURL=custom.css.map */

@@ -12,7 +12,7 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{ route('home') }}" target="_blank"><i class="fa fa-external-link-square"></i>&nbsp;Jump to the Front End</a></li>
+        <li><a href="{{ route('home') }}" target="_blank" class="admin-nav-link"><i class="fa fa-external-link-square"></i>&nbsp;Jump to the Front End</a></li>
       </ul>
     </div>
   </div>
