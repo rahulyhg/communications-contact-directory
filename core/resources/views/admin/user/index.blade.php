@@ -4,11 +4,11 @@
 <div class="container">
 
   <div class="row">
-    <h1 class="page-title">{{ $title }}</h1>
-    <div class="action-bar">
-    <p class="pull-right"><a href="create" class="btn btn-default"><i class="fa fa-user-plus"></i>&nbsp;Add User</a></p>
-    </div>
+
     <div class="content">
+      <h1 class="page-title">{{ $title }}
+        <span class="pull-right"><a href="create" class="btn btn-default"><i class="fa fa-user-plus"></i>&nbsp;Add User</a></span>
+      </h1>
       @if ($users)
       <table class="table">
         <caption>Optional table caption.</caption>

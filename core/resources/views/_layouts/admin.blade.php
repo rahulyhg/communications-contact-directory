@@ -7,7 +7,7 @@
 <body class="fixed-top">
   @include('_includes/admin_header')
 
-  <div class="container-fluid">
+  <div class="container-fluid admin-content">
     <div class="row">
       <div class="col-sm-3 col-md-2 sidebar admin-sidebar">
       @include('_includes/admin_navigation')

@@ -445,3 +445,9 @@ p.phone {
 .admin-nav-link {
   font-size: 0.8em;
 }
+
+.admin-content .content h1.page-title {
+  border-bottom: 1px solid lighten( $adminDark, 65% );
+  padding-bottom: .6em;
+  margin-bottom: 1em;
+}

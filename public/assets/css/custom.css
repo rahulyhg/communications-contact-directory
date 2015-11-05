@@ -156,4 +156,6 @@ p.phone { font-size: 14px; }
 
 .admin-nav-link { font-size: 0.8em; }
 
+.admin-content .content h1.page-title { border-bottom: 1px solid #b6b6b6; padding-bottom: .6em; margin-bottom: 1em; }
+
 /*# sourceMappingURL=custom.css.map */
