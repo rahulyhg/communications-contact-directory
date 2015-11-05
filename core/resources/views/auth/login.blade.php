@@ -42,7 +42,7 @@
 
 					<div class="form-group">
 					<button type="submit" class="btn btn-primary btn-block">Login</button>
-					<p class="subtle"><a class="btn btn-link" href="{{ url('/password/email') }}"><i class="fa fa-info-circle"></i>&nbsp;Did you forget your password?</a></p>
+					<p class="subtle"><a class="btn btn-link" href="{{ url('/password/email') }}"><i class="fa fa-life-ring"></i>&nbsp;Did you forget your password?</a></p>
 					</div>
 				</form>
 			</div><!-- /.well -->
