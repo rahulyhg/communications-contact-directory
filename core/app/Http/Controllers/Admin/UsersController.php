@@ -31,7 +31,10 @@ class UsersController extends Controller
      */
     public function create()
     {
+      $title = "Create User";
+      $page_active = "users";
 
+      return view('admin.user.create', compact('title','page_active'));
     }
 
     /**
