@@ -42,15 +42,15 @@ Route::group(['middleware' => 'auth'], function () {
 | Place routes that DO NOT require authentication here
 |--------------------------------------------------------------------------
 */
-Route::get('/','PagesController@table');
-Route::get('directory','PagesController@table');
-Route::get('contact','PagesController@contact');
-Route::get('about','PagesController@about');
-// Route::get('/table','PagesController@table');
+Route::get('/', array('as'=>'home','PagesController@table'));
+Route::get('directory',array('as'=>'directory','PagesController@table'));
+Route::get('contact',array('as'=>'contact','PagesController@contact'));
+Route::get('about',array('as'=>'about','PagesController@about'));
+// Route::get('/table',array('as'=>'table','PagesController@table'));
 
-Route::get('sign-in','Auth\AuthController@getLogin');
-Route::get('sign-out','Auth\AuthController@getLogout');
-Route::get('reset','Auth\PasswordController@getEmail');
+Route::get('sign-in',array('as'=>'login','Auth\AuthController@getLogin'));
+Route::get('sign-out',array('as'=>'logout','Auth\AuthController@getLogout'));
+Route::get('reset',array('as'=>'reset','Auth\PasswordController@getEmail'));
 
 
 /*
