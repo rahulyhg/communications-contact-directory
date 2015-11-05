@@ -5,7 +5,9 @@
 
   <div class="row">
     <h1 class="page-title">{{ $title }}</h1>
-    <div class="action-bar">Action Bar</div>
+    <div class="action-bar">
+    <p class="pull-right"><a href="create" class="btn btn-default"><i class="fa fa-user-plus"></i>&nbsp;Add User</a></p>
+    </div>
     <div class="content">
       @if ($users)
       <table class="table">
