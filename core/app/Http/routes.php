@@ -24,9 +24,9 @@ Route::controllers([
 |--------------------------------------------------------------------------
 */
 Route::group(['middleware' => 'auth'], function () {
-  Route::get('account','Account\AccountController@index');
+  Route::get('account', array('as'=>'account', 'uses'=>'Account\AccountController@index'));
 
-  Route::get('admin','Admin\DashboardController@index');
+  Route::get('admin', array('as'=>'admin', 'uses'=>'Admin\DashboardController@index'));
 
   Route::get('admin/users','Admin\UsersController@index');
   Route::get('admin/users/create','Admin\UsersController@create');

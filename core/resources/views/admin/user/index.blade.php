@@ -29,7 +29,7 @@
           <td>{{ $user->last_name }}</td>
           <td>{{ $user->email }}</td>
           <td>{{ $user->admin }}</td>
-          <td><a href="/admin/users/{{ $user->id }}">Edit</a> | Disable</td>
+          <td><a href="{{ route('admin') }}/users/{{ $user->id }}">Edit</a> | Disable</td>
         </tr>
 
         @endforeach
