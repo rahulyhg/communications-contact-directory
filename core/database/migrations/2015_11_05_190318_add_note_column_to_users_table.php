@@ -13,7 +13,7 @@ class AddNoteColumnToUsersTable extends Migration
   public function up()
   {
     Schema::table('users', function ($table) {
-      $table->text('notes');
+      $table->text('note');
     });
   }
 
@@ -25,7 +25,7 @@ class AddNoteColumnToUsersTable extends Migration
   public function down()
   {
     Schema::table('users', function ($table) {
-      $table->dropColumn('notes');
+      $table->dropColumn('note');
     });
   }
 }

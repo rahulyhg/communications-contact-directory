@@ -29,9 +29,9 @@
     </div>
 
     <div class="form-group">
-      {!! Form::label('notes', 'Administrative Note') !!}
+      {!! Form::label('note', 'Administrative Note') !!}
       <span class="help-block">Note, the administrative note is not displayed to users.</span>
-      {!! Form::textarea('notes', null, ['class'=>'form-control', 'placeholder'=>'Administrative notes go here.']) !!}
+      {!! Form::textarea('note', null, ['class'=>'form-control', 'placeholder'=>'Administrative notes go here.']) !!}
     </div>
 
     <div class="form-group">
