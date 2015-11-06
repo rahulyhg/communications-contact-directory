@@ -24,16 +24,16 @@ Route::controllers([
 |--------------------------------------------------------------------------
 */
 Route::group(['middleware' => 'auth'], function () {
-  Route::get('account', array('as'=>'account', 'uses'=>'Account\AccountController@index'));
+  Route::get('account',['as'=>'account', 'uses'=>'Account\AccountController@index']);
 
-  Route::get('admin', array('as'=>'admin', 'uses'=>'Admin\DashboardController@index'));
-
+  Route::get('admin',['as'=>'admin', 'uses'=>'Admin\DashboardController@index']);
   Route::get('admin/users','Admin\UsersController@index');
+  Route::post('admin/users',['as'=>'create_user', 'uses'=>'Admin\UsersController@store']);
   Route::get('admin/users/create','Admin\UsersController@create');
   Route::get('admin/users/{id}','Admin\UsersController@edit');
-
   Route::get('admin/directory','Admin\DirectoryController@index');
   Route::get('admin/cms','Admin\CmsController@index');
+
 });
 
 
@@ -42,15 +42,14 @@ Route::group(['middleware' => 'auth'], function () {
 | Place routes that DO NOT require authentication here
 |--------------------------------------------------------------------------
 */
-Route::get('/', array('as'=>'home', 'uses'=>'PagesController@table'));
-Route::get('directory',array('as'=>'directory', 'uses'=>'PagesController@table'));
-Route::get('contact',array('as'=>'contact', 'uses'=>'PagesController@contact'));
-Route::get('about',array('as'=>'about', 'uses'=>'PagesController@about'));
-// Route::get('/table',array('as'=>'table', 'uses'=>'PagesController@table'));
+Route::get('/',['as'=>'home', 'uses'=>'PagesController@table']);
+Route::get('directory',['as'=>'directory', 'uses'=>'PagesController@table']);
+Route::get('contact',['as'=>'contact', 'uses'=>'PagesController@contact']);
+Route::get('about',['as'=>'about', 'uses'=>'PagesController@about']);
 
-Route::get('sign-in',array('as'=>'login', 'uses'=>'Auth\AuthController@getLogin'));
-Route::get('sign-out',array('as'=>'logout', 'uses'=>'Auth\AuthController@getLogout'));
-Route::get('reset',array('as'=>'reset', 'uses'=>'Auth\PasswordController@getEmail'));
+Route::get('sign-in',['as'=>'login', 'uses'=>'Auth\AuthController@getLogin']);
+Route::get('sign-out',['as'=>'logout', 'uses'=>'Auth\AuthController@getLogout']);
+Route::get('reset',['as'=>'reset', 'uses'=>'Auth\PasswordController@getEmail']);
 
 
 /*
