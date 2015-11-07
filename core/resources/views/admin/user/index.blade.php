@@ -28,7 +28,7 @@
           <td>{{ $user->first_name }}</td>
           <td>{{ $user->last_name }}</td>
           <td>{{ $user->email }}</td>
-          <td>{{ $user->admin }}</td>
+          <td>{{ ($user->admin == "1" ? "True" : "&mdash;") }}</td>
           <td><a href="{{ route('admin') }}/users/{{ $user->id }}">Edit</a> | Disable</td>
         </tr>
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
+use Auth;
 use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -49,8 +50,9 @@ class UsersController extends Controller
     $user->first_name = $request->first_name;
     $user->last_name = $request->last_name;
     $user->email = $request->email;
-    $user->notes = $request->notes;
-    $user->admin = $request->admin;
+    $user->author = Auth::user()->id;
+    $user->note = $request->note;
+    $user->admin = ($request->admin ? true : false);
     $user->password = bcrypt('password');
 
     $user->save();

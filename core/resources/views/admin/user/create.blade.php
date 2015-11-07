@@ -25,7 +25,7 @@
 
     <div class="form-group">
       {!! Form::label('admin', 'Is user an Admin?') !!}
-      {!! Form::text('admin', null, ['required', 'class'=>'form-control']) !!}
+      {!! Form::checkbox('admin', 'admin', false) !!}
     </div>
 
     <div class="form-group">
