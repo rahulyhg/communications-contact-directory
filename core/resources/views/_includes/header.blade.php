@@ -18,7 +18,7 @@
           @if (Auth::check())
           <li class="dropdown{!! (isset($page_active) AND $page_active == 'account') ? " active" : "" !!}">
             <a href="{{ route('logout') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-              <i class="fa fa-caret-down"></i>&nbsp;{{{ Auth::user()->first_name }}}
+              <i class="fa fa-caret-down"></i>&nbsp;{{ Auth::user()->first_name }}
             </a>
             <ul class="dropdown-menu">
               <li><a href="{{ route('account') }}"><i class="fa fa-user"></i>&nbsp;&nbsp;My Account</a></li>
