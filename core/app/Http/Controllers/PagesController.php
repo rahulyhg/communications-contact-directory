@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Directory;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -22,7 +23,9 @@ class PagesController extends Controller
   {
     $title = "Table Page";
     $page_active = "table";
-    return view('pages.table', compact('title','page_active'));
+    $entries = Directory::all();
+
+    return view('pages.table', compact('title','page_active', 'entries'));
   }
 
   // page that displays the table output
