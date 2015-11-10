@@ -6,8 +6,9 @@
 <meta name="description" content="{{ Config::get('app.site_description') }}">
 
 <link href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+<!-- <link href="{{ asset('assets/vendor/datatables/media/css/jquery.dataTables.min.css') }}" rel="stylesheet"> -->
+<link href="{{ asset('assets/css/dataTables.bootstrap.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/vendor/fontawesome/css/font-awesome.min.css') }}" rel="stylesheet">
-<link href="{{ asset('assets/vendor/datatables/media/css/jquery.dataTables.min.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
