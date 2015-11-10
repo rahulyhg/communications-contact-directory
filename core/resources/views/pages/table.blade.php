@@ -20,11 +20,21 @@
         <tbody>
           @foreach ($entries as $entry)
           <tr>
-            <td>{{ $entry->first_name }}&nbsp;{{ $entry->last_name }}</td>
+            <td><a href="#" data-toggle="modal" data-target="#{{ $entry->id }}">{{ $entry->first_name }}&nbsp;{{ $entry->last_name }}</a></td>
             <td>{{ $entry->location }}</td>
             <td>{{ $entry->department }}</td>
-            <td>{{ $entry->email }}</td>
-            <td>{{ $entry->primary_phone }}</td>
+
+            @if(strlen($entry->email) > 0)
+            <td><a href="mailto:{{ $entry->email }}">{{ $entry->email }}</a></td>
+            @else
+            <td>&mdash;</td>
+            @endif
+
+            @if(strlen($entry->primary_phone) > 0)
+            <td><a href="tel:+{{ $entry->primary_phone }}">{{ $entry->primary_phone }}</a></td>
+            @else
+            <td>&mdash;</td>
+            @endif
           </tr>
           @endforeach
         </tbody>
