@@ -12,67 +12,18 @@
         <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="table-list" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 160px;">Name</th><th class="hidden-xs hidden-sm sorting" tabindex="0" aria-controls="table-list" rowspan="1" colspan="1" aria-label="County: activate to sort column ascending" style="width: 173px;">County</th><th class="hidden-xs hidden-sm sorting" tabindex="0" aria-controls="table-list" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 189px;">Department</th><th class="hidden-xs sorting" tabindex="0" aria-controls="table-list" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 306px;">Email</th><th class="sorting" tabindex="0" aria-controls="table-list" rowspan="1" colspan="1" aria-label="Phone: activate to sort column ascending" style="width: 116px;">Phone</th></tr>
       </thead>
       <tbody>
-        <tr role="row" class="odd">
-          <td class="sorting_1"><a href="#" data-toggle="modal" data-target="#contact-1">Arlene Holladay</a></td>
-          <td class="hidden-xs hidden-sm">Washington County</td>
-          <td class="hidden-xs hidden-sm">CAO</td>
-          <td class="hidden-xs"><a href="mailto:arlene_holladay@washco.com">arlene_holladay@washco.com</a></td>
-          <td><a href="tel:+503-555-1212">503-555-1212</a></td>
-        </tr><tr role="row" class="even">
-          <td class="sorting_1"><a href="#" data-toggle="modal" data-target="#contact-10">Bryce Moriarity</a></td>
-          <td class="hidden-xs hidden-sm">Washington County</td>
-          <td class="hidden-xs hidden-sm">Public Works</td>
-          <td class="hidden-xs"><a href="mailto:bryce_moriarity@washco.com">bryce_moriarity@washco.com</a></td>
-          <td><a href="tel:+503-777-1212">503-777-1212</a></td>
-        </tr><tr role="row" class="odd">
-          <td class="sorting_1"><a href="#" data-toggle="modal" data-target="#contact-8">Clifton Peagler</a></td>
-          <td class="hidden-xs hidden-sm">Washington County</td>
-          <td class="hidden-xs hidden-sm">CAO</td>
-          <td class="hidden-xs"><a href="mailto:clifton_peagler@washco.com">clifton_peagler@washco.com</a></td>
-          <td><a href="tel:+503-777-1212">503-777-1212</a></td>
-        </tr><tr role="row" class="even">
-          <td class="sorting_1"><a href="#" data-toggle="modal" data-target="#contact-4">Ethelyn Alegria</a></td>
-          <td class="hidden-xs hidden-sm">Washington County</td>
-          <td class="hidden-xs hidden-sm">Animal Services</td>
-          <td class="hidden-xs"><a href="mailto:ethelyn_alegria@washco.com">ethelyn_alegria@washco.com</a></td>
-          <td><a href="tel:+503-666-1212">503-666-1212</a></td>
-        </tr><tr role="row" class="odd">
-          <td class="sorting_1"><a href="#" data-toggle="modal" data-target="#contact-19">Ginny Slovak</a></td>
-          <td class="hidden-xs hidden-sm">Clackamas County</td>
-          <td class="hidden-xs hidden-sm">Facilities</td>
-          <td class="hidden-xs"><a href="mailto:ginny_slovak@clackco.com">ginny_slovak@clackco.com</a></td>
-          <td><a href="tel:+503-999-1212">503-999-1212</a></td>
-        </tr><tr role="row" class="even">
-          <td class="sorting_1"><a href="#" data-toggle="modal" data-target="#contact-9">Hyun Determan</a></td>
-          <td class="hidden-xs hidden-sm">Washington County</td>
-          <td class="hidden-xs hidden-sm">Public Works</td>
-          <td class="hidden-xs"><a href="mailto:hyun_determan@washco.com">hyun_determan@washco.com</a></td>
-          <td><a href="tel:+503-777-1212">503-777-1212</a></td>
-        </tr><tr role="row" class="odd">
-          <td class="sorting_1"><a href="#" data-toggle="modal" data-target="#contact-20">Karry Golay</a></td>
-          <td class="hidden-xs hidden-sm">Washington County</td>
-          <td class="hidden-xs hidden-sm">Facilities</td>
-          <td class="hidden-xs"><a href="mailto:karry_golay@washco.com">karry_golay@washco.com</a></td>
-          <td><a href="tel:+503-123-4567">503-123-4567</a></td>
-        </tr><tr role="row" class="even">
-          <td class="sorting_1"><a href="#" data-toggle="modal" data-target="#contact-5">Kera Bonacci</a></td>
-          <td class="hidden-xs hidden-sm">Washington County</td>
-          <td class="hidden-xs hidden-sm">Animal Services</td>
-          <td class="hidden-xs"><a href="mailto:kera_bonacci@washco.com">kera_bonacci@washco.com</a></td>
-          <td><a href="tel:+503-666-1212">503-666-1212</a></td>
-        </tr><tr role="row" class="odd">
-          <td class="sorting_1"><a href="#" data-toggle="modal" data-target="#contact-12">Kim Mei</a></td>
-          <td class="hidden-xs hidden-sm">Multnomah County</td>
-          <td class="hidden-xs hidden-sm">Public Works</td>
-          <td class="hidden-xs"><a href="mailto:kim_mei@multco.com">kim_mei@multco.com</a></td>
-          <td><a href="tel:+503-888-1212">503-888-1212</a></td>
-        </tr><tr role="row" class="even">
-          <td class="sorting_1"><a href="#" data-toggle="modal" data-target="#contact-16">Lauralee Rocha</a></td>
-          <td class="hidden-xs hidden-sm">Clackamas County</td>
-          <td class="hidden-xs hidden-sm">Parks and Recreation</td>
-          <td class="hidden-xs"><a href="mailto:lauralee_rocha@domain.com">lauralee_rocha@domain.com</a></td>
-          <td><a href="tel:+503-999-1212">503-999-1212</a></td>
-        </tr></tbody>
+
+        @foreach ($entries as $entry)
+        <tr>
+          <td>{{ $entry->first_name }}&nbsp;{{ $entry->last_name }}</td>
+          <td>{{ $entry->location }}</td>
+          <td>{{ $entry->department }}</td>
+          <td>{{ $entry->email }}</td>
+          <td>{{ $entry->primary_phone }}</td>
+        </tr>
+        @endforeach
+
+      </tbody>
       <tfoot>
         <tr><th rowspan="1" colspan="1">Name</th><th class="hidden-xs hidden-sm" rowspan="1" colspan="1">County</th><th class="hidden-xs hidden-sm" rowspan="1" colspan="1">Department</th><th class="hidden-xs" rowspan="1" colspan="1">Email</th><th rowspan="1" colspan="1">Phone</th></tr>
       </tfoot>
