@@ -4,7 +4,7 @@
 <div class="container">
 
   @if($entries)
-  <div id="table-list_wrapper">
+  <div id="table-list_wrapper" class="dataTables_wrapper">
     <div class="row">
       <table id="table-list" class="table table-striped table-bordered data-table dataTable" cellspacing="0" role="grid" aria-describedby="table-list_info">
         <thead>
