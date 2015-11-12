@@ -23,14 +23,14 @@
     </div>
 
     <div class="form-group">
-      {!! Form::label('admin', 'Is user an Admin?') !!}
-      {!! Form::checkbox('admin', 'admin', $user->admin) !!}
+      {!! Form::label('status', 'Account Status?') !!}
+      <span class="help-block">Disabled accounts cannot login.</span>
+      {!! Form::select('status', array('0' => 'Disabled', '1' => 'Enabled'), $user->status,['class'=>'form-control']) !!}
     </div>
 
     <div class="form-group">
       {!! Form::label('note', 'Administrative Note') !!}
-      <span class="help-block">Note, the administrative note is not displayed to users.</span>
-      {!! Form::textarea('note', $user->note, ['class'=>'form-control', 'placeholder'=>'Administrative notes go here.']) !!}
+      {!! Form::textarea('note', $user->note, ['class'=>'form-control', 'placeholder'=>'Example: account was disabled on Tuesday.']) !!}
     </div>
 
     <div class="form-group">
