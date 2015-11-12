@@ -416,6 +416,20 @@ p.phone {
   padding-top: 12px;
 }
 
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .admin-navigation-title {
+    display: none;
+  }
+  .nav-sidebar {
+     margin-right: 0;
+     margin-bottom: 0;
+     margin-left: 0;
+}
+}
+
 .admin-sidebar li.active>a {
   background-color: $adminDark;
   color: lighten( $coreColor, 15% );

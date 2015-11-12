@@ -144,6 +144,9 @@ p.phone { font-size: 14px; }
 
 .sidebar { position: fixed; top: 50px; bottom: 0; left: 0; z-index: 1000; display: block; overflow-x: hidden; overflow-y: auto; background-color: #e1f6ff; padding-top: 12px; }
 
+@media (max-width: 768px) { .sidebar { display: none; }
+  .admin-navigation-title { display: none; }
+  .nav-sidebar { margin-right: 0; margin-bottom: 0; margin-left: 0; } }
 .admin-sidebar li.active > a { background-color: #101010; color: white; }
 
 .admin-sidebar li > a:hover { background-color: #434343; color: white; }
