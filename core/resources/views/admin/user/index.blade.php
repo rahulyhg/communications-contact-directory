@@ -14,7 +14,7 @@
         <th>First Name</th>
         <th>Last Name</th>
         <th>Username</th>
-        <th>Admin</th>
+        <th>Status</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -25,8 +25,8 @@
       <td>{{ $user->first_name }}</td>
       <td>{{ $user->last_name }}</td>
       <td>{{ $user->email }}</td>
-      <td>{{ ($user->admin == "1" ? "True" : "&mdash;") }}</td>
-      <td><a href="{{ route('admin') }}/users/{{ $user->id }}">Edit</a> | Disable</td>
+      <td>{{ ($user->status == "1" ? "Enabled" : "Disabled") }}</td>
+      <td><a href="{{ route('edit_user',$user->id) }}">Edit</a> | {{ ($user->status == "0" ? "Link to Enable" : "Link to Disable") }}</td>
     </tr>
 
     @endforeach
