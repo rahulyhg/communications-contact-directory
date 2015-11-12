@@ -12,7 +12,10 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{ route('home') }}" target="_blank" class="admin-nav-link"><i class="fa fa-external-link-square"></i>&nbsp;Front End</a></li>
+        <div class="visible-xs">
+          @include('_includes/admin_navigation')
+        </div>
+        <li><a href="{{ route('home') }}" target="_blank" class="admin-nav-link"><i class="fa fa-external-link"></i>&nbsp;Front End</a></li>
         <li><a href="{{ route('logout') }}" class="admin-nav-link" title="Sign-out"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;Sign-out</a></li>
       </ul>
     </div>
