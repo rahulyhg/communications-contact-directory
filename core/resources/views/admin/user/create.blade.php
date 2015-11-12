@@ -6,6 +6,14 @@
   <h1 class="page-title">{{ $title }}</h1>
   <div class="well">
 
+    @if($errors->any())
+    <ul class="alert alert-danger list-unstyled">
+      @foreach ($errors->all() as $error)
+      <li>{{ $error }}</li>
+      @endforeach
+    </ul>
+    @endif
+
     {!! Form::open( ['route' => 'admin.users.store'] ) !!}
     <div class="form-group">
       {!! Form::label('first_name', 'First Name') !!}
