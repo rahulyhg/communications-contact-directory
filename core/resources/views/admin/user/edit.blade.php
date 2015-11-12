@@ -35,7 +35,7 @@
 
     <div class="form-group">
       {!! Form::submit('Submit', ['class'=>'btn btn-primary']) !!}
-      <a href="{{ route('store_users') }}" class="btn btn-default">Cancel</a>
+      <a href="{{ route('admin.users.store') }}" class="btn btn-default">Cancel</a>
     </div>
     {!! Form::close() !!}
 

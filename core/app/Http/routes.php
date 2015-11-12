@@ -27,13 +27,10 @@ Route::group(['middleware' => 'auth'], function () {
   Route::get('account',['as'=>'account', 'uses'=>'Account\AccountController@index']);
 
   Route::get('admin',['as'=>'admin', 'uses'=>'Admin\DashboardController@index']);
-  Route::get('admin/users','Admin\UsersController@index');
-  Route::post('admin/users',['as'=>'store_users', 'uses'=>'Admin\UsersController@store']);
-  Route::get('admin/users/create',['as'=>'create_user', 'uses'=>'Admin\UsersController@create']);
-  Route::get('admin/users/{id}',['as'=>'edit_user', 'uses'=>'Admin\UsersController@edit']);
   Route::get('admin/directory','Admin\DirectoryController@index');
   Route::get('admin/cms','Admin\CmsController@index');
 
+  Route::resource('admin/users','Admin\UsersController');
 });
 
 

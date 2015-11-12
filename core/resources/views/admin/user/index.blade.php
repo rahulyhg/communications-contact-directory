@@ -4,7 +4,7 @@
 
 <div class="content">
   <h1 class="page-title">{{ $title }}
-    <span class="pull-right"><a href="{{ route('create_user') }}" class="btn btn-default"><i class="fa fa-user-plus"></i>&nbsp;Add User</a></span>
+    <span class="pull-right"><a href="{{ route('admin.users.create') }}" class="btn btn-default"><i class="fa fa-user-plus"></i>&nbsp;Add User</a></span>
   </h1>
   @if ($users)
   <table class="table">
@@ -26,7 +26,7 @@
       <td>{{ $user->last_name }}</td>
       <td>{{ $user->email }}</td>
       <td>{{ ($user->status == "1" ? "Enabled" : "Disabled") }}</td>
-      <td><a href="{{ route('edit_user',$user->id) }}">Edit</a> | {{ ($user->status == "0" ? "Link to Enable" : "Link to Disable") }}</td>
+      <td><a href="{{ route('admin.users.edit',$user->id) }}">Edit</a> | {{ ($user->status == "0" ? "Link to Enable" : "Link to Disable") }}</td>
     </tr>
 
     @endforeach

@@ -6,7 +6,7 @@
   <h1 class="page-title">{{ $title }}</h1>
   <div class="well">
 
-    {!! Form::open( ['route' => 'store_users'] ) !!}
+    {!! Form::open( ['route' => 'admin.users.store'] ) !!}
     <div class="form-group">
       {!! Form::label('first_name', 'First Name') !!}
       {!! Form::text('first_name', null, ['required', 'class'=>'form-control', 'placeholder'=>'Firstname']) !!}
@@ -35,7 +35,7 @@
 
     <div class="form-group">
       {!! Form::submit('Submit', ['class'=>'btn btn-primary']) !!}
-      <a href="{{ route('store_users') }}" class="btn btn-default">Cancel</a>
+      <a href="{{ route('admin.users.store') }}" class="btn btn-default">Cancel</a>
     </div>
     {!! Form::close() !!}
 
