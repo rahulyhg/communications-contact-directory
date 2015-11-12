@@ -80,7 +80,7 @@ class UsersController extends Controller
   {
     $title = "Edit User";
     $page_active = "users";
-    $user = User::find($id);
+    $user = User::findOrFail($id);
 
     return view('admin.user.edit', compact('title','page_active','user'));
   }
@@ -94,7 +94,10 @@ class UsersController extends Controller
    */
   public function update(Request $request, $id)
   {
-    //
+    $user = User::find($id);
+    $user->update($request->all());
+
+    return redirect()->route('admin.users.index');
   }
 
   /**
