@@ -23,6 +23,9 @@ class UsersController extends Controller
     $page_active = "users";
     $users = User::all();
 
+    session()->flash('flash_success','Success!!');
+    session()->flash('flash_danger','Warning!!');
+    session()->flash('flash_info','Info!!');
     return view('admin.user.index', compact('title','page_active','users'));
   }
 
@@ -57,6 +60,7 @@ class UsersController extends Controller
     $user->password = bcrypt('password');
 
     $user->save();
+    \Session::flash('flash_message','User saved!');
     return redirect()->route('store_users');
   }
 

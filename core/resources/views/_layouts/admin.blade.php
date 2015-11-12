@@ -15,9 +15,8 @@
 
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <div class="container-fluid">
-          <div class="row">
-
-            @yield('content')
+          @include('_includes/flash')
+          @yield('content')
 
           </div><!-- /.row -->
         </div><!-- /.container-fluid -->
