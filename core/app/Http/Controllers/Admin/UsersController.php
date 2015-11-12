@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\User;
 use App\Http\Requests;
-use App\Http\Requests\CreateUserRequest;
+use App\Http\Requests\UserRequest;
 use App\Http\Controllers\Controller;
 
 class UsersController extends Controller
@@ -45,7 +45,7 @@ class UsersController extends Controller
    * @param  Request  $request
    * @return Response
    */
-  public function store(CreateUserRequest $request)
+  public function store(UserRequest $request)
   {
     $user = new User;
     $user->first_name = $request->first_name;
