@@ -27,9 +27,9 @@ Route::group(['middleware' => 'auth'], function () {
   Route::get('account',['as'=>'account', 'uses'=>'Account\AccountController@index']);
 
   Route::get('admin',['as'=>'admin', 'uses'=>'Admin\DashboardController@index']);
-  Route::get('admin/directory','Admin\DirectoryController@index');
   Route::get('admin/cms','Admin\CmsController@index');
 
+  Route::resource('admin/directory','Admin\DirectoryController');
   Route::resource('admin/users','Admin\UsersController');
   Route::post( 'admin/users/toggle',[
     'as' => 'toggle_user',
