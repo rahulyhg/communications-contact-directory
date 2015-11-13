@@ -23,9 +23,6 @@ class UsersController extends Controller
     $page_active = "users";
     $users = User::all();
 
-    session()->flash('flash_success','Success!!');
-    session()->flash('flash_danger','Warning!!');
-    session()->flash('flash_info','Info!!');
     return view('admin.user.index', compact('title','page_active','users'));
   }
 
@@ -102,6 +99,31 @@ class UsersController extends Controller
     $user = User::find($id);
     $user->update($request->all());
 
+    return redirect()->route('admin.users.index');
+  }
+
+  /**
+   * Toggle the status of the specified resource.
+   *
+   * @param  int  $id
+   * @return Response
+   */
+  public function toggleStatus($id)
+  {
+    $user = User::findOrFail($id);
+
+    // toggle the user status (between 0 and 1) based on the current status
+    if($user->status == 1){
+      $user->status = 0;
+      $message = 'disabled';
+    } else {
+      $user->status = 1;
+      $message = 'enabled';
+    }
+
+    $user->update();
+
+    session()->flash('flash_success','User '.$message);
     return redirect()->route('admin.users.index');
   }
 

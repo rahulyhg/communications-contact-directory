@@ -31,6 +31,10 @@ Route::group(['middleware' => 'auth'], function () {
   Route::get('admin/cms','Admin\CmsController@index');
 
   Route::resource('admin/users','Admin\UsersController');
+  Route::post( 'admin/users/toggle',[
+    'as' => 'toggle_user',
+    'uses' => 'Admin\UsersController@toggleStatus'
+  ]);
 });
 
 
