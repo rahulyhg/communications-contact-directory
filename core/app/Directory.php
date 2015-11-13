@@ -13,4 +13,18 @@ class Directory extends Model
    * @var string
    */
   protected $table = 'directory';
+
+  /**
+   * The attributes that are mass assignable.
+   *
+   * @var array
+   */
+  // protected $fillable = ['item', 'item'];
+
+  /**
+   * The attributes excluded from the model's JSON form.
+   *
+   * @var array
+   */
+  // protected $hidden = ['item', 'item'];
 }
