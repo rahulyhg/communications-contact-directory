@@ -57,7 +57,7 @@ class UsersController extends Controller
     $user->password = bcrypt('password');
 
     $user->save();
-    \Session::flash('flash_message','User saved!');
+    session()->flash('flash_message','User saved!');
     return redirect()->route('store_users');
   }
 
