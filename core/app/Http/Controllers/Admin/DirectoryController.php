@@ -42,7 +42,23 @@ class DirectoryController extends Controller
    */
   public function store(Request $request)
   {
-    //
+    $entry = new Directory;
+    $entry->first_name = $request->first_name;
+    $entry->last_name = $request->last_name;
+    $entry->email = $request->email;
+    $entry->location = $request->location;
+    $entry->primary_phone = $request->primary_phone;
+    $entry->secondary_phone = $request->secondary_phone;
+    $entry->website = $request->website;
+    $entry->twitter = $request->twitter;
+    $entry->facebook = $request->facebook;
+    $entry->linkedin = $request->linkedin;
+    $entry->note = $request->note;
+    $entry->password = bcrypt('password');
+
+    $entry->save();
+    session()->flash('flash_message','Entry saved!');
+    return redirect()->route('store_users');
   }
 
   /**
@@ -64,7 +80,11 @@ class DirectoryController extends Controller
    */
   public function edit($id)
   {
-    //
+    $title = "Edit Entry";
+    $page_active = "directory";
+    $entry = Directory::findOrFail($id);
+
+    return view('admin.directory.edit', compact('title','page_active','entry'));
   }
 
   /**
@@ -76,7 +96,10 @@ class DirectoryController extends Controller
    */
   public function update(Request $request, $id)
   {
-    //
+    $entry = Directory::find($id);
+    $entry->update($request->all());
+
+    return redirect()->route('admin.directory.index');
   }
 
   /**
