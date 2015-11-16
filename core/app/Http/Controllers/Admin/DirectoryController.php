@@ -31,7 +31,10 @@ class DirectoryController extends Controller
    */
   public function create()
   {
-    //
+    $title = "Create Entry";
+    $page_active = "directory";
+
+    return view('admin.directory.create', compact('title','page_active'));
   }
 
   /**
@@ -47,6 +50,7 @@ class DirectoryController extends Controller
     $entry->last_name = $request->last_name;
     $entry->email = $request->email;
     $entry->location = $request->location;
+    $entry->department = $request->department;
     $entry->primary_phone = $request->primary_phone;
     $entry->secondary_phone = $request->secondary_phone;
     $entry->website = $request->website;
@@ -54,11 +58,10 @@ class DirectoryController extends Controller
     $entry->facebook = $request->facebook;
     $entry->linkedin = $request->linkedin;
     $entry->note = $request->note;
-    $entry->password = bcrypt('password');
 
     $entry->save();
-    session()->flash('flash_message','Entry saved!');
-    return redirect()->route('store_users');
+    session()->flash('flash_success','Entry saved!');
+    return redirect()->route('admin.directory.index');
   }
 
   /**
@@ -99,6 +102,7 @@ class DirectoryController extends Controller
     $entry = Directory::find($id);
     $entry->update($request->all());
 
+    session()->flash('flash_success','Entry saved!');
     return redirect()->route('admin.directory.index');
   }
 
