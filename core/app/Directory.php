@@ -19,12 +19,25 @@ class Directory extends Model
    *
    * @var array
    */
-  // protected $fillable = ['item', 'item'];
+  protected $fillable = [
+    'first_name',
+    'last_name',
+    'email',
+    'location',
+    'department',
+    'primary_phone',
+    'secondary_phone',
+    'website',
+    'twitter',
+    'facebook',
+    'linkedin',
+    'note'
+  ];
 
   /**
    * The attributes excluded from the model's JSON form.
    *
    * @var array
    */
-  // protected $hidden = ['item', 'item'];
+  protected $hidden = [];
 }
