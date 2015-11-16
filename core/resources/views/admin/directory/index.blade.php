@@ -7,7 +7,7 @@
     <span class="pull-right"><a href="{{ route('admin.directory.create') }}" class="btn btn-default"><i class="fa fa-user-plus"></i>&nbsp;Add Entry</a></span>
   </h1>
   @if ($entries)
-  <table class="table">
+  <table class="table table-striped table-bordered data-table dataTable">
     <caption>{{ count($entries) }} Directory Entries</caption>
     <thead>
       <tr>
