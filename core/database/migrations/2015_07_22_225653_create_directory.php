@@ -17,8 +17,8 @@ class CreateDirectory extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email')->unique();
-            $table->string('location')->nullable();
-            $table->string('department')->nullable();
+            $table->integer('location_id')->unsigned();
+            $table->integer('department_id')->unsigned();
             $table->string('primary_phone')->nullable();
             $table->string('secondary_phone')->nullable();
             $table->string('website')->nullable();

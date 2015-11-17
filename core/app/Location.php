@@ -34,6 +34,6 @@ class Location extends Model
    */
   public function location()
   {
-    return $this->belongsToMany('App\Directory');
+    return $this->belongsTo('App\Directory');
   }
 }
