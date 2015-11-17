@@ -22,8 +22,8 @@ class DirectoryTableSeeder extends Seeder
         'first_name' => str_random(8),
         'last_name' => str_random(12),
         'email' => str_random(8).'@email.com',
-        'location' => $this->get_random_list_item('location'),
-        'department' => $this->get_random_list_item('department'),
+        'location_id' => $this->get_random_list_item('location'),
+        'department_id' => $this->get_random_list_item('department'),
         'primary_phone' => '503-'.rand(100,999).'-'.rand(1000,9999),
         'secondary_phone' => '503-'.rand(100,999).'-'.rand(1000,9999)
       ]);
@@ -42,22 +42,10 @@ class DirectoryTableSeeder extends Seeder
     {
       switch ($category) {
         case "location":
-          $list = array(
-            "Washington County",
-            "Multinomah County",
-            "Clackamas County",
-            "City of Hillsboro"
-          );
+          $list = array(1,2,3,4);
           break;
         case "department":
-          $list = array(
-            "CAO",
-            "Public Works",
-            "LUT",
-            "HHS",
-            "ITS",
-            "Parks and Recreation"
-          );
+          $list = array(1,2,3,4,5,6);
           break;
         default:
           $list = array();
