@@ -40,4 +40,24 @@ class Directory extends Model
    * @var array
    */
   protected $hidden = [];
+
+  /**
+   * An entry can have a department
+   *
+   * @var array
+   */
+  public function department()
+  {
+    return $this->hasOne('App\Department');
+  }
+
+  /**
+   * An entry can have a location
+   *
+   * @var array
+   */
+  public function location()
+  {
+    return $this->hasOne('App\Location');
+  }
 }

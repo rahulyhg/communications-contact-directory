@@ -26,4 +26,14 @@ class Location extends Model
    * @var array
    */
   // protected $hidden = ['item', 'item',];
+
+  /**
+   * A location can belong to many directory entries.
+   *
+   * @var array
+   */
+  public function location()
+  {
+    return $this->belongsToMany('App\Directory');
+  }
 }

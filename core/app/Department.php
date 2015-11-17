@@ -26,5 +26,14 @@ class Department extends Model
    * @var array
    */
   // protected $hidden = ['item', 'item',];
-}
+
+  /**
+   * A department can belong to many directory entries.
+   *
+   * @var array
+   */
+  public function department()
+  {
+    return $this->belongsToMany('App\Directory');
+  }
 }
