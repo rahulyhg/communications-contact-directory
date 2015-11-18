@@ -18,22 +18,22 @@ class Department extends Model
    *
    * @var array
    */
-    // protected $fillable = ['item', 'item',];
+    protected $fillable = ['title'];
 
   /**
    * The attributes excluded from the model's JSON form.
    *
    * @var array
    */
-  // protected $hidden = ['item', 'item',];
+  protected $hidden = [];
 
   /**
-   * A department can belong to many directory entries.
+   * A department belongs to a directory entry
    *
    * @var array
    */
-  public function department()
+  public function directory()
   {
-    return $this->belongsToMany('App\Directory');
+    return $this->hasMany('App\Directory');
   }
 }

@@ -23,8 +23,8 @@ class Directory extends Model
     'first_name',
     'last_name',
     'email',
-    'location',
-    'department',
+    'location_id',
+    'department_id',
     'primary_phone',
     'secondary_phone',
     'website',
@@ -48,7 +48,7 @@ class Directory extends Model
    */
   public function department()
   {
-    return $this->hasOne('App\Department');
+    return $this->belongsTo('App\Department', 'department_id');
   }
 
   /**
@@ -58,6 +58,6 @@ class Directory extends Model
    */
   public function location()
   {
-    return $this->hasOne('App\Location');
+    return $this->belongsTo('App\Location', 'location_id');
   }
 }

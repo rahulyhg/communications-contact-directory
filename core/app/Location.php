@@ -18,22 +18,22 @@ class Location extends Model
    *
    * @var array
    */
-    // protected $fillable = ['item', 'item',];
+    protected $fillable = ['title'];
 
   /**
    * The attributes excluded from the model's JSON form.
    *
    * @var array
    */
-  // protected $hidden = ['item', 'item',];
+  protected $hidden = [];
 
   /**
-   * A location can belong to many directory entries.
+   * A location belongs to a directory entry
    *
    * @var array
    */
   public function location()
   {
-    return $this->belongsTo('App\Directory');
+    return $this->hasMany('App\Directory');
   }
 }
