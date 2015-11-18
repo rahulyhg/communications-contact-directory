@@ -21,8 +21,8 @@
           @foreach ($entries as $entry)
           <tr>
             <td><a href="#" data-toggle="modal" data-target="#{{ $entry->id }}">{{ $entry->first_name }}&nbsp;{{ $entry->last_name }}</a></td>
-            <td>{{ $entry->location }}</td>
-            <td>{{ $entry->department }}</td>
+            <td>{{ $entry->location->title }}</td>
+            <td>{{ $entry->department->title }}</td>
 
             @if(strlen($entry->email) > 0)
             <td><a href="mailto:{{ $entry->email }}">{{ $entry->email }}</a></td>

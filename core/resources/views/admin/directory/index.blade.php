@@ -26,8 +26,8 @@
       <td>{{ $entry->first_name }}</td>
       <td>{{ $entry->last_name }}</td>
       <td>{{ $entry->email }}</td>
-      <td>{{ $entry->location }}</td>
-      <td>{{ $entry->department }}</td>
+      <td>{{ $entry->location->title }}</td>
+      <td>{{ $entry->department->title }}</td>
       <td><a href="{{ route('admin.directory.edit',$entry->id) }}">edit</a> | {{ ($entry->status == "0" ? "enable" : "disable") }}</td>
     </tr>
 
