@@ -56,10 +56,10 @@ class Directory extends Model
    *
    * @var array
    */
-  public function getDepartmentSelectedAttribute()
-  {
-    return $this->department_id;
-  }
+  // public function getDepartmentSelectedAttribute()
+  // {
+  //   return $this->department_id;
+  // }
 
   /**
    * An entry can have a location
@@ -76,8 +76,8 @@ class Directory extends Model
    *
    * @var array
    */
-  public function getLocationSelectedAttribute()
-  {
-    return $this->location_id;
-  }
+  // public function getLocationSelectedAttribute()
+  // {
+  //   return $this->location_id;
+  // }
 }
