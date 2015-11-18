@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 
 use App\Directory;
+use App\Department;
+use App\Location;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -33,8 +35,10 @@ class DirectoryController extends Controller
   {
     $title = "Create Entry";
     $page_active = "directory";
+    $active_departments = Department::orderBy('title')->lists('title', 'id');
+    $active_locations = Location::orderBy('title')->lists('title', 'id');
 
-    return view('admin.directory.create', compact('title','page_active'));
+    return view('admin.directory.create', compact('title','page_active','active_departments','active_locations'));
   }
 
   /**
@@ -86,8 +90,10 @@ class DirectoryController extends Controller
     $title = "Edit Entry";
     $page_active = "directory";
     $entry = Directory::findOrFail($id);
+    $active_departments = Department::orderBy('title')->lists('title', 'id');
+    $active_locations = Location::orderBy('title')->lists('title', 'id');
 
-    return view('admin.directory.edit', compact('title','page_active','entry'));
+    return view('admin.directory.edit', compact('title','page_active','entry','active_departments','active_locations'));
   }
 
   /**

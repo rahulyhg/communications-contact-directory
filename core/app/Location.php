@@ -18,7 +18,7 @@ class Location extends Model
    *
    * @var array
    */
-    protected $fillable = ['title'];
+  protected $fillable = ['title'];
 
   /**
    * The attributes excluded from the model's JSON form.
