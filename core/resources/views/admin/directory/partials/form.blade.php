@@ -15,13 +15,13 @@
 </div>
 
 <div class="form-group">
-  {!! Form::label('location', 'Location') !!}
-  {!! Form::text('location', null, ['class'=>'form-control']) !!}
+  {!! Form::label('location_selected', 'Location') !!}
+  {!! Form::select('location_selected', $active_locations, null, ['class'=>'form-control']) !!}
 </div>
 
 <div class="form-group">
-  {!! Form::label('department', 'Department') !!}
-  {!! Form::text('department', null, ['class'=>'form-control']) !!}
+  {!! Form::label('department_selected', 'Department') !!}
+  {!! Form::select('department_selected', $active_departments, null, ['class'=>'form-control']) !!}
 </div>
 
 <div class="form-group">
