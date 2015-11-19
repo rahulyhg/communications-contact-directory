@@ -12,9 +12,20 @@ class RenameEnabledToStatusForLocAndDep extends Migration
    */
   public function up()
   {
+    // add default value to existing column (no need to roll this back in down)
+    Schema::table('department', function($table)
+    {
+      $table->boolean('enabled', 1)->default(1)->change();
+    });
     Schema::table('department', function($table)
     {
       $table->renameColumn('enabled', 'status');
+    });
+
+    // add default value to existing column (no need to roll this back in down)
+    Schema::table('location', function($table)
+    {
+      $table->boolean('enabled', 1)->default(1)->change();
     });
     Schema::table('location', function($table)
     {
