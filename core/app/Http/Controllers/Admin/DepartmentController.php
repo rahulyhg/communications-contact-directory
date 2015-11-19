@@ -19,9 +19,9 @@ class DepartmentController extends Controller
   {
   $title = "Directory Department Management";
   $page_active = "department";
-  $entries = Department::all();
+  $departments = Department::all();
 
-  return view('admin.department.index', compact('title','page_active', 'entries'));
+  return view('admin.department.index', compact('title','page_active', 'departments'));
   }
 
   /**

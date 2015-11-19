@@ -19,9 +19,9 @@ class LocationController extends Controller
   {
   $title = "Directory Location Management";
   $page_active = "location";
-  $entries = Location::all();
+  $locations = Location::all();
 
-  return view('admin.location.index', compact('title','page_active', 'entries'));
+  return view('admin.location.index', compact('title','page_active', 'locations'));
   }
 
   /**
