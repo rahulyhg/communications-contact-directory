@@ -2,6 +2,7 @@
 
 namespace App;
 
+use DB;
 use Illuminate\Database\Eloquent\Model;
 
 class Location extends Model
@@ -35,5 +36,15 @@ class Location extends Model
   public function location()
   {
     return $this->hasMany('App\Directory');
+  }
+
+  /**
+   * Get the location ID for the current directory entry
+   *
+   * @var array
+   */
+  public function getCountEntriesAttribute()
+  {
+    return DB::table('directory')->where('location_id',$this->id)->count();
   }
 }

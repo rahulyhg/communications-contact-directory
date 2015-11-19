@@ -2,6 +2,7 @@
 
 namespace App;
 
+use DB;
 use Illuminate\Database\Eloquent\Model;
 
 class Department extends Model
@@ -35,5 +36,15 @@ class Department extends Model
   public function directory()
   {
     return $this->hasMany('App\Directory');
+  }
+
+  /**
+   * Get the location ID for the current directory entry
+   *
+   * @var array
+   */
+  public function getCountEntriesAttribute()
+  {
+    return DB::table('directory')->where('department_id',$this->id)->count();
   }
 }
