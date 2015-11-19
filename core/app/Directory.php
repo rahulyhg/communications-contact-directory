@@ -52,16 +52,6 @@ class Directory extends Model
   }
 
   /**
-   * Get the department ID for the current directory entry
-   *
-   * @var array
-   */
-  // public function getDepartmentSelectedAttribute()
-  // {
-  //   return $this->department_id;
-  // }
-
-  /**
    * An entry can have a location
    *
    * @var array
@@ -70,14 +60,4 @@ class Directory extends Model
   {
     return $this->belongsTo('App\Location', 'location_id');
   }
-
-  /**
-   * Get the location ID for the current directory entry
-   *
-   * @var array
-   */
-  // public function getLocationSelectedAttribute()
-  // {
-  //   return $this->location_id;
-  // }
 }
