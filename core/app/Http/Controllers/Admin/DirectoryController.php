@@ -53,8 +53,8 @@ class DirectoryController extends Controller
     $entry->first_name = $request->first_name;
     $entry->last_name = $request->last_name;
     $entry->email = $request->email;
-    $entry->location = $request->location;
-    $entry->department = $request->department;
+    $entry->location = $request->location_id;
+    $entry->department = $request->department_id;
     $entry->primary_phone = $request->primary_phone;
     $entry->secondary_phone = $request->secondary_phone;
     $entry->website = $request->website;
