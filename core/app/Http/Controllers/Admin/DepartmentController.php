@@ -17,11 +17,11 @@ class DepartmentController extends Controller
    */
   public function index()
   {
-  $title = "Directory Department Management";
-  $page_active = "department";
-  $departments = Department::all();
+    $title = "Department Management";
+    $page_active = "department";
+    $departments = Department::all();
 
-  return view('admin.department.index', compact('title','page_active', 'departments'));
+    return view('admin.department.index', compact('title','page_active', 'departments'));
   }
 
   /**
@@ -31,7 +31,10 @@ class DepartmentController extends Controller
    */
   public function create()
   {
-    //
+    $title = "Create Department";
+    $page_active = "department";
+
+    return view('admin.department.create', compact('title','page_active'));
   }
 
   /**
@@ -42,7 +45,14 @@ class DepartmentController extends Controller
    */
   public function store(Request $request)
   {
-    //
+    $entry = new Department;
+    $entry->title = $request->title;
+    $entry->status = $request->status;
+    $entry->note = $request->note;
+
+    $entry->save();
+    session()->flash('flash_success','Department saved!');
+    return redirect()->route('admin.department.index');
   }
 
   /**
@@ -64,7 +74,11 @@ class DepartmentController extends Controller
    */
   public function edit($id)
   {
-    //
+    $title = "Edit Department";
+    $page_active = "department";
+    $department = Department::findOrFail($id);
+
+    return view('admin.department.edit', compact('title','page_active','department'));
   }
 
   /**
@@ -76,7 +90,18 @@ class DepartmentController extends Controller
    */
   public function update(Request $request, $id)
   {
-    //
+    $department = Department::find($id);
+    $department->title = $request->title;
+    $department->note = $request->note;
+    $department->status = $request->status;
+    if($request->status !== "1"){
+      $department->status = 0;
+    }
+    $department->save();
+    // $department->update($request->all());
+
+    session()->flash('flash_success','Department saved!');
+    return redirect()->route('admin.department.index');
   }
 
   /**
