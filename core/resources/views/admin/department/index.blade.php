@@ -4,7 +4,7 @@
 
 <div class="content">
   <h1 class="page-title">{{ $title }}
-    <span class="pull-right"><a href="{{ route('admin.department.create') }}" class="btn btn-default"><i class="fa fa-user-plus"></i>&nbsp;Add Entry</a></span>
+    <span class="pull-right"><a href="{{ route('admin.department.create') }}" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;Add Department</a></span>
   </h1>
   @if ($departments)
   <table class="table table-striped table-bordered data-table dataTable">
@@ -13,7 +13,7 @@
       <tr>
         <th>Title</th>
         <th>Status</th>
-        <th>Count</th>
+        <th>Entries</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -22,8 +22,8 @@
     @foreach ($departments as $department)
     <tr>
       <td>{{ $department->title }}</td>
-      <td>{{ $department->status }}</td>
-      <td>COUNTER</td>
+      <td>{{ ($department->status == 0) ? 'Disabled' : 'Enabled' }}</td>
+      <td>{{ $department->count_entries }}</td>
       <td><a href="{{ route('admin.department.edit',$department->id) }}">edit</a> | {{ ($department->status == "0" ? "enable" : "disable") }}</td>
     </tr>
 
@@ -32,7 +32,7 @@
   </table>
 
   @else
-  <h3>No Users</h3>
+  <h3>No Departments</h3>
   @endif
 </div><!-- /.content -->
 
