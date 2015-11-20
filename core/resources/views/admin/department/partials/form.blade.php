@@ -6,7 +6,7 @@
 
 <div class="form-group">
   {!! Form::label('status', 'Status') !!}
-  {!! Form::select('status', ['0'=>'Disabled', '1'=>'Enabled'], null, ['class'=>'form-control']) !!}
+  {!! Form::select('status', ['0'=>'Disabled', '1'=>'Enabled'], null, ['required', 'class'=>'form-control']) !!}
 </div>
 
 <div class="form-group">

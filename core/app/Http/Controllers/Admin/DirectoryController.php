@@ -53,8 +53,11 @@ class DirectoryController extends Controller
     $entry->first_name = $request->first_name;
     $entry->last_name = $request->last_name;
     $entry->email = $request->email;
-    $entry->location = $request->location_id;
-    $entry->department = $request->department_id;
+    if($request->status !== "1"){
+      $entry->status = 0;
+    }
+    $entry->location_id = $request->location_id;
+    $entry->department_id = $request->department_id;
     $entry->primary_phone = $request->primary_phone;
     $entry->secondary_phone = $request->secondary_phone;
     $entry->website = $request->website;
@@ -106,7 +109,23 @@ class DirectoryController extends Controller
   public function update(Request $request, $id)
   {
     $entry = Directory::find($id);
-    $entry->update($request->all());
+    $entry->first_name = $request->first_name;
+    $entry->last_name = $request->last_name;
+    $entry->email = $request->email;
+    if($request->status !== "1"){
+      $entry->status = 0;
+    }
+    $entry->location_id = $request->location_id;
+    $entry->department_id = $request->department_id;
+    $entry->primary_phone = $request->primary_phone;
+    $entry->secondary_phone = $request->secondary_phone;
+    $entry->website = $request->website;
+    $entry->twitter = $request->twitter;
+    $entry->facebook = $request->facebook;
+    $entry->linkedin = $request->linkedin;
+    $entry->note = $request->note;
+
+    $entry->save();
 
     session()->flash('flash_success','Entry saved!');
     return redirect()->route('admin.directory.index');

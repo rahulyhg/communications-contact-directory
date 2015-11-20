@@ -15,6 +15,11 @@
 </div>
 
 <div class="form-group">
+  {!! Form::label('status', 'Status') !!}
+  {!! Form::select('status', ['0'=>'Disabled', '1'=>'Enabled'], null, ['required', 'class'=>'form-control']) !!}
+</div>
+
+<div class="form-group">
   {!! Form::label('location_id', 'Location') !!}
   {!! Form::select('location_id', $active_locations, null, ['class'=>'form-control']) !!}
 </div>
