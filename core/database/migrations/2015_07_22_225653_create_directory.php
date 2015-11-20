@@ -27,7 +27,7 @@ class CreateDirectory extends Migration
             $table->string('googleplus')->nullable();
             $table->string('linkedin')->nullable();
             $table->text('note');
-            $table->boolean('enabled', 1);
+            $table->boolean('status', 1)->default(1);
             $table->timestamps();
         });
     }
