@@ -23,7 +23,7 @@ class PagesController extends Controller
   {
     $title = "Table Page";
     $page_active = "table";
-    $entries = Directory::all();
+    $entries = Directory::where('status',1)->get();
 
     return view('pages.table', compact('title','page_active', 'entries'));
   }
