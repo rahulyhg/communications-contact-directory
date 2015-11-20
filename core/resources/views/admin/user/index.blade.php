@@ -26,7 +26,9 @@
       <td>{{ $user->last_name }}</td>
       <td>{{ $user->email }}</td>
       <td>{{ ($user->status == "1" ? "Enabled" : "Disabled") }}</td>
-      <td><a href="{{ route('admin.users.edit',$user->id) }}">edit</a> | {{ ($user->status == "0" ? "enable" : "disable") }}</td>
+      <td>
+        <a href="{{ route('admin.users.edit',$user->id) }}" class="btn btn-default btn-xs btn-block">edit</a>
+      </td>
     </tr>
 
     @endforeach

@@ -24,7 +24,9 @@
       <td>{{ $location->title }}</td>
       <td>{{ ($location->status == 0) ? 'Disabled' : 'Enabled' }}</td>
       <td>{{ $location->count_entries }}</td>
-      <td><a href="{{ route('admin.location.edit',$location->id) }}">edit</a> | {{ ($location->status == "0" ? "enable" : "disable") }}</td>
+      <td>
+      <a href="{{ route('admin.location.edit',$location->id) }}" class="btn btn-default btn-xs btn-block">edit</a>
+    </td>
     </tr>
 
     @endforeach

@@ -28,7 +28,9 @@
       <td>{{ $entry->email }}</td>
       <td>{{ $entry->location->title }}</td>
       <td>{{ $entry->department->title }}</td>
-      <td><a href="{{ route('admin.directory.edit',$entry->id) }}">edit</a> | {{ ($entry->status == "0" ? "enable" : "disable") }}</td>
+      <td>
+        <a href="{{ route('admin.directory.edit',$entry->id) }}" class="btn btn-default btn-xs btn-block">edit</a>
+      </td>
     </tr>
 
     @endforeach
