@@ -45,12 +45,12 @@ class DepartmentController extends Controller
    */
   public function store(Request $request)
   {
-    $entry = new Department;
-    $entry->title = $request->title;
-    $entry->status = $request->status;
-    $entry->note = $request->note;
+    $location = new Department;
+    $location->title = $request->title;
+    $location->status = $request->status;
+    $location->note = $request->note;
 
-    $entry->save();
+    $location->save();
     session()->flash('flash_success','Department saved!');
     return redirect()->route('admin.department.index');
   }

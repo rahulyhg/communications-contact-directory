@@ -45,12 +45,16 @@ class LocationController extends Controller
    */
   public function store(Request $request)
   {
-    $entry = new Location;
-    $entry->title = $request->title;
-    $entry->status = $request->status;
-    $entry->note = $request->note;
+    $location = new Location;
+    $location->title = $request->title;
+    if($request->status !== "1"){
+      $location->status = 0;
+    } else {
+      $location->status = $request->status;
+    }
+    $location->note = $request->note;
 
-    $entry->save();
+    $location->save();
     session()->flash('flash_success','Location saved!');
     return redirect()->route('admin.location.index');
   }
@@ -96,6 +100,8 @@ class LocationController extends Controller
     $location->status = $request->status;
     if($request->status !== "1"){
       $location->status = 0;
+    } else {
+      $location->status = $request->status;
     }
     $location->save();
 

@@ -35,7 +35,7 @@ class DirectoryController extends Controller
   {
     $title = "Create Entry";
     $page_active = "directory";
-    $active_departments = Department::orderBy('title')->lists('title', 'id');
+    $active_departments = Department::where('status', 1)->orderBy('title')->lists('title', 'id');
     $active_locations = Location::orderBy('title')->lists('title', 'id');
 
     return view('admin.directory.create', compact('title','page_active','active_departments','active_locations'));
@@ -55,6 +55,8 @@ class DirectoryController extends Controller
     $entry->email = $request->email;
     if($request->status !== "1"){
       $entry->status = 0;
+    } else {
+      $entry->status = $request->status;
     }
     $entry->location_id = $request->location_id;
     $entry->department_id = $request->department_id;
@@ -114,6 +116,8 @@ class DirectoryController extends Controller
     $entry->email = $request->email;
     if($request->status !== "1"){
       $entry->status = 0;
+    } else {
+      $entry->status = $request->status;
     }
     $entry->location_id = $request->location_id;
     $entry->department_id = $request->department_id;
