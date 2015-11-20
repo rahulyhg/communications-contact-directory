@@ -22,6 +22,7 @@ $monospacePrimary : "Inconsolata", Courier, monospace;
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 $standout: rgb(0,120,174);
 $coreColor: rgb(242, 240, 237);
+$buttonPrimary: rgb(196,87,15);
 $adminDark: #101010;
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -38,11 +39,11 @@ p, ul, ol, address { font-size: 20px; font-family: $sansSerifPrimary; line-heigh
 
 code { font-size: 16px; font-family: $monospacePrimary; background-color: #959595; color: #222222; padding: 4px; border-radius: 0px; }
 
-a { color: rgb(196,87,15); }
+a { color: $buttonPrimary; }
 
-a:hover { color: rgb(196,87,15); }
+a:hover { color: $buttonPrimary; }
 
-a:visited { color: rgb(196,87,15); }
+a:visited { color: $buttonPrimary; }
 
 thead, tfoot {
   background-color: $coreColor;
@@ -189,8 +190,17 @@ img.brand-logo {
 
 .btn-primary {
   color: #fff;
-  background-color: rgb(196,87,15);
-  border-color: rgb(196,87,15);
+  background-color: $buttonPrimary;
+  border-color: $buttonPrimary;
+}
+
+.btn-default {
+  color: $buttonPrimary;
+  border-color: lighen( $buttonPrimary, 10% );
+}
+
+.btn-default:visited {
+  color: $buttonPrimary;
 }
 
 .panel {

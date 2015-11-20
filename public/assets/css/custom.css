@@ -75,6 +75,10 @@ img.brand-logo { margin-top: -15px; height: 75px; }
 
 .btn-primary { color: #fff; background-color: #c4570f; border-color: #c4570f; }
 
+.btn-default { color: #c4570f; border-color: lighen(#c4570f, 10%); }
+
+.btn-default:visited { color: #c4570f; }
+
 .panel { border-radius: 0px; height: 230px; }
 
 @media (max-width: 768px) { .panel { height: inherit; } }
