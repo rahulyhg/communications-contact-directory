@@ -98,7 +98,6 @@ class DepartmentController extends Controller
       $department->status = 0;
     }
     $department->save();
-    // $department->update($request->all());
 
     session()->flash('flash_success','Department saved!');
     return redirect()->route('admin.department.index');
