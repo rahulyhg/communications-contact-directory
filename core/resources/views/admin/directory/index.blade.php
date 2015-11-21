@@ -11,11 +11,11 @@
     <caption>{{ count($entries) }} Directory Entries</caption>
     <thead>
       <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
+        <th>Name</th>
         <th>Email</th>
         <th>Location</th>
         <th>Department</th>
+        <th>Status</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -23,11 +23,11 @@
 
     @foreach ($entries as $entry)
     <tr>
-      <td>{{ $entry->first_name }}</td>
-      <td>{{ $entry->last_name }}</td>
+      <td>{{ $entry->first_name }} {{ $entry->last_name }}</td>
       <td>{{ $entry->email }}</td>
       <td>{{ $entry->location->title }}</td>
       <td>{{ $entry->department->title }}</td>
+      <td>{!! ($entry->status == 0) ? '<span class="text-warning">Disabled</span>' : 'Enabled' !!}</td>
       <td>
         <a href="{{ route('admin.directory.edit',$entry->id) }}" class="btn btn-default btn-xs btn-block">edit</a>
       </td>

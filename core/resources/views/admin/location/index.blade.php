@@ -12,6 +12,7 @@
     <thead>
       <tr>
         <th>Title</th>
+        <th>Note</th>
         <th>Status</th>
         <th>Entries</th>
         <th>Actions</th>
@@ -22,7 +23,8 @@
     @foreach ($locations as $location)
     <tr>
       <td>{{ $location->title }}</td>
-      <td>{{ ($location->status == 0) ? 'Disabled' : 'Enabled' }}</td>
+      <td>{{ $location->note }}</td>
+      <td>{!! ($location->status == 0) ? '<span class="text-warning">Disabled</span>' : 'Enabled' !!}</td>
       <td>{{ $location->count_entries }}</td>
       <td>
       <a href="{{ route('admin.location.edit',$location->id) }}" class="btn btn-default btn-xs btn-block">edit</a>

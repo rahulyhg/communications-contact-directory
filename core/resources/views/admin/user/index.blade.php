@@ -25,7 +25,7 @@
       <td>{{ $user->first_name }}</td>
       <td>{{ $user->last_name }}</td>
       <td>{{ $user->email }}</td>
-      <td>{{ ($user->status == "1" ? "Enabled" : "Disabled") }}</td>
+      <td>{!! ($user->status == 0) ? '<span class="text-warning">Disabled</span>' : 'Enabled' !!}</td>
       <td>
         <a href="{{ route('admin.users.edit',$user->id) }}" class="btn btn-default btn-xs btn-block">edit</a>
       </td>
