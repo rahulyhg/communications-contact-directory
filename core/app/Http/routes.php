@@ -27,16 +27,16 @@ Route::group(['middleware' => 'auth'], function () {
   Route::get('account',['as'=>'account', 'uses'=>'Account\AccountController@index']);
 
   Route::get('admin',['as'=>'admin', 'uses'=>'Admin\DashboardController@index']);
-  Route::get('admin/cms','Admin\CmsController@index');
 
   Route::resource('admin/directory','Admin\DirectoryController');
   Route::resource('admin/department','Admin\DepartmentController');
   Route::resource('admin/location','Admin\LocationController');
+  Route::resource('admin/cms','Admin\CmsController');
   Route::resource('admin/users','Admin\UsersController');
-  Route::post( 'admin/users/toggle',[
-    'as' => 'toggle_user',
-    'uses' => 'Admin\UsersController@toggleStatus'
-  ]);
+  // Route::post( 'admin/users/toggle',[
+  //   'as' => 'toggle_user',
+  //   'uses' => 'Admin\UsersController@toggleStatus'
+  // ]);
 });
 
 
