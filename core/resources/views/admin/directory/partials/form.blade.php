@@ -1,11 +1,11 @@
 
 <div class="form-group">
-  {!! Form::label('first_name', 'First Name') !!}
+  {!! Form::label('first_name', 'First Name', ['class'=>'required']) !!}
   {!! Form::text('first_name', null, ['required', 'class'=>'form-control', 'placeholder'=>'Firstname']) !!}
 </div>
 
 <div class="form-group">
-  {!! Form::label('last_name', 'Last Name') !!}
+  {!! Form::label('last_name', 'Last Name', ['class'=>'required']) !!}
   {!! Form::text('last_name', null, ['required', 'class'=>'form-control', 'placeholder'=>'Lastname']) !!}
 </div>
 
@@ -15,7 +15,7 @@
 </div>
 
 <div class="form-group">
-  {!! Form::label('status', 'Status') !!}
+  {!! Form::label('status', 'Status', ['class'=>'required']) !!}
   {!! Form::select('status', ['0'=>'Disabled', '1'=>'Enabled'], null, ['required', 'class'=>'form-control']) !!}
 </div>
 

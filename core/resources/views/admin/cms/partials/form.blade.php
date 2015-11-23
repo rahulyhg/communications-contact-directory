@@ -1,22 +1,22 @@
 
 <div class="form-group">
-  {!! Form::label('title', 'Title') !!}
+  {!! Form::label('title', 'Title', ['class'=>'required']) !!}
   {!! Form::text('title', null, ['required', 'class'=>'form-control', 'placeholder'=>'Title']) !!}
 </div>
 
 <div class="form-group">
-  {!! Form::label('tag', 'Tag') !!}
+  {!! Form::label('tag', 'Tag', ['class'=>'required']) !!}
   {!! Form::text('tag', null, ['required', 'class'=>'form-control', 'placeholder'=>'tag']) !!}
 </div>
 
 <div class="form-group">
-  {!! Form::label('status', 'Status') !!}
+  {!! Form::label('status', 'Status', ['class'=>'required']) !!}
   {!! Form::select('status', ['0'=>'Disabled', '1'=>'Enabled'], null, ['required', 'class'=>'form-control']) !!}
 </div>
 
 <div class="form-group">
-  {!! Form::label('content', 'Content') !!}
-  {!! Form::textarea('content', null, ['class'=>'form-control', 'placeholder'=>'Sample note text.']) !!}
+  {!! Form::label('content', 'Content', ['class'=>'required']) !!}
+  {!! Form::textarea('content', null, ['required','class'=>'form-control', 'placeholder'=>'Sample note text.']) !!}
 </div>
 
 <div class="form-group">
