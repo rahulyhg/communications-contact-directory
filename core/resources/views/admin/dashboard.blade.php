@@ -43,11 +43,11 @@
 
 <div class="row dashboard-reports">
   <div class="col-sm-6">
-    <h2 class="report-title">Report</h2>
+    <h2 class="report-title"><i class="fa fa-bar-chart-o"></i>&nbsp;Report</h2>
     <p>Report goes here.</p>
   </div>
   <div class="col-sm-6">
-    <h2 class="report-title">Report</h2>
+    <h2 class="report-title"><i class="fa fa-bar-chart-o"></i>&nbsp;Report</h2>
     <p>Report goes here.</p>
   </div>
 </div>

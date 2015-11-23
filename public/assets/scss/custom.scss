@@ -373,6 +373,10 @@ p.phone {
   border-radius: 0px;
 }
 
+ul.pagination {
+  font-size: 14px;
+}
+
 .pagination>li:first-child>a, .pagination>li:first-child>span {
   margin-left: 0;
   border-top-left-radius: 0px;
@@ -500,4 +504,8 @@ a.dashboard-link, a.dashboard-link:hover, a.dashboard-link:visited {
   padding-bottom: 12px;
   color: lighten( $standout, 15% );
   font-family: $sansSerifSecondary;
+}
+
+.admin-navigation-block {
+  background-color: lighten( $adminDark, 15% );
 }

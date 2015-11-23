@@ -8,11 +8,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{ route('admin') }}">Admin Panel{{ (isset($title)) ? " :: ".$title : "" }}</a>
+      <a class="navbar-brand" href="{{ route('admin') }}"><i class="fa fa-home"></i>&nbsp;<span class="hidden-xs">{{ Config::get('app.site_title') }}</span> Admin Panel</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <div class="visible-xs">
+        <div class="visible-xs admin-navigation-block">
           @include('_includes/admin_navigation')
         </div>
         <li><a href="{{ route('home') }}" target="_blank" class="admin-nav-link"><i class="fa fa-external-link"></i>&nbsp;Front End</a></li>
