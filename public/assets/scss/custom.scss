@@ -475,3 +475,29 @@ p.phone {
   padding-bottom: .6em;
   margin-bottom: 1em;
 }
+
+.dashboard-actions {
+  margin-bottom: 15px;
+}
+
+.dashboard-link-block {
+  border: 1px solid lighten( $adminDark, 15% );
+  padding: 12px 3px 8px 3px;
+  background-color: lighten( $adminDark, 15% );
+}
+
+a.dashboard-link, a.dashboard-link:hover, a.dashboard-link:visited {
+  text-decoration: none;
+}
+
+.dashboard-link-block:hover {
+  background-color: darken( $standout, 15% );
+  color: #fff;
+}
+
+.report-title {
+  border-bottom: 1px solid lighten( $standout, 15% );
+  padding-bottom: 12px;
+  color: lighten( $standout, 15% );
+  font-family: $sansSerifSecondary;
+}
