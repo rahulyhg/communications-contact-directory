@@ -5,7 +5,9 @@
   <div class="container">
 
     <div class="col-md-12">
-      <p>About page details go here.</p>
+      @if( $content)
+        {!! $content->content !!}
+      @endif
     </div><!-- /.col -->
 
   </div><!-- /.half-container -->

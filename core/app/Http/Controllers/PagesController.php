@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Cms;
 use App\Directory;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -33,7 +34,9 @@ class PagesController extends Controller
   {
     $title = "About Page";
     $page_active = "about";
-    return view('pages.about', compact('title','page_active'));
+    $content = Cms::where('tag','about')->where('status',1)->first();
+
+    return view('pages.about', compact('title','page_active', 'content'));
   }
 
   // page that displays the table output
