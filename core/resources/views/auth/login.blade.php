@@ -21,14 +21,14 @@
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
           <div class="form-group">
-            <label class="control-label">Email Address</label>
-            <p class="help-block">Use <em>admin@localhost.com</em> during testing.</p>
+            <label class="control-label required">Email Address</label>
+            <p class="help-block">Use <code>admin@localhost.com</code> during testing.</p>
             <input type="email" class="form-control" name="email" value="{{ old('email') }}">
           </div>
 
           <div class="form-group">
-            <label class="control-label">Password</label>
-            <p class="help-block">Use <em>password</em> during testing.</p>
+            <label class="control-label required">Password</label>
+            <p class="help-block">Use <code>password</code> during testing.</p>
             <input type="password" class="form-control" name="password">
           </div>
 
