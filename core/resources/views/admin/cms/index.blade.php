@@ -12,8 +12,8 @@
     <thead>
       <tr>
         <th>Title</th>
-        <th>Tag</th>
-        <th>Status</th>
+        <th class="visible-lg">Tag</th>
+        <th class="visible-lg">Status</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -22,8 +22,8 @@
     @foreach ($entries as $entry)
     <tr>
       <td>{{ $entry->title }}</td>
-      <td>{{ $entry->tag }}</td>
-      <td>{!! ($entry->status == 0) ? '<span class="text-warning">Disabled</span>' : 'Enabled' !!}</td>
+      <td class="visible-lg">{{ $entry->tag }}</td>
+      <td class="visible-lg">{!! ($entry->status == 0) ? '<span class="text-warning">Disabled</span>' : 'Enabled' !!}</td>
       <td>
         <a href="{{ route('admin.cms.edit',$entry->id) }}" class="btn btn-default btn-xs btn-block">edit</a>
       </td>
