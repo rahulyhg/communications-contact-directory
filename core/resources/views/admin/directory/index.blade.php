@@ -12,10 +12,10 @@
     <thead>
       <tr>
         <th>Name</th>
-        <th>Email</th>
-        <th>Location</th>
-        <th>Department</th>
-        <th>Status</th>
+        <th class="visible-lg">Email</th>
+        <th class="hidden-xs hidden-sm">Location</th>
+        <th class="hidden-xs hidden-sm">Department</th>
+        <th class="visible-lg">Status</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -24,10 +24,10 @@
     @foreach ($entries as $entry)
     <tr>
       <td>{{ $entry->first_name }} {{ $entry->last_name }}</td>
-      <td>{{ $entry->email }}</td>
-      <td>{{ $entry->location->title }}</td>
-      <td>{{ $entry->department->title }}</td>
-      <td>{!! ($entry->status == 0) ? '<span class="text-warning">Disabled</span>' : 'Enabled' !!}</td>
+      <td class="visible-lg">{{ $entry->email }}</td>
+      <td class="hidden-xs hidden-sm">{{ $entry->location->title }}</td>
+      <td class="hidden-xs hidden-sm">{{ $entry->department->title }}</td>
+      <td class="visible-lg">{!! ($entry->status == 0) ? '<span class="text-warning">Disabled</span>' : 'Enabled' !!}</td>
       <td>
         <a href="{{ route('admin.directory.edit',$entry->id) }}" class="btn btn-default btn-xs btn-block">edit</a>
       </td>
