@@ -43,25 +43,31 @@
 
 <div class="row dashboard-reports">
   <div class="col-sm-6">
-    <h2 class="report-title"><i class="fa fa-bar-chart-o"></i>&nbsp;Report</h2>
+    <h2 class="report-title"><i class="fa fa-bar-chart-o"></i>&nbsp;Counts</h2>
     <ul class="list-group">
       <li class="list-group-item">
-        <span class="badge">14</span>
-        Cras justo odio
+        <span class="badge">{{ $count_directory }}</span>
+        <a href="{{ route('admin.directory.index') }}">Active Directory Entries</a>
       </li>
       <li class="list-group-item">
-        <span class="badge">2</span>
-        Dapibus ac facilisis in
+        <span class="badge">{{ $count_users }}</span>
+        <a href="{{ route('admin.users.index') }}">Active Users</a>
       </li>
       <li class="list-group-item">
-        <span class="badge">1</span>
-        Morbi leo risus
+        <span class="badge">{{ $count_messages }}</span>
+        <a href="{{ route('admin.message.index') }}">Messages</a>
       </li>
     </ul>
   </div>
   <div class="col-sm-6">
-    <h2 class="report-title"><i class="fa fa-bar-chart-o"></i>&nbsp;Report</h2>
-    <p>Report goes here.</p>
+    <h2 class="report-title"><i class="fa fa-bar-chart-o"></i>&nbsp;Recent Messages</h2>
+    @if ($messages)
+      @foreach ($messages as $message)
+      <p>{{ substr($message->created_at,0,10) }} - <a href="{{ route('admin.message.show',$message->id) }}">{{ $message->subject }}</a></p>
+      @endforeach
+    @else
+    <h5>No recent messages</h5>
+    @endif
   </div>
 </div>
 @stop

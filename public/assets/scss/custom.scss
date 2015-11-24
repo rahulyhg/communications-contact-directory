@@ -526,3 +526,11 @@ a.dashboard-link, a.dashboard-link:hover, a.dashboard-link:visited {
   padding: 6px;
   background-color: #eee;
 }
+
+.badge {
+  font-size: 16px;
+  font-weight: 100;
+  padding: 5px 12px;
+  border-radius: 0px;
+  background-color: $standout;
+}

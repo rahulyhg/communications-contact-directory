@@ -185,4 +185,6 @@ a.dashboard-link, a.dashboard-link:hover, a.dashboard-link:visited { text-decora
 
 .message-copy { font-size: 16px; font-family: "Inconsolata", Courier, monospace; padding: 6px; background-color: #eee; }
 
+.badge { font-size: 16px; font-weight: 100; padding: 5px 12px; border-radius: 0px; background-color: #0078ae; }
+
 /*# sourceMappingURL=custom.css.map */
