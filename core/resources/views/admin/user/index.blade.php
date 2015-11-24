@@ -11,10 +11,10 @@
     <caption>Optional table caption.</caption>
     <thead>
       <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
+        <th>First</th>
+        <th>Last</th>
         <th>Username</th>
-        <th>Status</th>
+        <th class="visible-lg">Status</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -25,7 +25,7 @@
       <td>{{ $user->first_name }}</td>
       <td>{{ $user->last_name }}</td>
       <td>{{ $user->email }}</td>
-      <td>{!! ($user->status == 0) ? '<span class="text-warning">Disabled</span>' : 'Enabled' !!}</td>
+      <td class="visible-lg">{!! ($user->status == 0) ? '<span class="text-warning">Disabled</span>' : 'Enabled' !!}</td>
       <td>
         <a href="{{ route('admin.users.edit',$user->id) }}" class="btn btn-default btn-xs btn-block">edit</a>
       </td>
