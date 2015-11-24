@@ -12,9 +12,9 @@
     <thead>
       <tr>
         <th>Title</th>
-        <th>Note</th>
-        <th>Status</th>
-        <th>Entries</th>
+        <th class="visible-lg">Note</th>
+        <th class="hidden-xs hidden-sm">Status</th>
+        <th class="hidden-xs hidden-sm">Entries</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -23,9 +23,9 @@
     @foreach ($departments as $department)
     <tr>
       <td>{{ $department->title }}</td>
-      <td>{{ $department->note }}</td>
-      <td>{!! ($department->status == 0) ? '<span class="text-warning">Disabled</span>' : 'Enabled' !!}</td>
-      <td>{{ $department->count_entries }}</td>
+      <td class="visible-lg">{{ $department->note }}</td>
+      <td class="hidden-xs hidden-sm">{!! ($department->status == 0) ? '<span class="text-warning">Disabled</span>' : 'Enabled' !!}</td>
+      <td class="hidden-xs hidden-sm">{{ $department->count_entries }}</td>
       <td>
         <a href="{{ route('admin.department.edit',$department->id) }}" class="btn btn-default btn-xs btn-block">edit</a>
       </td>
