@@ -7,7 +7,7 @@
       <div class="well">
         <h3>Contact Us</h3>
 
-        {!! Form::open() !!}
+        {!! Form::open( ['route' => 'storeContact'] ) !!}
 
           <div class="form-group">
             {!! Form::label('name', 'Name', ['class'=>'required']) !!}

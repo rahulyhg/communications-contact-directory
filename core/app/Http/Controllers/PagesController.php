@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Cms;
+use App\Message;
 use App\Directory;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -45,5 +46,24 @@ class PagesController extends Controller
     $title = "Contact Page";
     $page_active = "contact";
     return view('pages.contact', compact('title','page_active'));
+  }
+
+  /**
+   * Store a newly created resource in storage.
+   *
+   * @param  Request  $request
+   * @return Response
+   */
+  public function storeContact(Request $request)
+  {
+    $message = new Message;
+    $message->name = $request->name;
+    $message->email = $request->email;
+    $message->subject = $request->subject;
+    $message->message = $request->message;
+
+    $message->save();
+    session()->flash('flash_success','Thank you for your message.');
+    return redirect()->route('home');
   }
 }

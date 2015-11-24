@@ -48,6 +48,7 @@ Route::group(['middleware' => 'auth'], function () {
 Route::get('/',['as'=>'home', 'uses'=>'PagesController@table']);
 Route::get('directory',['as'=>'directory', 'uses'=>'PagesController@table']);
 Route::get('contact',['as'=>'contact', 'uses'=>'PagesController@contact']);
+Route::post('storeContact',['as'=>'storeContact', 'uses'=>'PagesController@storeContact']);
 Route::get('about',['as'=>'about', 'uses'=>'PagesController@about']);
 
 Route::get('sign-in',['as'=>'login', 'uses'=>'Auth\AuthController@getLogin']);
