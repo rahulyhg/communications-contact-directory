@@ -11,8 +11,8 @@
       <tr>
         <th>Posted</th>
         <th>Name</th>
-        <th>Email</th>
-        <th>Subject</th>
+        <th class="hidden-xs hidden-sm">Email</th>
+        <th class="visible-lg">Subject</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -22,8 +22,8 @@
     <tr>
       <td>{{ $message->created_at }}</td>
       <td>{{ $message->name }}</td>
-      <td>{{ $message->email }}</td>
-      <td>{{ $message->subject }}</td>
+      <td class="hidden-xs hidden-sm">{{ $message->email }}</td>
+      <td class="visible-lg">{{ $message->subject }}</td>
       <td>
       <a href="{{ route('admin.message.show',$message->id) }}" class="btn btn-default btn-xs btn-block">read</a>
     </td>
