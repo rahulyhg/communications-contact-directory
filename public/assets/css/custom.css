@@ -181,4 +181,8 @@ a.dashboard-link, a.dashboard-link:hover, a.dashboard-link:visited { text-decora
 
 .admin-navigation-block { background-color: #363636; }
 
+.message-label { font-size: 18px; font-weight: bold; font-family: Raleway, Arial, Helvetica, sans-serif; }
+
+.message-copy { font-size: 16px; font-family: "Inconsolata", Courier, monospace; padding: 6px; background-color: #eee; }
+
 /*# sourceMappingURL=custom.css.map */

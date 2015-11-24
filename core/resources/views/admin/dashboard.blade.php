@@ -44,7 +44,20 @@
 <div class="row dashboard-reports">
   <div class="col-sm-6">
     <h2 class="report-title"><i class="fa fa-bar-chart-o"></i>&nbsp;Report</h2>
-    <p>Report goes here.</p>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <span class="badge">14</span>
+        Cras justo odio
+      </li>
+      <li class="list-group-item">
+        <span class="badge">2</span>
+        Dapibus ac facilisis in
+      </li>
+      <li class="list-group-item">
+        <span class="badge">1</span>
+        Morbi leo risus
+      </li>
+    </ul>
   </div>
   <div class="col-sm-6">
     <h2 class="report-title"><i class="fa fa-bar-chart-o"></i>&nbsp;Report</h2>

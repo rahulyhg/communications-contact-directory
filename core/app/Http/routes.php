@@ -32,6 +32,7 @@ Route::group(['middleware' => 'auth'], function () {
   Route::resource('admin/department','Admin\DepartmentController');
   Route::resource('admin/location','Admin\LocationController');
   Route::resource('admin/cms','Admin\CmsController');
+  Route::resource('admin/message','Admin\MessageController');
   Route::resource('admin/users','Admin\UsersController');
   // Route::post( 'admin/users/toggle',[
   //   'as' => 'toggle_user',

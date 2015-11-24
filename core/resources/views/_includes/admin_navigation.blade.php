@@ -9,8 +9,8 @@
   <li class="admin-navigation-link{!! (isset($page_active) AND $page_active == 'users') ? " active" : "" !!}">
     <a href="{{ route('admin') }}/users/"><i class="fa fa-users"></i>&nbsp;Users</a>
   </li>
-  <li class="admin-navigation-link{!! (isset($page_active) AND $page_active == 'contact') ? " active" : "" !!}">
-    <a href="{{ route('admin') }}/contact/"><i class="fa fa-envelope"></i>&nbsp;Messages</a>
+  <li class="admin-navigation-link{!! (isset($page_active) AND $page_active == 'message') ? " active" : "" !!}">
+    <a href="{{ route('admin') }}/message/"><i class="fa fa-envelope"></i>&nbsp;Messages</a>
   </li>
 </ul>
 <p class="admin-navigation-title">Contact Management</p>
