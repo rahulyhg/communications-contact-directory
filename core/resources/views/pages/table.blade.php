@@ -20,7 +20,7 @@
         <tbody>
           @foreach ($entries as $entry)
           <tr>
-            <td><a href="#" data-toggle="modal" data-target="#{{ $entry->id }}">{{ $entry->first_name }}&nbsp;{{ $entry->last_name }}</a></td>
+            <td><a href="#" data-toggle="modal" data-target="#entryModal">{{ $entry->first_name }}&nbsp;{{ $entry->last_name }}</a></td>
             <td class="hidden-xs hidden-sm">{{ $entry->location->title }}</td>
             <td class="hidden-xs hidden-sm">{{ $entry->department->title }}</td>
 
@@ -56,5 +56,7 @@
   @endif
 
 </div><!-- /.container -->
+
+@include('pages/modal')
 
 @stop

@@ -30,6 +30,21 @@ class PagesController extends Controller
     return view('pages.table', compact('title','page_active', 'entries'));
   }
 
+  /**
+   * Display the specified resource.
+   *
+   * @param  int  $id
+   * @return Response
+   */
+  public function modal($id)
+  {
+    $title = "Table Page";
+    $page_active = "table";
+    $entry = Directory::find($id);
+
+    return view('pages.modal', compact('entry'));
+  }
+
   // page that displays the table output
   public function about()
   {

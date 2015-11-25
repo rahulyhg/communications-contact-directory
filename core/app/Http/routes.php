@@ -47,6 +47,7 @@ Route::group(['middleware' => 'auth'], function () {
 |--------------------------------------------------------------------------
 */
 Route::get('/',['as'=>'home', 'uses'=>'PagesController@table']);
+Route::get('modal/{id}',['as'=>'modal', 'uses'=>'PagesController@modal']);
 Route::get('directory',['as'=>'directory', 'uses'=>'PagesController@table']);
 Route::get('contact',['as'=>'contact', 'uses'=>'PagesController@contact']);
 Route::post('storeContact',['as'=>'storeContact', 'uses'=>'PagesController@storeContact']);
