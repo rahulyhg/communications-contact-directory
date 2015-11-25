@@ -65,6 +65,7 @@ class DirectoryController extends Controller
     $entry->website = $request->website;
     $entry->twitter = $request->twitter;
     $entry->facebook = $request->facebook;
+    $entry->googleplus = $request->googleplus;
     $entry->linkedin = $request->linkedin;
     $entry->note = $request->note;
 
@@ -126,6 +127,7 @@ class DirectoryController extends Controller
     $entry->website = $request->website;
     $entry->twitter = $request->twitter;
     $entry->facebook = $request->facebook;
+    $entry->googleplus = $request->googleplus;
     $entry->linkedin = $request->linkedin;
     $entry->note = $request->note;
 
