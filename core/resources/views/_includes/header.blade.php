@@ -21,8 +21,8 @@
               <i class="fa fa-caret-down"></i>&nbsp;{{ Auth::user()->first_name }}
             </a>
             <ul class="dropdown-menu">
-              <li><a href="{{ route('account') }}"><i class="fa fa-user"></i>&nbsp;&nbsp;My Account</a></li>
-              <li><a href="{{ route('admin') }}"><i class="fa fa-cogs"></i>&nbsp;&nbsp;Admin</a></li>
+              <!-- <li><a href="{{ route('account') }}"><i class="fa fa-user"></i>&nbsp;&nbsp;My Account</a></li> -->
+              <li><a href="{{ route('admin') }}"><i class="fa fa-cogs"></i>&nbsp;&nbsp;Admin Panel</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="{{ route('logout') }}"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;Sign-out</a></li>
             </ul>
