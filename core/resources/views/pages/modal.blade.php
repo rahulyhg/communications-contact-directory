@@ -22,27 +22,59 @@
   @if ( strlen($entry->primary_phone) > 0 )
   <p class="phone">
     <i class="fa fa-phone"></i>&nbsp;
-    <a href="tel:+{{ $entry->primary_phone }}">{{ $entry->primary_phone }}</a>
+    <a href="tel:+{{ str_replace("-","",$entry->primary_phone) }}">{{ $entry->primary_phone }}</a>
   </p>
   @endif
 
-  @if ( strlen($entry->secondary) > 0 )
+  @if ( strlen($entry->secondary_phone) > 0 )
   <p class="phone">
     <i class="fa fa-phone"></i>&nbsp;
-    <a href="tel:+{{ $entry->secondary }}">{{ $entry->secondary }}</a>
+    <a href="tel:+{{ str_replace("-","",$entry->secondary_phone) }}">{{ $entry->secondary_phone }}</a>
+  </p>
+  @endif
+
+  @if ( strlen($entry->website) > 0)
+  <p class="website">
+    <i class="fa fa-globe"></i>&nbsp;<a href="{{ $entry->website }}" target="_blank">{{ $entry->website }}</a>
   </p>
   @endif
 
   @if ( strlen($entry->twitter) > 0)
   <p class="twitter">
-    <a href="https://twitter.com/{{ $entry->twitter }}"><i class="fa fa-twitter"></i>&nbsp;{{ $entry->twitter }}</a>
+    <i class="fa fa-twitter-square"></i>&nbsp;<a href="https://twitter.com/{{ str_replace("@","",$entry->twitter) }}" target="_blank">{{ $entry->twitter }}</a>
   </p>
+  @endif
+
+  @if ( strlen($entry->facebook) > 0)
+  <p class="facebook">
+    <i class="fa fa-facebook-official"></i>&nbsp;<a href="https://www.facebook.com/public/{{ str_replace("@","",$entry->facebook) }}" target="_blank">{{ $entry->facebook }}</a>
+  </p>
+  @endif
+
+  @if ( strlen($entry->googleplus) > 0)
+  <p class="googleplus">
+    <i class="fa fa-google-plus-square"></i>&nbsp;<a href="https://plus.google.com/{{ $entry->googleplus }}" target="_blank">{{ $entry->googleplus }}</a>
+  </p>
+  @endif
+
+  @if ( strlen($entry->linkedin) > 0)
+  <p class="linkedin">
+    <i class="fa fa-linkedin-square"></i>&nbsp;<a href="{{ $entry->linkedin }}" target="_blank">{{ $entry->linkedin }}</a>
+  </p>
+  @endif
+
+  @if ( strlen($entry->note) > 0 )
+  <p class="note">{{ $entry->note }}</p>
   @endif
 </div><!-- /.modal-body -->
 
 <div class="modal-footer">
-  <button type="button" class="btn btn-default"><i class="fa fa-envelope"></i></button>
-  <button type="button" class="btn btn-default"><i class="fa fa-phone"></i></button>
+  @if ( strlen($entry->email) > 0 )
+  <a href="mailto:{{ $entry->email }}" class="btn btn-default"><i class="fa fa-envelope"></i></a>
+  @endif
+  @if ( strlen($entry->primary_phone) > 0 )
+  <a href="tel:+{{ str_replace("-","",$entry->primary_phone) }}" class="btn btn-default"><i class="fa fa-phone"></i></a>
+  @endif
   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 </div><!-- /.modal-footer -->
 
