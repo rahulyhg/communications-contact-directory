@@ -187,4 +187,6 @@ a.dashboard-link, a.dashboard-link:hover, a.dashboard-link:visited { text-decora
 
 .badge { font-size: 16px; font-weight: 100; padding: 5px 12px; border-radius: 0px; background-color: #0078ae; }
 
+.modal-content { border-radius: 0px; }
+
 /*# sourceMappingURL=custom.css.map */
