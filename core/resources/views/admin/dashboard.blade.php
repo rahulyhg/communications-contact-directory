@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="content">
-<h1 class="page-title">{{ $title }}</h1>
+<h1 class="page-title"><i class="fa fa-tachometer"></i>&nbsp;{{ $title }}</h1>
 </div><!-- /.content -->
 
 <div class="row dashboard-actions hidden-xs">
@@ -43,7 +43,7 @@
 
 <div class="row dashboard-reports">
   <div class="col-sm-6">
-    <h2 class="report-title"><i class="fa fa-bar-chart-o"></i>&nbsp;Counts</h2>
+    <h2 class="report-title"><i class="fa fa-hashtag"></i>&nbsp;Counts</h2>
     <ul class="list-group">
       <li class="list-group-item">
         <span class="badge">{{ $count_directory }}</span>
@@ -60,7 +60,7 @@
     </ul>
   </div>
   <div class="col-sm-6">
-    <h2 class="report-title"><i class="fa fa-bar-chart-o"></i>&nbsp;Recent Messages</h2>
+    <h2 class="report-title"><i class="fa fa-clock-o"></i>&nbsp;Recent Messages</h2>
     @if ($messages)
       @foreach ($messages as $message)
       <p>{{ substr($message->created_at,0,10) }} - <a href="{{ route('admin.message.show',$message->id) }}">{{ $message->subject }}</a></p>
