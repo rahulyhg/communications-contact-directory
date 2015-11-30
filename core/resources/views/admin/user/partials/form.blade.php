@@ -21,6 +21,12 @@
 </div>
 
 <div class="form-group">
+  {!! Form::label('admin', 'Account Type', ['class'=>'required']) !!}
+  <span class="help-block">Users cannot access the administration area.</span>
+  {!! Form::select('admin', ['0'=>'User', '1'=>'Administrator'], null, ['required', 'class'=>'form-control']) !!}
+</div>
+
+<div class="form-group">
   {!! Form::label('note', 'Administrative Note') !!}
   {!! Form::textarea('note', null, ['class'=>'form-control', 'placeholder'=>'Example: account was disabled on Tuesday.']) !!}
 </div>

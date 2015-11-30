@@ -53,12 +53,21 @@ class UsersController extends Controller
     $user->email = $request->email;
     $user->author = Auth::user()->id;
     $user->note = $request->note;
-    $user->admin = ($request->admin ? true : false);
+    if($request->status !== "1"){
+      $user->status = 0;
+    } else {
+      $user->status = $request->status;
+    }
+    if($request->admin !== "1"){
+      $user->admin = 0;
+    } else {
+      $user->admin = $request->admin;
+    }
     $user->password = bcrypt('password');
 
     $user->save();
     session()->flash('flash_success','User saved!');
-    return redirect()->route('store_users');
+    return redirect()->route('admin.users.index');
   }
 
   /**
@@ -97,8 +106,24 @@ class UsersController extends Controller
   public function update(Request $request, $id)
   {
     $user = User::find($id);
-    $user->update($request->all());
+    $user->first_name = $request->first_name;
+    $user->last_name = $request->last_name;
+    $user->email = $request->email;
+    $user->author = Auth::user()->id;
+    $user->note = $request->note;
+    if($request->status !== "1"){
+      $user->status = 0;
+    } else {
+      $user->status = $request->status;
+    }
+    if($request->admin !== "1"){
+      $user->admin = 0;
+    } else {
+      $user->admin = $request->admin;
+    }
 
+    $user->save();
+    session()->flash('flash_success','User saved!');
     return redirect()->route('admin.users.index');
   }
 
