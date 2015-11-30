@@ -60,7 +60,7 @@
     </ul>
   </div>
   <div class="col-sm-6">
-    <h2 class="report-title"><i class="fa fa-clock-o"></i>&nbsp;Recent Messages</h2>
+    <h2 class="report-title"><i class="fa fa-pencil"></i>&nbsp;Recent Messages</h2>
     @if ($messages)
       @foreach ($messages as $message)
       <p>{{ substr($message->created_at,0,10) }} - <a href="{{ route('admin.message.show',$message->id) }}">{{ $message->subject }}</a></p>
