@@ -11,10 +11,10 @@
     <caption>Optional table caption.</caption>
     <thead>
       <tr>
-        <th>First</th>
-        <th>Last</th>
-        <th>Username</th>
+        <th>Last, First</th>
+        <th>Username/Email</th>
         <th class="visible-lg">Status</th>
+        <th class="visible-lg">Type</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -22,10 +22,10 @@
 
     @foreach ($users as $user)
     <tr>
-      <td>{{ $user->first_name }}</td>
-      <td>{{ $user->last_name }}</td>
+      <td>{{ $user->last_name }},&nbsp;{{ $user->first_name }}</td>
       <td>{{ $user->email }}</td>
       <td class="visible-lg">{!! ($user->status == 0) ? '<span class="text-warning">Disabled</span>' : 'Enabled' !!}</td>
+      <td class="visible-lg">{!! ($user->admin == 1) ? '<span class="text-warning">Admin</span>' : 'User' !!}</td>
       <td>
         <a href="{{ route('admin.users.edit',$user->id) }}" class="btn btn-default btn-xs btn-block">edit</a>
       </td>

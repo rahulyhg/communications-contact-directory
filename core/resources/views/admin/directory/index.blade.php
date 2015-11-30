@@ -11,7 +11,7 @@
     <caption>{{ count($entries) }} Directory Entries</caption>
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Last, First</th>
         <th class="visible-lg">Email</th>
         <th class="hidden-xs hidden-sm">Location</th>
         <th class="hidden-xs hidden-sm">Department</th>
@@ -23,7 +23,7 @@
 
     @foreach ($entries as $entry)
     <tr>
-      <td>{{ $entry->first_name }} {{ $entry->last_name }}</td>
+      <td>{{ $entry->last_name }},&nbsp;{{ $entry->first_name }}</td>
       <td class="visible-lg">{{ $entry->email }}</td>
       <td class="hidden-xs hidden-sm">{{ $entry->location->title }}</td>
       <td class="hidden-xs hidden-sm">{{ $entry->department->title }}</td>
