@@ -22,8 +22,10 @@
             </a>
             <ul class="dropdown-menu">
               <!-- <li><a href="{{ route('account') }}"><i class="fa fa-user"></i>&nbsp;&nbsp;My Account</a></li> -->
+              @if(Auth::user()->admin == 1)
               <li><a href="{{ route('admin') }}"><i class="fa fa-tachometer"></i>&nbsp;&nbsp;Admin Panel</a></li>
               <li role="separator" class="divider"></li>
+              @endif
               <li><a href="{{ route('logout') }}"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;Sign-out</a></li>
             </ul>
           </li>
