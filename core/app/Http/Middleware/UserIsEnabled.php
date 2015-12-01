@@ -35,7 +35,6 @@ class UserIsEnabled
   public function handle($request, Closure $next)
   {
     // if the users status is 0, redirect home
-    // todo: log the user out
     if (! $this->guard->user()->status == "1") {
       $this->guard->logout();
       return redirect('/');
