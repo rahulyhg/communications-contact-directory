@@ -23,7 +23,7 @@ Route::controllers([
 | Place routes that require authentication here
 |--------------------------------------------------------------------------
 */
-Route::group(['middleware' => ['auth', 'onlyallowadmins']], function () {
+Route::group(['middleware' => ['auth', 'onlyenabledusers', 'onlyallowadmins']], function () {
   Route::get('account',['as'=>'account', 'uses'=>'Account\AccountController@index']);
 
   Route::get('admin',['as'=>'admin', 'uses'=>'Admin\DashboardController@index']);
