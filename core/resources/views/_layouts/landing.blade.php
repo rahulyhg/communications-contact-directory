@@ -8,7 +8,16 @@
 
   <div class="page-content">
     <div class="wrapper">
-      @yield('content')
+        <div class="container">
+          <div class="row">
+            <div class="sign-in-form">
+                <a href="{{ route('splash') }}">
+                    <img src="{{ asset('assets/img/logo.png') }}" class="brand-logo" />
+                </a>
+            </div><!-- /.sign-in-form -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+        @yield('content')
     </div>
   </div>
 

@@ -24,9 +24,12 @@ Route::controllers([
 |--------------------------------------------------------------------------
 */
 Route::group(['middleware' => ['auth', 'onlyenabledusers']], function () {
+  // home page aliases
+  Route::get('/',['as'=>'home', 'uses'=>'PagesController@table']);
   Route::get('table',['as'=>'table', 'uses'=>'PagesController@table']);
-  Route::get('modal/{id}',['as'=>'modal', 'uses'=>'PagesController@modal']);
   Route::get('directory',['as'=>'directory', 'uses'=>'PagesController@table']);
+
+  Route::get('modal/{id}',['as'=>'modal', 'uses'=>'PagesController@modal']);
   Route::get('contact',['as'=>'contact', 'uses'=>'PagesController@contact']);
   Route::post('storeContact',['as'=>'storeContact', 'uses'=>'PagesController@storeContact']);
   Route::get('about',['as'=>'about', 'uses'=>'PagesController@about']);
@@ -57,7 +60,7 @@ Route::group(['middleware' => ['auth', 'onlyenabledusers', 'onlyallowadmins']], 
 | Place routes that DO NOT require authentication here
 |--------------------------------------------------------------------------
 */
-Route::get('/',['as'=>'home', 'uses'=>'PagesController@home']);
+Route::get('/splash',['as'=>'splash', 'uses'=>'PagesController@splash']);
 Route::get('sign-in',['as'=>'login', 'uses'=>'Auth\AuthController@getLogin']);
 Route::get('sign-out',['as'=>'logout', 'uses'=>'Auth\AuthController@getLogout']);
 Route::get('reset',['as'=>'reset', 'uses'=>'Auth\PasswordController@getEmail']);

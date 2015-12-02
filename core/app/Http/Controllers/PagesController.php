@@ -13,11 +13,12 @@ use App\Http\Controllers\Controller;
 class PagesController extends Controller
 {
   // homepage
-  public function home()
+  public function Splash()
   {
-    $title = "Home Page";
-    $page_active = "home";
-    return view('pages.home', compact('title','page_active'));
+    // $title = "Home Page";
+    // $page_active = "home";
+    // return view('pages.home', compact('title','page_active'));
+    return view('pages.splash');
   }
 
   // page that displays the table output
