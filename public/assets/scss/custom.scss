@@ -24,6 +24,7 @@ $standout: rgb(0,120,174);
 $coreColor: rgb(242, 240, 237);
 $buttonPrimary: rgb(196,87,15);
 $adminDark: #101010;
+$darkContrastColor: rgb(65, 65, 65);
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* css resets
@@ -332,8 +333,31 @@ img.brand-logo {
 .footer-section {
   padding-top: 24px;
   padding-bottom: 48px;
-  background-color: rgb(65, 65, 65);
+  background-color: $darkContrastColor;
   color: $coreColor;
+}
+
+.footer-usage-section {
+  background-color: lighten( $darkContrastColor, 33% );
+  padding-top: 20px;
+  padding-bottom: 12px;
+}
+
+p.usage {
+  font-size: 12px;
+  font-family: $sansSerifSecondary;
+  line-height: 1.3;
+}
+
+.footer-copyright-section {
+  padding-top: 20px;
+  padding-bottom: 12px;
+}
+
+p.copyright {
+  font-size: 12px;
+  font-family: $sansSerifSecondary;
+  color: lighten( $darkContrastColor, 33% );
 }
 
 .footer-section a, .footer-section a:hover, .footer-section a:visited {
@@ -446,6 +470,18 @@ ul.pagination {
   padding: 15px;
   margin: 0 auto;
   margin-top: 12px;
+}
+
+ul.horizontal-list {
+  list-style: none;
+}
+
+ul.horizontal-list li {
+  display: inline;
+}
+
+.social-list>li {
+  padding-right: 20px;
 }
 
 .well {
