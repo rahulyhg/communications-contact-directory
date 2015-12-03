@@ -5,6 +5,7 @@
 </head>
 
 <body>
+    <div id="bg"><img src="/assets/img/wine-country.jpg" alt=""></div>
 
     <div class="page-content">
         @yield('content')

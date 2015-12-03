@@ -30,10 +30,37 @@ $adminDark: #101010;
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 * { margin: 0; padding: 0; }
 
-html, body { height: 100%; }
+/*html {
+  background: url(/assets/img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/
+
+html, body { /*height: 100%;*/ }
 
 body { font-family: $sansSerifPrimary; }
 .fixed-top { padding-top: 70px;}
+
+#bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -100;
+}
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
 
 p, ul, ol, address { font-size: 20px; font-family: $sansSerifPrimary; line-height: 28px; }
 
@@ -333,13 +360,21 @@ img.brand-logo {
 }
 
 .splash-div-link {
-  padding: 12px 12px 20px;
-  transition: all 0.5s ease 0s;
-  border-radius: 2px;
+  padding: 6px;
+  background: $coreColor;
+  background: rgba( $coreColor, 0.8 );
 }
 
-.splash-div-link:hover {
-  background-color: lighten( $standout, 50% );
+@media (min-width: 768px) {
+  .splash-div-link {
+    padding: 12px 12px 20px;
+    background: $coreColor;
+    background: rgba( $coreColor, 0.8 );
+    transition: all 0.9s ease 0s;
+  }
+  .splash-div-link:hover {
+    background: $coreColor;
+  }
 }
 
 .panel-heading {
@@ -558,4 +593,16 @@ a.dashboard-link, a.dashboard-link:hover, a.dashboard-link:visited {
 
 .modal-content {
   border-radius: 0px;
+}
+
+.opaque-block {
+  background: $standout;
+  background: rgba( $standout, 0.7 );
+    transition: all 0.9s ease 0s;
+  padding: 4px;
+}
+
+.opaque-block:hover {
+  background: $coreColor;
+  background: rgba( $coreColor, 0.9 );
 }

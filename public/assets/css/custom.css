@@ -17,11 +17,17 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 * { margin: 0; padding: 0; }
 
-html, body { height: 100%; }
+/*html { background: url(/assets/img/bg.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+}*/
+html, body { /*height: 100%;*/ }
 
 body { font-family: "Source Sans Pro", "Times New Roman", times, sans-serif; }
 
 .fixed-top { padding-top: 70px; }
+
+#bg { position: fixed; top: -50%; left: -50%; width: 200%; height: 200%; z-index: -100; }
+
+#bg img { position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto; min-width: 50%; min-height: 50%; }
 
 p, ul, ol, address { font-size: 20px; font-family: "Source Sans Pro", "Times New Roman", times, sans-serif; line-height: 28px; }
 
@@ -120,10 +126,10 @@ img.brand-logo { margin-top: -15px; height: 75px; }
 .heading-break { padding-top: 36px; }
 
 @media (min-width: 1200px) { .splash-page { margin-top: 150px; } }
-.splash-div-link { padding: 12px 12px 20px; transition: all 0.5s ease 0s; border-radius: 2px; }
+.splash-div-link { padding: 6px; background: #f2f0ed; background: rgba(242, 240, 237, 0.8); }
 
-.splash-div-link:hover { background-color: #aee6ff; }
-
+@media (min-width: 768px) { .splash-div-link { padding: 12px 12px 20px; background: #f2f0ed; background: rgba(242, 240, 237, 0.8); transition: all 0.9s ease 0s; }
+  .splash-div-link:hover { background: #f2f0ed; } }
 .panel-heading { font-weight: 800; font-size: 16px; }
 
 p.organization { font-size: 14px; word-wrap: break-word; }
@@ -196,5 +202,9 @@ a.dashboard-link, a.dashboard-link:hover, a.dashboard-link:visited { text-decora
 .badge { font-size: 16px; font-weight: 100; padding: 5px 12px; border-radius: 0px; background-color: #0078ae; }
 
 .modal-content { border-radius: 0px; }
+
+.opaque-block { background: #0078ae; background: rgba(0, 120, 174, 0.7); transition: all 0.9s ease 0s; padding: 4px; }
+
+.opaque-block:hover { background: #f2f0ed; background: rgba(242, 240, 237, 0.9); }
 
 /*# sourceMappingURL=custom.css.map */
