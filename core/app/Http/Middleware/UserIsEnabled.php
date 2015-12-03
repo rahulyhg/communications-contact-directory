@@ -37,7 +37,7 @@ class UserIsEnabled
     // if the users status is 0, redirect home
     if (! $this->guard->user()->status == "1") {
       $this->guard->logout();
-      return redirect('/');
+      return redirect('/splash');
     }
 
     return $next($request);

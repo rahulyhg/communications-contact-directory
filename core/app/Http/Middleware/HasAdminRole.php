@@ -16,7 +16,7 @@ class HasAdminRole
   public function handle($request, Closure $next)
   {
     if (! $request->user()->admin == "1") {
-      return redirect('/');
+      return redirect('/splash');
     }
 
     return $next($request);
