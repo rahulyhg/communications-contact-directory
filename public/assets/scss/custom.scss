@@ -344,9 +344,9 @@ img.brand-logo {
 }
 
 p.usage {
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 1.5;
   font-family: $sansSerifSecondary;
-  line-height: 1.3;
 }
 
 .footer-copyright-section {
@@ -386,14 +386,14 @@ p.copyright {
 .splash-div-link {
   padding: 6px;
   background: $coreColor;
-  background: rgba( $coreColor, 0.8 );
+  background: rgba( $coreColor, 0.6 );
 }
 
 @media (min-width: 768px) {
   .splash-div-link {
     padding: 12px 12px 20px;
     background: $coreColor;
-    background: rgba( $coreColor, 0.8 );
+    background: rgba( $coreColor, 0.6 );
     transition: all 0.9s ease 0s;
   }
   .splash-div-link:hover {
@@ -634,11 +634,24 @@ a.dashboard-link, a.dashboard-link:hover, a.dashboard-link:visited {
 .opaque-block {
   background: $standout;
   background: rgba( $standout, 0.7 );
-    transition: all 0.9s ease 0s;
+  transition: all 0.9s ease 0s;
   padding: 4px;
 }
 
 .opaque-block:hover {
   background: $coreColor;
   background: rgba( $coreColor, 0.9 );
+}
+
+.fa-pad-right {
+  padding-right: 6px;
+}
+
+a.fa-hover {
+  color: $coreColor;
+  transition: all 0.3s ease 0s;
+}
+
+a.fa-hover:hover {
+  color: $buttonPrimary;
 }

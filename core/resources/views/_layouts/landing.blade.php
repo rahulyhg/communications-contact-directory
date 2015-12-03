@@ -23,7 +23,7 @@
         </div><!-- /.wrapper -->
     </div><!-- /.page-content -->
 
-    <div id="bg"><img src="/assets/img/mount-hood.jpg" alt=""></div>
+    <div id="bg"><img src="/assets/img/mount-hood-blurred.jpg" alt=""></div>
 @include('_includes/scripts')
 @include('_includes/analytics')
 
