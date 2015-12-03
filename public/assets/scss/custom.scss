@@ -93,6 +93,10 @@ img.brand-logo {
   height: 75px;
 }
 
+.img-center {
+  margin: auto;
+}
+
 .navbar-nohover {
   font-family: $sansSerifSecondary;
   font-weight: 100;
@@ -324,8 +328,18 @@ img.brand-logo {
 
 @media (min-width: 1200px) {
   .splash-page {
-    margin-top: 200px;
+    margin-top: 150px;
   }
+}
+
+.splash-div-link {
+  padding: 12px 12px 20px;
+  transition: all 0.5s ease 0s;
+  border-radius: 2px;
+}
+
+.splash-div-link:hover {
+  background-color: lighten( $standout, 50% );
 }
 
 .panel-heading {

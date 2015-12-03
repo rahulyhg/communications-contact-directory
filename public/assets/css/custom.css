@@ -51,6 +51,8 @@ label.required:after { content: " *"; }
 
 img.brand-logo { margin-top: -15px; height: 75px; }
 
+.img-center { margin: auto; }
+
 .navbar-nohover { font-family: Raleway, Arial, Helvetica, sans-serif; font-weight: 100; padding-top: 12px; font-size: 20px; line-height: 30px; color: #00557b; }
 
 .navbar-public { padding-top: 9px; padding-bottom: 9px; background-color: #f2f0ed; }
@@ -117,7 +119,11 @@ img.brand-logo { margin-top: -15px; height: 75px; }
 
 .heading-break { padding-top: 36px; }
 
-@media (min-width: 1200px) { .splash-page { margin-top: 200px; } }
+@media (min-width: 1200px) { .splash-page { margin-top: 150px; } }
+.splash-div-link { padding: 12px 12px 20px; transition: all 0.5s ease 0s; border-radius: 2px; }
+
+.splash-div-link:hover { background-color: #aee6ff; }
+
 .panel-heading { font-weight: 800; font-size: 16px; }
 
 p.organization { font-size: 14px; word-wrap: break-word; }
