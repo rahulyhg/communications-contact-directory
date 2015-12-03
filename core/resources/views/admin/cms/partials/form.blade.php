@@ -16,7 +16,7 @@
 
 <div class="form-group">
   {!! Form::label('content', 'Content', ['class'=>'required']) !!}
-  {!! Form::textarea('content', null, ['required','class'=>'form-control', 'placeholder'=>'Sample note text.']) !!}
+  {!! Form::textarea('content', null, ['required','class'=>'form-control wysiwyg', 'placeholder'=>'Sample note text.']) !!}
 </div>
 
 <div class="form-group">

@@ -1,5 +1,10 @@
 $(document).ready(function(){
   $('.data-table').dataTable();
+  $('.wysiwyg').summernote({
+    height: 300,                 // set editor height
+    minHeight: null,             // set minimum height of editor
+    maxHeight: null,             // set maximum height of editor
+  });
 
   $('.alert-fade-away').delay(3000).slideUp(300);
 
@@ -13,4 +18,5 @@ $(document).ready(function(){
   $("#entryModal").on("hide.bs.modal", function(e) {
     $(this).find(".modal-content").empty();
   });
+
 });
