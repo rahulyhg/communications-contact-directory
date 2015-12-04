@@ -46,6 +46,7 @@ Route::group(['middleware' => ['auth', 'onlyenabledusers', 'onlyallowadmins']], 
 
   Route::get('admin',['as'=>'admin', 'uses'=>'Admin\DashboardController@index']);
 
+  Route::get('admin/directory/excel',['as'=>'admin.directory.excel', 'uses'=>'Admin\DirectoryController@excel']);
   Route::resource('admin/directory','Admin\DirectoryController');
   Route::resource('admin/department','Admin\DepartmentController');
   Route::resource('admin/location','Admin\LocationController');
@@ -64,6 +65,7 @@ Route::get('/splash',['as'=>'splash', 'uses'=>'PagesController@splash']);
 Route::get('sign-in',['as'=>'login', 'uses'=>'Auth\AuthController@getLogin']);
 Route::get('sign-out',['as'=>'logout', 'uses'=>'Auth\AuthController@getLogout']);
 Route::get('reset',['as'=>'reset', 'uses'=>'Auth\PasswordController@getEmail']);
+
 
 
 /*

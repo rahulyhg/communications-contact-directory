@@ -159,7 +159,8 @@ return [
         /*
          * Custom Service Providers...
          */
-        Maatwebsite\Excel\ExcelServiceProvider::class,
+        // Maatwebsite\Excel\ExcelServiceProvider::class,
+        'Maatwebsite\Excel\ExcelServiceProvider',
     ],
 
     /*
@@ -209,7 +210,8 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Form'      => Illuminate\Html\FormFacade::class,
         'Html'      => Illuminate\Html\HtmlFacade::class,
-        'Excel'     => Maatwebsite\Excel\ExcelServiceProvider::class,
+        // 'Excel'     => Maatwebsite\Excel\ExcelServiceProviderFacade::class,
+        'Excel' => 'Maatwebsite\Excel\Facades\Excel',
     ],
 
 ];

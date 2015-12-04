@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
+use Excel;
 use App\Directory;
 use App\Department;
 use App\Location;
@@ -146,5 +147,27 @@ class DirectoryController extends Controller
   public function destroy($id)
   {
     //
+  }
+
+  /**
+   * Show the form for creating a new resource.
+   *
+   * @return Response
+   */
+  public function excel()
+  {
+    Excel::create('Filename', function($excel) {
+
+        // Set the title
+        $excel->setTitle('Our new awesome title');
+
+        // Chain the setters
+        $excel->setCreator('Maatwebsite')
+              ->setCompany('Maatwebsite');
+
+        // Call them separately
+        $excel->setDescription('A demonstration to change the file properties');
+
+    })->download('xls');
   }
 }
