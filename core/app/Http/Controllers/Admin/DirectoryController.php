@@ -156,18 +156,57 @@ class DirectoryController extends Controller
    */
   public function excel()
   {
-    Excel::create('Filename', function($excel) {
+    Excel::create('Directory', function($excel) {
 
-        // Set the title
-        $excel->setTitle('Our new awesome title');
+      $excel->setTitle('Washington County')
+        ->setCreator('Washington County')
+        ->setCompany('Washington County')
+        ->setDescription('A demonstration to change the file properties');
 
-        // Chain the setters
-        $excel->setCreator('Maatwebsite')
-              ->setCompany('Maatwebsite');
 
-        // Call them separately
-        $excel->setDescription('A demonstration to change the file properties');
+      $excel->sheet('All Directory Entries', function($sheet) {
+        $entries = Directory::all();
 
-    })->download('xls');
+        foreach($entries AS $entry) {
+          $status = "Disabled";
+          if($entry->status == 1){
+            $status = "Enabled";
+          }
+          $sheet->appendRow(array(
+            $entry->first_name,
+            $entry->last_name,
+            $entry->email,
+            $status,
+            $entry->location->title,
+            $entry->department->title,
+            $entry->primary_phone,
+            $entry->secondary_phone,
+            $entry->twitter,
+            $entry->facebook,
+            $entry->googleplus,
+            $entry->linkedin,
+            $entry->note
+          ));
+        }
+
+        $headers = array(
+          'First',
+          'Last',
+          'Email',
+          'Status',
+          'Location',
+          'Department',
+          'Primary Phone',
+          'Secondary Phone',
+          'Twitter',
+          'Facebook',
+          'Google Plus',
+          'LinkedIn',
+          'Note'
+        );
+        $sheet->prependRow(1,$headers);
+      });
+
+    })->export('xls');
   }
 }

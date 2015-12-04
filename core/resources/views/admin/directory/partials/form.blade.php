@@ -35,7 +35,7 @@
 </div>
 
 <div class="form-group">
-  {!! Form::label('secondary_phone', 'Primary Phone Number') !!}
+  {!! Form::label('secondary_phone', 'Secondary Phone Number') !!}
   {!! Form::text('secondary_phone', null, ['class'=>'form-control', 'placeholder'=>'123-456-7890']) !!}
 </div>
 
@@ -71,5 +71,5 @@
 
 <div class="form-group">
   {!! Form::submit($submit_text, ['class'=>'btn btn-primary']) !!}
-  <a href="{{ route('admin.users.store') }}" class="btn btn-default">Cancel</a>
+  <a href="{{ route('admin.directory.index') }}" class="btn btn-default">Cancel</a>
 </div>

@@ -4,7 +4,10 @@
 
 <div class="content">
   <h1 class="page-title">{{ $title }}
-    <span class="pull-right"><a href="{{ route('admin.directory.create') }}" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;Add Entry</a></span>
+    <span class="pull-right">
+      <a href="{{ route('admin.directory.excel') }}" class="btn btn-link" target="_blank"><i class="fa fa-file-excel-o  fa-pad-right"></i>Download to Excel</a>
+      <a href="{{ route('admin.directory.create') }}" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;Add Entry</a>
+    </span>
   </h1>
   @if ($entries)
   <table class="table table-striped table-bordered data-table dataTable">
