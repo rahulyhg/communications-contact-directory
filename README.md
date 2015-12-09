@@ -27,16 +27,15 @@ You'll probably want the following:
     $ mysql -uroot -proot
     $ create database {database_name_from_above_step};
 
-
-### Seed the database
-    $ php artisan db:seed
-
-
 ### Update application
     $ cd /vagrant/
     $ bower install
     $ cd /vagrant/core/
     $ composer install
+
+### Seed the database
+    $ php artisan migrate
+    $ php artisan db:seed
 
 ### Test
 Browse to [http://localhost:8080/](http://localhost:8080/).
