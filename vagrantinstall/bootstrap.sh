@@ -60,10 +60,6 @@ ln -s /usr/bin/nodejs /usr/bin/node
 # install With Bower, Grunt, and Gulp here
 npm install -g bower
 
-# Fixes issue using bower behind a firewall/proxy
-# See: https://github.com/bower/bower/issues/731
-git config --global url.https://github.com/.insteadOf git://github.com/
-
 npm install -g grunt
 npm install -g gulp
 ################################################################################
@@ -72,6 +68,10 @@ npm install -g gulp
 # Git setup ####################################################################
 # Install Git
 inst 'Git' git
+
+# Fixes issue using bower behind a firewall/proxy
+# See: https://github.com/bower/bower/issues/731
+git config --global url.https://github.com/.insteadOf git://github.com/
 ################################################################################
 
 
