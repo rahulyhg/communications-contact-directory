@@ -123,9 +123,9 @@ img.brand-logo { margin-top: -15px; height: 75px; }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* custom id's and classes
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-@media (min-width: 640px) { h1.page-title { font-weight: 400; font-family: Raleway, Arial, Helvetica, sans-serif; font-size: 30px; color: #93a73b; margin-top: 10px; margin-bottom: 6px; }
-  h2.page-subtitle { font-weight: 100; font-size: 26px; font-family: Raleway, Arial, Helvetica, sans-serif; margin-top: 10px; margin-bottom: 6px; } }
-@media (max-width: 640px) { h1.page-title { font-weight: 400; font-family: Raleway, Arial, Helvetica, sans-serif; font-size: 24px; color: #93a73b; }
+@media (min-width: 640px) { h1.page-title { font-weight: 400; font-family: Raleway, Arial, Helvetica, sans-serif; font-size: 24px; color: #0078ae; margin-top: 6px; margin-bottom: 4px; }
+  h2.page-subtitle { font-weight: 100; font-size: 20px; color: #424242; font-family: Raleway, Arial, Helvetica, sans-serif; margin-top: 10px; margin-bottom: 6px; } }
+@media (max-width: 640px) { h1.page-title { font-weight: 400; font-family: Raleway, Arial, Helvetica, sans-serif; font-size: 22px; color: #93a73b; }
   h2.page-subtitle { font-weight: 100; font-size: 18px; font-family: Raleway, Arial, Helvetica, sans-serif; } }
 .copy-section { background-color: #fff; /*margin-top: 10px;*/ margin-bottom: 36px; }
 
@@ -139,21 +139,21 @@ img.brand-logo { margin-top: -15px; height: 75px; }
 
 .pre-post-padding { padding-top: 24px; padding-bottom: 24px; }
 
-.header-section { background-color: white; margin-bottom: 20px; }
+.header-section { background-color: white; margin-bottom: 8px; }
 
 .footer-section h3 { font-size: 20px; font-family: Raleway, Arial, Helvetica, sans-serif; }
 
-.footer-section { padding-top: 24px; padding-bottom: 48px; background-color: #40491a; color: #f2f0ed; }
+.footer-section { padding-top: 24px; padding-bottom: 48px; background-color: #424242; color: white; }
 
-.footer-usage-section { background-color: #d7e1aa; padding-top: 20px; padding-bottom: 12px; }
+.footer-usage-section { background-color: #87973a; padding-top: 24px; padding-bottom: 24px; }
 
 p.usage { font-size: 14px; line-height: 1.5; font-family: Raleway, Arial, Helvetica, sans-serif; }
 
 .footer-copyright-section { padding-top: 20px; padding-bottom: 12px; }
 
-p.copyright { font-size: 12px; font-family: Raleway, Arial, Helvetica, sans-serif; color: #959595; }
+p.copyright { font-size: 12px; font-family: Raleway, Arial, Helvetica, sans-serif; color: #9b9b9b; }
 
-.footer-section a, .footer-section a:hover, .footer-section a:visited { color: #aaa; }
+.footer-section a, .footer-section a:hover, .footer-section a:visited { font-weight: 100; color: #0078ae; text-decoration: none; }
 
 .tab-container { background-color: #f2f0ed; }
 

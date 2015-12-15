@@ -40,7 +40,7 @@ $secondaryPalette4: rgb(155,155,155); /*#9b9b9b*/
 $secondaryPalette5: rgb(255,255,255); /*#fffff*/
 
 $standout: $primaryPalette1;
-$coreColor: rgb(242, 240, 237);
+$coreColor: $primaryPalette5;
 $adminDark: #101010;
 $darkContrastColor: rgb(65, 65, 65);
 
@@ -314,15 +314,16 @@ img.brand-logo {
   h1.page-title {
     font-weight: 400;
     font-family: $sansSerifSecondary;
-    font-size: 30px;
-    color: $standout;
-    margin-top: 10px;
-    margin-bottom: 6px;
+    font-size: 24px;
+    color: $primaryPalette3;
+    margin-top: 6px;
+    margin-bottom: 4px;
   }
 
   h2.page-subtitle {
     font-weight: 100;
-    font-size: 26px;
+    font-size: 20px;
+    color: $primaryPalette4;
     font-family: $sansSerifSecondary;
     margin-top: 10px;
     margin-bottom: 6px;
@@ -333,7 +334,7 @@ img.brand-logo {
   h1.page-title {
     font-weight: 400;
     font-family: $sansSerifSecondary;
-    font-size: 24px;
+    font-size: 22px;
     color: $standout;
   }
 
@@ -377,8 +378,8 @@ img.brand-logo {
 }
 
 .header-section {
-  background-color: lighten( $standout, 60% );
-  margin-bottom: 20px;
+  background-color: $secondaryPalette5;
+  margin-bottom: 8px;
 }
 
 .footer-section h3 {
@@ -389,14 +390,14 @@ img.brand-logo {
 .footer-section {
   padding-top: 24px;
   padding-bottom: 48px;
-  background-color: darken( $standout, 25% );
-  color: $coreColor;
+  background-color: $primaryPalette4;
+  color: $secondaryPalette5;
 }
 
 .footer-usage-section {
-  background-color: lighten( $standout, 33% );
-  padding-top: 20px;
-  padding-bottom: 12px;
+  background-color: $secondaryPalette1;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 p.usage {
@@ -413,11 +414,13 @@ p.usage {
 p.copyright {
   font-size: 12px;
   font-family: $sansSerifSecondary;
-  color: lighten( $darkContrastColor, 33% );
+  color: $secondaryPalette4;
 }
 
 .footer-section a, .footer-section a:hover, .footer-section a:visited {
-  color: #aaa;
+  font-weight: 100;
+  color: $primaryPalette3;
+  text-decoration: none;
 }
 
 .tab-container {
