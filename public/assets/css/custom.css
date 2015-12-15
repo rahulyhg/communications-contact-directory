@@ -33,11 +33,11 @@ p, ul, ol, address { font-size: 20px; font-family: "Source Sans Pro", "Times New
 
 code { font-size: 16px; font-family: "Inconsolata", Courier, monospace; background-color: #959595; color: #222222; padding: 4px; border-radius: 0px; }
 
-a { color: #c4570f; }
+a { color: #788930; }
 
-a:hover { color: #c4570f; }
+a:hover { color: #a7bc39; }
 
-a:visited { color: #c4570f; }
+a:visited { color: #788930; }
 
 thead, tfoot { background-color: #f2f0ed; }
 
@@ -85,11 +85,21 @@ img.brand-logo { margin-top: -15px; height: 75px; }
 @media (min-width: 640px) { .nav-tabs > li > a { /*override the bootstrap borders for tab links*/ border: none; border-radius: 0; margin-right: 0px; padding: 20px 25px; } }
 .nav-tabs > li > a:hover { border: none; background-color: #ddd; }
 
-.btn-primary { color: #fff; background-color: #c4570f; border-color: #c4570f; }
+.btn-primary { color: #fff; background-color: #93a73b; border-color: #93a73b; }
 
-.btn-default { color: #c4570f; border-color: lighen(#c4570f, 10%); }
+.btn-primary:hover { background-color: #a7bc39; border-color: #a7bc39; }
 
-.btn-default:visited { color: #c4570f; }
+.btn-primary:visited { color: #fff; background-color: #93a73b; border-color: #93a73b; }
+
+.btn-default { color: lighen(#93a73b, 10%); border-color: lighen(#93a73b, 10%); }
+
+.btn-default:hover { background-color: #a7bc39; border-color: #a7bc39; }
+
+.btn-default:visited { color: lighen(#93a73b, 10%); border-color: lighen(#93a73b, 10%); }
+
+.btn-link { color: #788930; border-radius: 0; }
+
+.btn-link:hover { color: #a7bc39; border-radius: 0; }
 
 .panel { border-radius: 0px; height: 230px; }
 
@@ -227,6 +237,6 @@ a.dashboard-link, a.dashboard-link:hover, a.dashboard-link:visited { text-decora
 
 a.fa-hover { color: #f2f0ed; transition: all 0.3s ease 0s; }
 
-a.fa-hover:hover { color: #c4570f; }
+a.fa-hover:hover { color: #93a73b; }
 
 /*# sourceMappingURL=custom.css.map */

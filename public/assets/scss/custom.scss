@@ -9,10 +9,10 @@
 /* fonts
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
-$sansSerifPrimary : "Source Sans Pro", "Times New Roman", times, sans-serif;;
+$sansSerifPrimary : "Source Sans Pro", "Times New Roman", times, sans-serif;
 
 @import url(http://fonts.googleapis.com/css?family=Raleway);
-$sansSerifSecondary : Raleway, Arial, Helvetica, sans-serif;;
+$sansSerifSecondary : Raleway, Arial, Helvetica, sans-serif;
 
 @import url(http://fonts.googleapis.com/css?family=Inconsolata);
 $monospacePrimary : "Inconsolata", Courier, monospace;
@@ -22,7 +22,8 @@ $monospacePrimary : "Inconsolata", Courier, monospace;
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 $standout: rgb(0,120,174);
 $coreColor: rgb(242, 240, 237);
-$buttonPrimary: rgb(196,87,15);
+$buttonPrimary: rgb(147,167,59);
+$buttonPrimaryHover: rgb(167,188,57);
 $adminDark: #101010;
 $darkContrastColor: rgb(65, 65, 65);
 
@@ -67,11 +68,11 @@ p, ul, ol, address { font-size: 20px; font-family: $sansSerifPrimary; line-heigh
 
 code { font-size: 16px; font-family: $monospacePrimary; background-color: #959595; color: #222222; padding: 4px; border-radius: 0px; }
 
-a { color: $buttonPrimary; }
+a { color: darken( $buttonPrimary, 8% ); }
 
-a:hover { color: $buttonPrimary; }
+a:hover { color: $buttonPrimaryHover; }
 
-a:visited { color: $buttonPrimary; }
+a:visited { color: darken( $buttonPrimary, 8% ); }
 
 thead, tfoot {
   background-color: $coreColor;
@@ -236,13 +237,40 @@ img.brand-logo {
   border-color: $buttonPrimary;
 }
 
+.btn-primary:hover {
+  background-color: $buttonPrimaryHover;
+  border-color: $buttonPrimaryHover;
+}
+
+.btn-primary:visited {
+  color: #fff;
+  background-color: $buttonPrimary;
+  border-color: $buttonPrimary;
+}
+
 .btn-default {
-  color: $buttonPrimary;
+  color: lighen( $buttonPrimary, 10% );
   border-color: lighen( $buttonPrimary, 10% );
 }
 
+.btn-default:hover {
+  background-color: $buttonPrimaryHover;
+  border-color: $buttonPrimaryHover;
+}
+
 .btn-default:visited {
-  color: $buttonPrimary;
+  color: lighen( $buttonPrimary, 10% );
+  border-color: lighen( $buttonPrimary, 10% );
+}
+
+.btn-link {
+  color: darken( $buttonPrimary, 8% );
+  border-radius: 0;
+}
+
+.btn-link:hover {
+  color: $buttonPrimaryHover;
+  border-radius: 0;
 }
 
 .panel {
