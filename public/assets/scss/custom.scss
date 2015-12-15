@@ -24,8 +24,8 @@ $monospacePrimary : "Inconsolata", Courier, monospace;
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* Color palette from the styleguide page 5
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-$linkPrimary: rgb(147,167,59); /*#c4570f*/
-$linkPrimaryHover: rgb(167,188,57); /*#a6a6a6*/
+$linkPrimary: rgb(196,87,15); /*#c4570f*/
+$linkPrimaryHover: rgb(166,166,166); /*#a6a6a6*/
 
 $primaryPalette1: rgb(147,167,59); /*#93a73b*/
 $primaryPalette2: rgb(167,188,57); /*#a6bd39*/
@@ -419,8 +419,7 @@ p.copyright {
 
 .footer-section a, .footer-section a:hover, .footer-section a:visited {
   font-weight: 100;
-  color: $primaryPalette3;
-  text-decoration: none;
+  color: $primaryPalette5;
 }
 
 .tab-container {
@@ -444,19 +443,19 @@ p.copyright {
 
 .splash-div-link {
   padding: 6px;
-  background: $coreColor;
-  background: rgba( $coreColor, 0.6 );
+  background: $secondaryPalette5;
+  background: rgba( $secondaryPalette5, 0.9 );
 }
 
 @media (min-width: 768px) {
   .splash-div-link {
     padding: 12px 12px 20px;
-    background: $coreColor;
-    background: rgba( $coreColor, 0.6 );
+    background: $secondaryPalette5;
+    background: rgba( $secondaryPalette5, 0.9 );
     transition: all 0.9s ease 0s;
   }
   .splash-div-link:hover {
-    background: $coreColor;
+    background: $secondaryPalette5;
   }
 }
 
@@ -524,6 +523,38 @@ ul.pagination {
   border-bottom-right-radius: 0px;
 }
 
+.pagination>li>a, .pagination>li>span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.42857143;
+  color: $linkPrimary;
+  text-decoration: none;
+  background-color: $secondaryPalette5;
+  border: 1px solid $secondaryPalette4;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+  z-index: 2;
+  color: $secondaryPalette5;
+  cursor: default;
+  background-color: $linkPrimary;
+  border-color: $secondaryPalette4;
+}
+
+.pagination > li > a:hover, .pagination > li > span:hover {
+  background: $primaryPalette5;
+  border: 1px solid $secondaryPalette4;
+}
+
+.pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover {
+  color: #777;
+  cursor: not-allowed;
+  background-color: #fff;
+  border-color: $secondaryPalette4;
+}
+
 .sign-in-form {
   max-width: 460px;
   padding: 15px;
@@ -567,8 +598,9 @@ ul.horizontal-list li {
 }
 
 .alert-danger {
-  background-color: $coreColor;
-  border-color: darken( $coreColor, 10% );
+  background-color: $linkPrimary;
+  border-color: darken( $linkPrimary, 10% );
+  color: $secondaryPalette5;
 }
 
 
