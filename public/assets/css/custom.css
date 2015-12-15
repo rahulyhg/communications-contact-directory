@@ -13,6 +13,21 @@
 /* colors
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Color palette from the styleguide page 5
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*#c4570f*/
+/*#a6a6a6*/
+/*#93a73b*/
+/*#a6bd39*/
+/*#0078ae*/
+/*#424242*/
+/*#f2f0ed*/
+/*#87973a*/
+/*#b9ca00*/
+/*#686868*/
+/*#9b9b9b*/
+/*#fffff*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* css resets
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 * { margin: 0; padding: 0; }
@@ -59,25 +74,26 @@ img.brand-logo { margin-top: -15px; height: 75px; }
 
 .img-center { margin: auto; }
 
-.navbar-nohover { font-family: Raleway, Arial, Helvetica, sans-serif; font-weight: 100; padding-top: 12px; font-size: 20px; line-height: 30px; color: #00557b; }
+.navbar-nohover { font-family: Raleway, Arial, Helvetica, sans-serif; font-weight: 100; padding-top: 12px; font-size: 20px; line-height: 30px; color: #72812e; }
 
-.navbar-public { padding-top: 9px; padding-bottom: 9px; background-color: #e1f6ff; }
+.navbar-public { padding-top: 9px; padding-bottom: 28px; background-color: #f2f0ed; }
 
+@media (min-width: 768px) { .navbar-nav { padding-top: 12px; } }
 .nav-sidebar > li > a { font-size: 14px; line-height: 18px; }
 
-.navbar-nav > li > a { color: #008ac8; text-decoration: none; }
+.navbar-nav > li > a { color: #353535; text-decoration: none; }
 
-.navbar-nav > li.active, .navbar-nav > li.active > a:hover, .navbar-nav > li.active > a { background-color: #0078ae; color: #fff; }
+.navbar-nav > li.active, .navbar-nav > li.active > a:hover, .navbar-nav > li.active > a { background-color: #424242; color: #fff; }
 
-.navbar-nav > li > a:hover { color: #fff; text-decoration: none; background-color: #0094d7; }
+.navbar-nav > li > a:hover { color: #fff; text-decoration: none; background-color: #565656; }
 
-.nav .open > a, .nav .open > a:focus, .nav .open > a:hover { color: #fff; background-color: #0083bd; border-color: transparent; }
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover { color: #fff; background-color: #4a4a4a; border-color: transparent; }
 
-.navbar-nav > .active > a, .navbar-nav > .active > a:focus, .navbar-nav > .active > a:hover { background-color: #0094d7; text-decoration: none; background-color: transparent; }
+.navbar-nav > .active > a, .navbar-nav > .active > a:focus, .navbar-nav > .active > a:hover { background-color: #565656; text-decoration: none; background-color: transparent; }
 
 .navbar-collapse.in { padding-top: 15px; padding-right: 15px; padding-left: 15px; overflow-x: visible; -webkit-overflow-scrolling: touch; border-top: none; }
 
-.navbar-toggle { position: relative; float: right; padding: 9px 10px; margin-top: 8px; margin-right: 15px; margin-bottom: 8px; background-color: #0078ae; background-image: none; border: 1px solid transparent; border-radius: 0px; }
+.navbar-toggle { position: relative; float: right; padding: 9px 10px; margin-top: 8px; margin-right: 15px; margin-bottom: 8px; background-color: #93a73b; background-image: none; border: 1px solid transparent; border-radius: 0px; }
 
 .navbar-toggle .icon-bar { display: block; width: 22px; height: 2px; border-radius: 0px; background-color: #fff; }
 
@@ -107,9 +123,9 @@ img.brand-logo { margin-top: -15px; height: 75px; }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* custom id's and classes
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-@media (min-width: 640px) { h1.page-title { font-weight: 400; font-family: Raleway, Arial, Helvetica, sans-serif; font-size: 30px; color: #0078ae; margin-top: 10px; margin-bottom: 6px; }
+@media (min-width: 640px) { h1.page-title { font-weight: 400; font-family: Raleway, Arial, Helvetica, sans-serif; font-size: 30px; color: #93a73b; margin-top: 10px; margin-bottom: 6px; }
   h2.page-subtitle { font-weight: 100; font-size: 26px; font-family: Raleway, Arial, Helvetica, sans-serif; margin-top: 10px; margin-bottom: 6px; } }
-@media (max-width: 640px) { h1.page-title { font-weight: 400; font-family: Raleway, Arial, Helvetica, sans-serif; font-size: 24px; color: #0078ae; }
+@media (max-width: 640px) { h1.page-title { font-weight: 400; font-family: Raleway, Arial, Helvetica, sans-serif; font-size: 24px; color: #93a73b; }
   h2.page-subtitle { font-weight: 100; font-size: 18px; font-family: Raleway, Arial, Helvetica, sans-serif; } }
 .copy-section { background-color: #fff; /*margin-top: 10px;*/ margin-bottom: 36px; }
 
@@ -123,13 +139,13 @@ img.brand-logo { margin-top: -15px; height: 75px; }
 
 .pre-post-padding { padding-top: 24px; padding-bottom: 24px; }
 
-.header-section { background-color: #e1f6ff; margin-bottom: 20px; }
+.header-section { background-color: white; margin-bottom: 20px; }
 
 .footer-section h3 { font-size: 20px; font-family: Raleway, Arial, Helvetica, sans-serif; }
 
-.footer-section { padding-top: 24px; padding-bottom: 48px; background-color: #00202f; color: #f2f0ed; }
+.footer-section { padding-top: 24px; padding-bottom: 48px; background-color: #40491a; color: #f2f0ed; }
 
-.footer-usage-section { background-color: #57cbff; padding-top: 20px; padding-bottom: 12px; }
+.footer-usage-section { background-color: #d7e1aa; padding-top: 20px; padding-bottom: 12px; }
 
 p.usage { font-size: 14px; line-height: 1.5; font-family: Raleway, Arial, Helvetica, sans-serif; }
 
@@ -190,7 +206,7 @@ ul.horizontal-list li { display: inline; }
 
 .alert-danger { background-color: #f2f0ed; border-color: #ddd7cf; }
 
-.sidebar { position: fixed; top: 50px; bottom: 0; left: 0; z-index: 1000; display: block; overflow-x: hidden; overflow-y: auto; background-color: #e1f6ff; padding-top: 12px; }
+.sidebar { position: fixed; top: 50px; bottom: 0; left: 0; z-index: 1000; display: block; overflow-x: hidden; overflow-y: auto; background-color: white; padding-top: 12px; }
 
 @media (max-width: 768px) { .sidebar { display: none; }
   .admin-navigation-title { display: none; }
@@ -215,9 +231,9 @@ ul.horizontal-list li { display: inline; }
 
 a.dashboard-link, a.dashboard-link:hover, a.dashboard-link:visited { text-decoration: none; }
 
-.dashboard-link-block:hover { background-color: #004362; color: #fff; }
+.dashboard-link-block:hover { background-color: #616e27; color: #fff; }
 
-.report-title { border-bottom: 1px solid #00adfb; padding-bottom: 12px; color: #00adfb; font-family: Raleway, Arial, Helvetica, sans-serif; }
+.report-title { border-bottom: 1px solid #b6c966; padding-bottom: 12px; color: #b6c966; font-family: Raleway, Arial, Helvetica, sans-serif; }
 
 .admin-navigation-block { background-color: #363636; }
 
@@ -225,11 +241,11 @@ a.dashboard-link, a.dashboard-link:hover, a.dashboard-link:visited { text-decora
 
 .message-copy { font-size: 16px; font-family: "Inconsolata", Courier, monospace; padding: 6px; background-color: #eee; }
 
-.badge { font-size: 16px; font-weight: 100; padding: 5px 12px; border-radius: 0px; background-color: #0078ae; }
+.badge { font-size: 16px; font-weight: 100; padding: 5px 12px; border-radius: 0px; background-color: #93a73b; }
 
 .modal-content { border-radius: 0px; }
 
-.opaque-block { background: #0078ae; background: rgba(0, 120, 174, 0.7); transition: all 0.9s ease 0s; padding: 4px; }
+.opaque-block { background: #93a73b; background: rgba(147, 167, 59, 0.7); transition: all 0.9s ease 0s; padding: 4px; }
 
 .opaque-block:hover { background: #f2f0ed; background: rgba(242, 240, 237, 0.9); }
 

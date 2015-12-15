@@ -20,10 +20,27 @@ $monospacePrimary : "Inconsolata", Courier, monospace;
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* colors
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-$standout: rgb(0,120,174);
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Color palette from the styleguide page 5
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+$linkPrimary: rgb(147,167,59); /*#c4570f*/
+$linkPrimaryHover: rgb(167,188,57); /*#a6a6a6*/
+
+$primaryPalette1: rgb(147,167,59); /*#93a73b*/
+$primaryPalette2: rgb(167,188,57); /*#a6bd39*/
+$primaryPalette3: rgb(0,120,174); /*#0078ae*/
+$primaryPalette4: rgb(66,66,66); /*#424242*/
+$primaryPalette5: rgb(242,240,237); /*#f2f0ed*/
+
+$secondaryPalette1: rgb(135,151,58); /*#87973a*/
+$secondaryPalette2: rgb(185,202,0); /*#b9ca00*/
+$secondaryPalette3: rgb(104,104,104); /*#686868*/
+$secondaryPalette4: rgb(155,155,155); /*#9b9b9b*/
+$secondaryPalette5: rgb(255,255,255); /*#fffff*/
+
+$standout: $primaryPalette1;
 $coreColor: rgb(242, 240, 237);
-$buttonPrimary: rgb(147,167,59);
-$buttonPrimaryHover: rgb(167,188,57);
 $adminDark: #101010;
 $darkContrastColor: rgb(65, 65, 65);
 
@@ -68,11 +85,11 @@ p, ul, ol, address { font-size: 20px; font-family: $sansSerifPrimary; line-heigh
 
 code { font-size: 16px; font-family: $monospacePrimary; background-color: #959595; color: #222222; padding: 4px; border-radius: 0px; }
 
-a { color: darken( $buttonPrimary, 8% ); }
+a { color: darken( $linkPrimary, 8% ); }
 
-a:hover { color: $buttonPrimaryHover; }
+a:hover { color: $linkPrimaryHover; }
 
-a:visited { color: darken( $buttonPrimary, 8% ); }
+a:visited { color: darken( $linkPrimary, 8% ); }
 
 thead, tfoot {
   background-color: $coreColor;
@@ -137,8 +154,14 @@ img.brand-logo {
 
 .navbar-public {
   padding-top: 9px;
-  padding-bottom: 9px;
-  background-color: lighten( $standout, 60% );
+  padding-bottom: 28px;
+  background-color: $primaryPalette5;
+}
+
+@media (min-width: 768px){
+  .navbar-nav {
+    padding-top: 12px;
+  }
 }
 
 .nav-sidebar>li>a {
@@ -147,31 +170,31 @@ img.brand-logo {
 }
 
 .navbar-nav>li>a {
-  color: lighten( $standout, 5% );
+  color: darken( $primaryPalette4, 5% );
   text-decoration: none;
 }
 
 .navbar-nav>li.active, .navbar-nav>li.active>a:hover, .navbar-nav>li.active>a {
-  background-color: $standout;
+  background-color: $primaryPalette4;
   color: #fff;
 }
 
 .navbar-nav>li>a:hover {
   color: #fff;
   text-decoration: none;
-  background-color: lighten( $standout, 8% );
+  background-color: lighten( $primaryPalette4, 8% );
 }
 
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
   color: #fff;
-  background-color: lighten( $standout, 3% );
+  background-color: lighten( $primaryPalette4, 3% );
   border-color: transparent;
 }
 
 .navbar-nav>.active>a,
 .navbar-nav>.active>a:focus,
 .navbar-nav>.active>a:hover {
-  background-color: lighten( $standout, 8% );
+  background-color: lighten( $primaryPalette4, 8% );
   text-decoration: none;
   background-color: transparent;
 }
@@ -233,43 +256,43 @@ img.brand-logo {
 
 .btn-primary {
   color: #fff;
-  background-color: $buttonPrimary;
-  border-color: $buttonPrimary;
+  background-color: $linkPrimary;
+  border-color: $linkPrimary;
 }
 
 .btn-primary:hover {
-  background-color: $buttonPrimaryHover;
-  border-color: $buttonPrimaryHover;
+  background-color: $linkPrimaryHover;
+  border-color: $linkPrimaryHover;
 }
 
 .btn-primary:visited {
   color: #fff;
-  background-color: $buttonPrimary;
-  border-color: $buttonPrimary;
+  background-color: $linkPrimary;
+  border-color: $linkPrimary;
 }
 
 .btn-default {
-  color: lighen( $buttonPrimary, 10% );
-  border-color: lighen( $buttonPrimary, 10% );
+  color: lighen( $linkPrimary, 10% );
+  border-color: lighen( $linkPrimary, 10% );
 }
 
 .btn-default:hover {
-  background-color: $buttonPrimaryHover;
-  border-color: $buttonPrimaryHover;
+  background-color: $linkPrimaryHover;
+  border-color: $linkPrimaryHover;
 }
 
 .btn-default:visited {
-  color: lighen( $buttonPrimary, 10% );
-  border-color: lighen( $buttonPrimary, 10% );
+  color: lighen( $linkPrimary, 10% );
+  border-color: lighen( $linkPrimary, 10% );
 }
 
 .btn-link {
-  color: darken( $buttonPrimary, 8% );
+  color: darken( $linkPrimary, 8% );
   border-radius: 0;
 }
 
 .btn-link:hover {
-  color: $buttonPrimaryHover;
+  color: $linkPrimaryHover;
   border-radius: 0;
 }
 
@@ -686,5 +709,5 @@ a.fa-hover {
 }
 
 a.fa-hover:hover {
-  color: $buttonPrimary;
+  color: $linkPrimary;
 }

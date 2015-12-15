@@ -11,7 +11,7 @@
         <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ asset('assets/img/logo.png') }}" class="brand-logo" /></a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right navbar-public">
+        <ul class="nav navbar-nav navbar-right">
           <li{!! (isset($page_active) AND $page_active == 'table') ? " class='active'" : "" !!}><a href="{{ route('directory') }}"><i class="fa fa-users"></i>&nbsp;Directory</a></li>
           <li{!! (isset($page_active) AND $page_active == 'about') ? " class='active'" : "" !!}><a href="{{ route('about') }}"><i class="fa fa-info-circle"></i>&nbsp;About</a></li>
           <li{!! (isset($page_active) AND $page_active == 'contact') ? " class='active'" : "" !!}><a href="{{ route('contact') }}"><i class="fa fa-comments-o"></i>&nbsp;Contact</a></li>
