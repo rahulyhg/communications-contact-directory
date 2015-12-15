@@ -70,6 +70,8 @@ label.required:after { content: " *"; }
 
 .navbar-brand { float: left; height: 50px; padding: 15px 15px; font-size: 18px; line-height: 20px; }
 
+a.navbar-brand.navbar-brand-admin { color: #93a73b; }
+
 img.brand-logo { margin-top: -15px; height: 75px; }
 
 .img-center { margin: auto; }
@@ -90,6 +92,8 @@ img.brand-logo { margin-top: -15px; height: 75px; }
 .nav .open > a, .nav .open > a:focus, .nav .open > a:hover { color: #fff; background-color: #4a4a4a; border-color: transparent; }
 
 .navbar-nav > .active > a, .navbar-nav > .active > a:focus, .navbar-nav > .active > a:hover { background-color: #565656; text-decoration: none; background-color: transparent; }
+
+.navbar-admin .navbar-nav { padding-top: 0px; }
 
 .navbar-collapse.in { padding-top: 15px; padding-right: 15px; padding-left: 15px; overflow-x: visible; -webkit-overflow-scrolling: touch; border-top: none; }
 
@@ -219,6 +223,8 @@ ul.horizontal-list li { display: inline; }
 @media (max-width: 768px) { .sidebar { display: none; }
   .admin-navigation-title { display: none; }
   .nav-sidebar { margin-right: 0; margin-bottom: 0; margin-left: 0; } }
+.admin-sidebar { background-color: #f2f0ed; }
+
 .admin-sidebar li.active > a { background-color: #101010; color: white; }
 
 .admin-sidebar li > a:hover { background-color: #434343; color: white; }
@@ -239,7 +245,7 @@ ul.horizontal-list li { display: inline; }
 
 a.dashboard-link, a.dashboard-link:hover, a.dashboard-link:visited { text-decoration: none; }
 
-.dashboard-link-block:hover { background-color: #616e27; color: #fff; }
+.dashboard-link-block:hover { border: 1px solid #616e27; background-color: #616e27; color: #fff; }
 
 .report-title { border-bottom: 1px solid #b6c966; padding-bottom: 12px; color: #b6c966; font-family: Raleway, Arial, Helvetica, sans-serif; }
 

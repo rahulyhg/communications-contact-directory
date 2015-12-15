@@ -134,6 +134,10 @@ label.required:after {
   line-height: 20px;
 }
 
+a.navbar-brand.navbar-brand-admin {
+  color: $primaryPalette1;
+}
+
 img.brand-logo {
   margin-top: -15px;
   height: 75px;
@@ -197,6 +201,10 @@ img.brand-logo {
   background-color: lighten( $primaryPalette4, 8% );
   text-decoration: none;
   background-color: transparent;
+}
+
+.navbar-admin .navbar-nav {
+  padding-top: 0px;
 }
 
 .navbar-collapse.in {
@@ -628,7 +636,11 @@ ul.horizontal-list li {
      margin-right: 0;
      margin-bottom: 0;
      margin-left: 0;
+  }
 }
+
+.admin-sidebar {
+  background-color: $primaryPalette5;
 }
 
 .admin-sidebar li.active>a {
@@ -682,6 +694,7 @@ a.dashboard-link, a.dashboard-link:hover, a.dashboard-link:visited {
 }
 
 .dashboard-link-block:hover {
+  border: 1px solid darken( $standout, 15% );
   background-color: darken( $standout, 15% );
   color: #fff;
 }
