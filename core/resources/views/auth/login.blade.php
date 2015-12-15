@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="sign-in-form">
-      <div class="well">
+      <div class="well shadowed">
         <h3>Sign-In</h3>
         @if (count($errors) > 0)
           <div class="alert alert-danger">
