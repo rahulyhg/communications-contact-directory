@@ -78,9 +78,8 @@ img.brand-logo { margin-top: -15px; height: 75px; }
 
 .navbar-nohover { font-family: Raleway, Arial, Helvetica, sans-serif; font-weight: 100; padding-top: 12px; font-size: 20px; line-height: 30px; color: #72812e; }
 
-.navbar-public { padding-top: 9px; padding-bottom: 28px; background-color: #f2f0ed; }
+.navbar-public { padding-top: 9px; padding-bottom: 28px; background-color: white; }
 
-@media (min-width: 768px) { .navbar-nav { padding-top: 12px; } }
 .nav-sidebar > li > a { font-size: 14px; line-height: 18px; }
 
 .navbar-nav > li > a { color: #353535; text-decoration: none; }
@@ -97,9 +96,11 @@ img.brand-logo { margin-top: -15px; height: 75px; }
 
 .navbar-collapse.in { padding-top: 15px; padding-right: 15px; padding-left: 15px; overflow-x: visible; -webkit-overflow-scrolling: touch; border-top: none; }
 
-.navbar-toggle { position: relative; float: right; padding: 9px 10px; margin-top: 8px; margin-right: 15px; margin-bottom: 8px; background-color: #93a73b; background-image: none; border: 1px solid transparent; border-radius: 0px; }
+.navbar-toggle { position: relative; float: right; padding: 9px 10px; margin-top: 8px; margin-right: 15px; margin-bottom: 8px; background-color: #424242; background-image: none; border: 1px solid transparent; border-radius: 0px; }
 
 .navbar-toggle .icon-bar { display: block; width: 22px; height: 2px; border-radius: 0px; background-color: #fff; }
+
+.sub-navbar { background-color: #a7bc39; }
 
 @media (max-width: 640px) { .nav-tabs > li > a { /*override the bootstrap borders for tab links*/ border: none; border-radius: 0; margin-right: 0px; padding: 5px 8px; } }
 @media (min-width: 640px) { .nav-tabs > li > a { /*override the bootstrap borders for tab links*/ border: none; border-radius: 0; margin-right: 0px; padding: 20px 25px; } }
@@ -107,13 +108,13 @@ img.brand-logo { margin-top: -15px; height: 75px; }
 
 .btn-primary { color: #fff; background-color: #c4570f; border-color: #c4570f; }
 
-.btn-primary:hover { background-color: #a6a6a6; border-color: #a6a6a6; }
+.btn-primary:hover { background-color: #87973a; border-color: #87973a; }
 
 .btn-primary:visited { color: #fff; background-color: #c4570f; border-color: #c4570f; }
 
 .btn-default { color: lighen(#c4570f, 10%); border-color: lighen(#c4570f, 10%); }
 
-.btn-default:hover { background-color: #a6a6a6; border-color: #a6a6a6; }
+.btn-default:hover { background-color: #9b9b9b; border-color: #9b9b9b; color: white; }
 
 .btn-default:visited { color: lighen(#c4570f, 10%); border-color: lighen(#c4570f, 10%); }
 
@@ -149,7 +150,7 @@ img.brand-logo { margin-top: -15px; height: 75px; }
 
 .footer-section { padding-top: 24px; padding-bottom: 48px; background-color: #424242; color: white; }
 
-.footer-usage-section { background-color: #87973a; padding-top: 24px; padding-bottom: 24px; }
+.footer-usage-section { background-color: #a7bc39; padding-top: 24px; padding-bottom: 24px; }
 
 p.usage { font-size: 14px; line-height: 1.5; font-family: Raleway, Arial, Helvetica, sans-serif; }
 
@@ -231,9 +232,11 @@ ul.horizontal-list li { display: inline; }
 
 .action-bar { background-color: #434343; color: white; padding: 6px 12px; margin-top: 12px; margin-bottom: 22px; }
 
-.dropdown-menu { min-width: 200px; }
+.dropdown-menu { min-width: 200px; border-radius: 0px; background-color: #565656; border: 1px solid #424242; -webkit-box-shadow: 0 9px 9px #424242; box-shadow: 0 9px 9px #424242; }
 
-.dropdown-menu > li > a { font-size: 1.2em; }
+.dropdown-menu > li > a { font-size: 1.2em; color: white; }
+
+.dropdown-menu > li > a:hover { background-color: #9b9b9b; }
 
 .admin-nav-link { font-size: 0.8em; }
 
@@ -270,5 +273,7 @@ a.fa-hover { color: #f2f0ed; transition: all 0.3s ease 0s; }
 a.fa-hover:hover { color: #c4570f; }
 
 .shadowed { box-shadow: 0 6px 15px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s; -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; }
+
+table.dataTable { margin-top: 12px !important; margin-bottom: 12px !important; box-shadow: 3px 3px 12px #424242; }
 
 /*# sourceMappingURL=custom.css.map */

@@ -159,12 +159,11 @@ img.brand-logo {
 .navbar-public {
   padding-top: 9px;
   padding-bottom: 28px;
-  background-color: $primaryPalette5;
+  background-color: $secondaryPalette5;
 }
 
 @media (min-width: 768px){
   .navbar-nav {
-    padding-top: 12px;
   }
 }
 
@@ -223,7 +222,7 @@ img.brand-logo {
   margin-top: 8px;
   margin-right: 15px;
   margin-bottom: 8px;
-  background-color: $standout;
+  background-color: $primaryPalette4;
   background-image: none;
   border: 1px solid transparent;
   border-radius: 0px;
@@ -235,6 +234,10 @@ img.brand-logo {
   height: 2px;
   border-radius: 0px;
   background-color: #fff;
+}
+
+.sub-navbar {
+  background-color: $primaryPalette2;
 }
 
 @media (max-width: 640px) {
@@ -269,8 +272,8 @@ img.brand-logo {
 }
 
 .btn-primary:hover {
-  background-color: $linkPrimaryHover;
-  border-color: $linkPrimaryHover;
+  background-color: $secondaryPalette1;
+  border-color: $secondaryPalette1;
 }
 
 .btn-primary:visited {
@@ -285,8 +288,9 @@ img.brand-logo {
 }
 
 .btn-default:hover {
-  background-color: $linkPrimaryHover;
-  border-color: $linkPrimaryHover;
+  background-color: $secondaryPalette4;
+  border-color: $secondaryPalette4;
+  color: $secondaryPalette5;
 }
 
 .btn-default:visited {
@@ -403,7 +407,7 @@ img.brand-logo {
 }
 
 .footer-usage-section {
-  background-color: $secondaryPalette1;
+  background-color: $primaryPalette2;
   padding-top: 24px;
   padding-bottom: 24px;
 }
@@ -663,10 +667,20 @@ ul.horizontal-list li {
 
 .dropdown-menu {
   min-width: 200px;
+  border-radius: 0px;
+  background-color: lighten( $primaryPalette4, 8% );
+  border: 1px solid $primaryPalette4;
+  -webkit-box-shadow: 0 9px 9px $primaryPalette4;
+  box-shadow: 0 9px 9px $primaryPalette4;
 }
 
 .dropdown-menu>li>a {
   font-size: 1.2em;
+  color: $secondaryPalette5;
+}
+
+.dropdown-menu>li>a:hover {
+  background-color: $secondaryPalette4;
 }
 
 .admin-nav-link {
@@ -765,4 +779,10 @@ a.fa-hover:hover {
   -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+table.dataTable {
+  margin-top: 12px !important;
+  margin-bottom: 12px !important;
+  box-shadow: 3px 3px 12px $primaryPalette4;
 }

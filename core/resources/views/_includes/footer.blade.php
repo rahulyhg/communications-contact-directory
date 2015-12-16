@@ -27,7 +27,7 @@
   </section><!-- /.footer-usage-section -->
   <section class="footer-copyright-section">
     <div class="container">
-      <p class="copyright text-center">Copyright &copy; {{ date('Y') }}</p>
+      <p class="copyright text-center">Copyright &copy; {{ date('Y') }}, Washington County, Oregon</p>
     </div><!-- /.container -->
   </section><!-- /.footer-copyright-section -->
 </footer>
