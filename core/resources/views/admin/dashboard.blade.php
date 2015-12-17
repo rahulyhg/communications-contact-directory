@@ -24,7 +24,7 @@
     </a>
   </div>
   <div class="col-sm-3">
-    <a href="{{ route('admin.users.index') }}" class="dashboard-link">
+    <a href="{{ route('admin.message.index') }}" class="dashboard-link">
       <div class="dashboard-link-block">
         <p class="text-center fa-3x"><i class="fa fa-envelope"></i></p>
         <h4 class="text-center fa-2x hidden-xs hidden-sm">Messages</h4>
