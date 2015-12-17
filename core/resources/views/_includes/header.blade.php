@@ -14,6 +14,7 @@
   </nav>
 
   @include('_includes/sub_navigation')
+  @include('_includes/flash')
 
   <section class="header-section">
     <div class="container pre-post-padding">

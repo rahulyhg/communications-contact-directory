@@ -9,7 +9,6 @@
 
   <div class="page-content">
     <div class="copy-section">
-      @include('_includes/flash')
       @yield('content')
     </div>
   </div>
