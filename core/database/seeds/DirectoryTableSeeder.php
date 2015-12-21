@@ -25,7 +25,9 @@ class DirectoryTableSeeder extends Seeder
         'location_id' => $this->get_random_list_item('location'),
         'department_id' => $this->get_random_list_item('department'),
         'primary_phone' => '503-'.rand(100,999).'-'.rand(1000,9999),
-        'secondary_phone' => '503-'.rand(100,999).'-'.rand(1000,9999)
+        'secondary_phone' => '503-'.rand(100,999).'-'.rand(1000,9999),
+        'created_at' => date("Y-m-d"),
+        'updated_at' => date("Y-m-d")
       ]);
     }
   }
