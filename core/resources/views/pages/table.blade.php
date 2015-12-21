@@ -50,6 +50,13 @@
         </tfoot>
       </table>
     </div><!-- /.row -->
+    <div class="row hidden-xs hidden-sm">
+      <div class="pull-right">
+        <a href="http://localhost:8080/admin/directory/excel" class="btn btn-default" target="_blank">
+          <i class="fa fa-file-excel-o fa-pad-right"></i>Download Full Directory to Excel
+        </a>
+      </div>
+    </div>
   </div><!-- /#table-list_wrapper -->
   @else
   <h3>No Directory Entries Found</h3>
