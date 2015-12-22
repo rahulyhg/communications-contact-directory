@@ -18,6 +18,7 @@
         <th class="visible-lg">Email</th>
         <th class="hidden-xs hidden-sm">Location</th>
         <th class="hidden-xs hidden-sm">Department</th>
+        <th class="hidden-xs hidden-sm">Updated</th>
         <th class="visible-lg">Status</th>
         <th>Actions</th>
       </tr>
@@ -30,6 +31,7 @@
       <td class="visible-lg">{{ $entry->email }}</td>
       <td class="hidden-xs hidden-sm">{{ $entry->location->title }}</td>
       <td class="hidden-xs hidden-sm">{{ $entry->department->title }}</td>
+      <td class="hidden-xs hidden-sm">{{ $entry->updated_at->format('Y-m-d') }}</td>
       <td class="visible-lg">{!! ($entry->status == 0) ? '<span class="text-warning">Disabled</span>' : 'Enabled' !!}</td>
       <td>
         <a href="{{ route('admin.directory.edit',$entry->id) }}" class="btn btn-default btn-xs btn-block">edit</a>
