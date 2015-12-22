@@ -18,7 +18,7 @@
   "dependencies": {
     "fontawesome": "~4.5.0",
     "jquery": "~2.1.4",
-    "bootstrap": "~3.3.5",
+    "bootstrap": "~3.3.6",
     "datatables": "~1.10.9",
     "summernote": "~0.6"
   }
