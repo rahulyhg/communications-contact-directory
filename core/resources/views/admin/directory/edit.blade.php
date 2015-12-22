@@ -9,7 +9,7 @@
     @include('errors.validation_errors')
 
     {!! Form::model($entry, ['method'=>'PATCH', 'route' => ['admin.directory.update', $entry->id]] ) !!}
-    @include('admin.directory.partials.form', ['submit_text'=>'Update entry'])
+    @include('admin.directory.partials.form', ['submit_text'=>'Update entry','show_dates'=>true])
     {!! Form::close() !!}
 
   </div><!-- /.well -->

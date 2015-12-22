@@ -69,6 +69,17 @@
   {!! Form::textarea('note', null, ['class'=>'form-control', 'placeholder'=>'Sample note text.']) !!}
 </div>
 
+@if(isset($show_dates) AND ($show_dates))
+<div class="form-group">
+  <label>Created</label>
+  <p>{{ $entry->created_at }}</p>
+</div>
+<div class="form-group">
+  <label>Updated</label>
+  <p>{{ $entry->updated_at }}</p>
+</div>
+@endif
+
 <div class="form-group">
   {!! Form::submit($submit_text, ['class'=>'btn btn-primary']) !!}
   <a href="{{ route('admin.directory.index') }}" class="btn btn-default">Cancel</a>
