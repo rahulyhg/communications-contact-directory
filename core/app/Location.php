@@ -39,6 +39,14 @@ class Location extends Model
   }
 
   /**
+   * A location can have a state
+   */
+  public function state()
+  {
+    return $this->belongsTo('App\State', 'state_id');
+  }
+
+  /**
    * Get the location ID for the current directory entry
    *
    * @var array
