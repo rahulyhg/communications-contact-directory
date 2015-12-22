@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(DepartmentTableSeeder::class);
         $this->call(LocationTableSeeder::class);
         $this->call(DirectoryTableSeeder::class);
+        $this->call(StateTableSeeder::class);
 
         Model::reguard();
     }
