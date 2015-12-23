@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
+use App\State;
 use App\Location;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -33,8 +34,9 @@ class LocationController extends Controller
   {
     $title = "Create Location";
     $page_active = "location";
+    $states = State::orderBy('name')->lists('name', 'id');
 
-    return view('admin.location.create', compact('title','page_active'));
+    return view('admin.location.create', compact('title','page_active','states'));
   }
 
   /**
@@ -81,8 +83,9 @@ class LocationController extends Controller
     $title = "Edit Location";
     $page_active = "location";
     $location = Location::findOrFail($id);
+    $states = State::orderBy('name')->lists('name', 'id');
 
-    return view('admin.location.edit', compact('title','page_active','location'));
+    return view('admin.location.edit', compact('title','page_active','location','states'));
   }
 
   /**
