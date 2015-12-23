@@ -54,6 +54,12 @@ class LocationController extends Controller
     } else {
       $location->status = $request->status;
     }
+    $location->street_address_1 = $request->street_address_1;
+    $location->street_address_2 = $request->street_address_2;
+    $location->city = $request->city;
+    $location->state_id = $request->state_id;
+    $location->zipcode = $request->zipcode;
+    $location->url = $request->url;
     $location->note = $request->note;
 
     $location->save();
@@ -99,16 +105,21 @@ class LocationController extends Controller
   {
     $location = Location::find($id);
     $location->title = $request->title;
-    $location->note = $request->note;
-    $location->status = $request->status;
     if($request->status !== "1"){
       $location->status = 0;
     } else {
       $location->status = $request->status;
     }
+    $location->street_address_1 = $request->street_address_1;
+    $location->street_address_2 = $request->street_address_2;
+    $location->city = $request->city;
+    $location->state_id = $request->state_id;
+    $location->zipcode = $request->zipcode;
+    $location->url = $request->url;
+    $location->note = $request->note;
     $location->save();
 
-    session()->flash('flash_success','Location saved!');
+    session()->flash('flash_success',$location->title.' successfully updated!');
     return redirect()->route('admin.location.index');
   }
 

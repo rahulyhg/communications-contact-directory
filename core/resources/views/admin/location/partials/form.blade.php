@@ -11,7 +11,7 @@
 
 <div class="form-group">
   {!! Form::label('street_address_2', 'Street Line 2') !!}
-  {!! Form::text('street_address_2', null, ['class'=>'form-control', 'placeholder'=>'Appt. #7']) !!}
+  {!! Form::text('street_address_2', null, ['class'=>'form-control', 'placeholder'=>'Suite #16']) !!}
 </div>
 
 <div class="form-group">
@@ -31,7 +31,7 @@
 
 <div class="form-group">
   {!! Form::label('url', 'Website URL') !!}
-  {!! Form::text('url', null, ['class'=>'form-control', 'placeholder'=>'http://www.website.com/']) !!}
+  {!! Form::text('url', null, ['class'=>'form-control', 'placeholder'=>'www.site.com']) !!}
 </div>
 
 <div class="form-group">
