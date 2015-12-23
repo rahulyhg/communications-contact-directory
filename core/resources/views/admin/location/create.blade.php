@@ -8,7 +8,7 @@
 
     @include('errors.validation_errors')
 
-    {!! Form::open( ['route' => 'admin.location.store'] ) !!}
+    {!! Form::open( ['route' => 'admin.location.store','class' => 'validate-form'] ) !!}
     @include('admin.location.partials.form', ['submit_text'=>'Create Location'])
     {!! Form::close() !!}
 

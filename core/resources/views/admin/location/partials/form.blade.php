@@ -31,7 +31,7 @@
 
 <div class="form-group">
   {!! Form::label('url', 'Website URL') !!}
-  {!! Form::text('url', null, ['class'=>'form-control', 'placeholder'=>'www.site.com']) !!}
+  {!! Form::text('url', null, ['class'=>'form-control', 'data-parsley-type' => 'url', 'placeholder'=>'www.site.com']) !!}
 </div>
 
 <div class="form-group">
