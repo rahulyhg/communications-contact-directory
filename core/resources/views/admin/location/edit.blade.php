@@ -8,7 +8,7 @@
 
     @include('errors.validation_errors')
 
-    {!! Form::model($location, ['method'=>'PATCH', 'route' => ['admin.location.update', $location->id]] ) !!}
+    {!! Form::model($location, ['method'=>'PATCH', 'route' => ['admin.location.update', $location->id],'class' => 'validate-form'] ) !!}
     @include('admin.location.partials.form', ['submit_text'=>'Update Location'])
     {!! Form::close() !!}
 
