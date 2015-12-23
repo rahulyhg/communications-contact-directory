@@ -1,5 +1,6 @@
 $(document).ready(function(){
   $('.data-table').dataTable();
+  $('.validate-form').parsley();
   $('.wysiwyg').summernote({
     height: 300,                 // set editor height
     minHeight: null,             // set minimum height of editor
