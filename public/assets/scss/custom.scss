@@ -788,3 +788,11 @@ table.dataTable {
   margin-bottom: 12px !important;
   box-shadow: 3px 3px 12px $primaryPalette4;
 }
+
+ul.parsley-errors-list {
+  list-style: none;
+  font-size: 12px;
+  padding-left: 12px;
+  color: #fff;
+  background-color: red;
+}

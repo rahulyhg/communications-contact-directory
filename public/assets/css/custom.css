@@ -276,4 +276,6 @@ a.fa-hover:hover { color: #c4570f; }
 
 table.dataTable { margin-top: 12px !important; margin-bottom: 12px !important; box-shadow: 3px 3px 12px #424242; }
 
+ul.parsley-errors-list { list-style: none; font-size: 12px; padding-left: 12px; color: #fff; background-color: red; }
+
 /*# sourceMappingURL=custom.css.map */
