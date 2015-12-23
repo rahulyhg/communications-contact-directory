@@ -130,7 +130,7 @@ img.brand-logo { margin-top: -15px; height: 75px; }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media (min-width: 640px) { h1.page-title { font-weight: 400; font-family: Raleway, Arial, Helvetica, sans-serif; font-size: 24px; color: #0078ae; margin-top: 6px; margin-bottom: 4px; }
   h2.page-subtitle { font-weight: 100; font-size: 20px; color: #424242; font-family: Raleway, Arial, Helvetica, sans-serif; margin-top: 10px; margin-bottom: 6px; } }
-@media (max-width: 640px) { h1.page-title { font-weight: 400; font-family: Raleway, Arial, Helvetica, sans-serif; font-size: 22px; color: #93a73b; }
+@media (max-width: 640px) { h1.page-title { font-weight: 400; font-family: Raleway, Arial, Helvetica, sans-serif; color: #0078ae; font-size: 22px; }
   h2.page-subtitle { font-weight: 100; font-size: 18px; font-family: Raleway, Arial, Helvetica, sans-serif; } }
 .copy-section { background-color: #fff; /*margin-top: 10px;*/ margin-bottom: 36px; }
 
@@ -248,9 +248,9 @@ ul.horizontal-list li { display: inline; }
 
 a.dashboard-link, a.dashboard-link:hover, a.dashboard-link:visited { text-decoration: none; }
 
-.dashboard-link-block:hover { border: 1px solid #616e27; background-color: #616e27; color: #fff; }
+.dashboard-link-block:hover { border: 1px solid #616e27; background-color: #616e27; color: #fff; transition: all 0.5s ease 0s; }
 
-.report-title { border-bottom: 1px solid #b6c966; padding-bottom: 12px; color: #b6c966; font-family: Raleway, Arial, Helvetica, sans-serif; }
+.report-title { border-bottom: 1px solid #b6c966; padding-bottom: 12px; color: #b6c966; font-family: Raleway, Arial, Helvetica, sans-serif; font-size: 22px; }
 
 .admin-navigation-block { background-color: #363636; }
 

@@ -346,8 +346,8 @@ img.brand-logo {
   h1.page-title {
     font-weight: 400;
     font-family: $sansSerifSecondary;
+    color: $primaryPalette3;
     font-size: 22px;
-    color: $standout;
   }
 
   h2.page-subtitle {
@@ -711,6 +711,7 @@ a.dashboard-link, a.dashboard-link:hover, a.dashboard-link:visited {
   border: 1px solid darken( $standout, 15% );
   background-color: darken( $standout, 15% );
   color: #fff;
+  transition: all 0.5s ease 0s;
 }
 
 .report-title {
@@ -718,6 +719,7 @@ a.dashboard-link, a.dashboard-link:hover, a.dashboard-link:visited {
   padding-bottom: 12px;
   color: lighten( $standout, 15% );
   font-family: $sansSerifSecondary;
+  font-size: 22px;
 }
 
 .admin-navigation-block {
