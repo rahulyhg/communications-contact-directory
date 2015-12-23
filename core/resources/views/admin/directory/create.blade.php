@@ -8,7 +8,7 @@
 
     @include('errors.validation_errors')
 
-    {!! Form::open( ['route' => 'admin.directory.store'] ) !!}
+    {!! Form::open( ['route' => 'admin.directory.store','class' => 'validate-form'] ) !!}
     @include('admin.directory.partials.form', ['submit_text'=>'Create New Entry'])
     {!! Form::close() !!}
 

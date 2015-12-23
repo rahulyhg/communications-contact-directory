@@ -8,7 +8,7 @@
 
     @include('errors.validation_errors')
 
-    {!! Form::model($entry, ['method'=>'PATCH', 'route' => ['admin.directory.update', $entry->id]] ) !!}
+    {!! Form::model($entry, ['method'=>'PATCH', 'route' => ['admin.directory.update', $entry->id],'class' => 'validate-form'] ) !!}
     @include('admin.directory.partials.form', ['submit_text'=>'Update entry','show_dates'=>true])
     {!! Form::close() !!}
 

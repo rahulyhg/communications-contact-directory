@@ -11,7 +11,7 @@
 
 <div class="form-group">
   {!! Form::label('email', 'Email') !!}
-  {!! Form::text('email', null, ['class'=>'form-control', 'placeholder'=>'email@domain.com']) !!}
+  {!! Form::text('email', null, ['class'=>'form-control', 'placeholder'=>'email@domain.com', 'data-parsley-type' => 'email']) !!}
 </div>
 
 <div class="form-group">
@@ -20,13 +20,13 @@
 </div>
 
 <div class="form-group">
-  {!! Form::label('location_id', 'Location') !!}
-  {!! Form::select('location_id', $active_locations, null, ['class'=>'form-control']) !!}
+  {!! Form::label('location_id', 'Location', ['class'=>'required']) !!}
+  {!! Form::select('location_id', $active_locations, null, ['class'=>'form-control required']) !!}
 </div>
 
 <div class="form-group">
-  {!! Form::label('department_id', 'Department') !!}
-  {!! Form::select('department_id', $active_departments, null, ['class'=>'form-control']) !!}
+  {!! Form::label('department_id', 'Department', ['class'=>'required']) !!}
+  {!! Form::select('department_id', $active_departments, null, ['class'=>'form-control required']) !!}
 </div>
 
 <div class="form-group">
@@ -41,7 +41,7 @@
 
 <div class="form-group">
   {!! Form::label('website', 'Website URL') !!}
-  {!! Form::text('website', null, ['class'=>'form-control', 'placeholder'=>'http://www.website.com']) !!}
+  {!! Form::text('website', null, ['class'=>'form-control', 'placeholder'=>'http://www.website.com', 'data-parsley-type' => 'url']) !!}
 </div>
 
 <div class="form-group">
@@ -61,7 +61,7 @@
 
 <div class="form-group">
   {!! Form::label('linkedin', 'LinkedIn URL') !!}
-  {!! Form::text('linkedin', null, ['class'=>'form-control', 'placeholder'=>'http://www.linkedin.com/user']) !!}
+  {!! Form::text('linkedin', null, ['class'=>'form-control', 'placeholder'=>'http://www.linkedin.com/user', 'data-parsley-type' => 'url']) !!}
 </div>
 
 <div class="form-group">
@@ -72,11 +72,11 @@
 @if(isset($show_dates) AND ($show_dates))
 <div class="form-group">
   <label>Created</label>
-  <p>{{ $entry->created_at }}</p>
+  <p class="date">{{ $entry->created_at }}</p>
 </div>
 <div class="form-group">
   <label>Updated</label>
-  <p>{{ $entry->updated_at }}</p>
+  <p class="date">{{ $entry->updated_at }}</p>
 </div>
 @endif
 
