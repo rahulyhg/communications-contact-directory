@@ -17,17 +17,17 @@
           </div>
         @endif
 
-        <form class="form" role="form" method="POST" action="{{ url('/auth/login') }}">
+        <form class="form validate-form" role="form" method="POST" action="{{ url('/auth/login') }}">
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
           <div class="form-group">
             <label class="control-label required">Email Address</label>
-            <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+            <input type="email" class="form-control required" data-parsley-type="email" name="email" value="{{ old('email') }}" required>
           </div>
 
           <div class="form-group">
             <label class="control-label required">Password</label>
-            <input type="password" class="form-control" name="password">
+            <input type="password" class="form-control required" name="password" required>
           </div>
 
           <div class="form-group">

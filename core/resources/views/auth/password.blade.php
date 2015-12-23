@@ -23,12 +23,12 @@
           </div>
         @endif
 
-        <form class="form" role="form" method="POST" action="{{ url('/password/email') }}">
+        <form class="form validate-form" role="form" method="POST" action="{{ url('/password/email') }}">
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
           <div class="form-group">
             <label class="control-label required">Email Address</label>
-            <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+            <input type="email" class="form-control required" name="email" data-parsley-type="email" value="{{ old('email') }}" required>
           </div>
 
           <div class="form-group">
