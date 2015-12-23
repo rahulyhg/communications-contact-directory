@@ -12,7 +12,7 @@
     <thead>
       <tr>
         <th>Title</th>
-        <th class="visible-lg">Note</th>
+        <th class="visible-lg">Address</th>
         <th class="hidden-xs hidden-sm">Status</th>
         <th class="hidden-xs hidden-sm">Entries</th>
         <th>Actions</th>
@@ -23,14 +23,13 @@
     @foreach ($locations as $location)
     <tr>
       <td>{{ $location->title }}</td>
-      <td class="visible-lg">{{ $location->note }}</td>
+      <td class="visible-lg">{{ $location->street_address_1 }}{!! (strlen($location->street_address_2)>0) ? ' '.$location->street_address_2 : '' !!} {{ $location->city }} {!! (isset($location->state->abbreviation)) ? ','.$location->state->abbreviation : '' !!} {{ $location->zipcode }}</td>
       <td class="hidden-xs hidden-sm">{!! ($location->status == 0) ? '<span class="text-warning">Disabled</span>' : 'Enabled' !!}</td>
       <td class="hidden-xs hidden-sm">{{ $location->count_entries }}</td>
       <td>
       <a href="{{ route('admin.location.edit',$location->id) }}" class="btn btn-default btn-xs btn-block">edit</a>
     </td>
     </tr>
-
     @endforeach
     </tbody>
   </table>
