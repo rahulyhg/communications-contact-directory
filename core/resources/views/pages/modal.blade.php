@@ -2,7 +2,7 @@
 @if ($entry)
 <div class="modal-header">
   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-   <h4 class="modal-title">{{ $entry->first_name }} {{ $entry->last_name }}</h4>
+   <h4 class="modal-title">{{ $entry->first_name }} {{ $entry->last_name }} {{ $entry->title }}</h4>
 </div><!-- /.modal-header -->
 
 <div class="modal-body">
@@ -54,6 +54,18 @@
   @if ( strlen($entry->googleplus) > 0)
   <p class="googleplus">
     <i class="fa fa-google-plus-square"></i>&nbsp;<a href="https://plus.google.com/{{ $entry->googleplus }}" target="_blank">{{ $entry->googleplus }}</a>
+  </p>
+  @endif
+
+  @if ( strlen($entry->snapchat) > 0)
+  <p class="snapchat">
+    <i class="fa fa-weixin"></i>&nbsp;<a href="https://www.snapchat.com/{{ $entry->snapchat }}" target="_blank">{{ $entry->snapchat }}</a>
+  </p>
+  @endif
+
+  @if ( strlen($entry->instagram) > 0)
+  <p class="instagram">
+    <i class="fa fa-instagram"></i>&nbsp;<a href="{{ $entry->instagram }}" target="_blank">{{ $entry->instagram }}</a>
   </p>
   @endif
 
