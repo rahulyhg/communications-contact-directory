@@ -53,6 +53,7 @@ class DirectoryController extends Controller
     $entry = new Directory;
     $entry->first_name = $request->first_name;
     $entry->last_name = $request->last_name;
+    $entry->title = $request->title;
     $entry->email = $request->email;
     if($request->status !== "1"){
       $entry->status = 0;
@@ -67,6 +68,8 @@ class DirectoryController extends Controller
     $entry->twitter = $request->twitter;
     $entry->facebook = $request->facebook;
     $entry->googleplus = $request->googleplus;
+    $entry->snapchat = $request->snapchat;
+    $entry->instagram = $request->instagram;
     $entry->linkedin = $request->linkedin;
     $entry->note = $request->note;
 
@@ -115,6 +118,7 @@ class DirectoryController extends Controller
     $entry = Directory::find($id);
     $entry->first_name = $request->first_name;
     $entry->last_name = $request->last_name;
+    $entry->title = $request->title;
     $entry->email = $request->email;
     if($request->status !== "1"){
       $entry->status = 0;
@@ -129,6 +133,8 @@ class DirectoryController extends Controller
     $entry->twitter = $request->twitter;
     $entry->facebook = $request->facebook;
     $entry->googleplus = $request->googleplus;
+    $entry->snapchat = $request->snapchat;
+    $entry->instagram = $request->instagram;
     $entry->linkedin = $request->linkedin;
     $entry->note = $request->note;
 

@@ -1,4 +1,3 @@
-
 <div class="form-group">
   {!! Form::label('first_name', 'First Name', ['class'=>'required']) !!}
   {!! Form::text('first_name', null, ['required', 'class'=>'form-control', 'placeholder'=>'Firstname']) !!}
@@ -7,6 +6,11 @@
 <div class="form-group">
   {!! Form::label('last_name', 'Last Name', ['class'=>'required']) !!}
   {!! Form::text('last_name', null, ['required', 'class'=>'form-control', 'placeholder'=>'Lastname']) !!}
+</div>
+
+<div class="form-group">
+  {!! Form::label('title', 'Job Title') !!}
+  {!! Form::text('title', null, ['class'=>'form-control', 'placeholder'=>'Director of Department']) !!}
 </div>
 
 <div class="form-group">
@@ -57,6 +61,16 @@
 <div class="form-group">
   {!! Form::label('googleplus', 'Google+ Handle') !!}
   {!! Form::text('googleplus', null, ['class'=>'form-control', 'placeholder'=>'+handle']) !!}
+</div>
+
+<div class="form-group">
+  {!! Form::label('snapchat', 'SnapChat Username') !!}
+  {!! Form::text('snapchat', null, ['class'=>'form-control', 'placeholder'=>'username']) !!}
+</div>
+
+<div class="form-group">
+  {!! Form::label('instagram', 'Instagram URL') !!}
+  {!! Form::text('instagram', null, ['class'=>'form-control', 'placeholder'=>'https://www.instagram.com/user', 'data-parsley-type' => 'url']) !!}
 </div>
 
 <div class="form-group">
