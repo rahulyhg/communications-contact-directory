@@ -18,7 +18,7 @@ class LocationController extends Controller
    */
   public function index()
   {
-  $title = "Directory Location Management";
+  $title = "Organization Management";
   $page_active = "location";
   $locations = Location::all();
 
@@ -32,7 +32,7 @@ class LocationController extends Controller
    */
   public function create()
   {
-    $title = "Create Location";
+    $title = "Create Organization";
     $page_active = "location";
     $states = State::orderBy('name')->lists('name', 'id');
 
@@ -86,7 +86,7 @@ class LocationController extends Controller
    */
   public function edit($id)
   {
-    $title = "Edit Location";
+    $title = "Edit Organization";
     $page_active = "location";
     $location = Location::findOrFail($id);
     $states = State::orderBy('name')->lists('name', 'id');
