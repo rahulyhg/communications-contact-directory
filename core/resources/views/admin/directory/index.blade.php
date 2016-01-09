@@ -16,7 +16,7 @@
       <tr>
         <th>Last, First</th>
         <th class="visible-lg">Email</th>
-        <th class="hidden-xs hidden-sm">Location</th>
+        <th class="hidden-xs hidden-sm">Organization</th>
         <th class="hidden-xs hidden-sm">Department</th>
         <th class="hidden-xs hidden-sm">Updated</th>
         <th class="visible-lg">Status</th>

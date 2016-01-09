@@ -18,11 +18,11 @@
   <li class="admin-navigation-link{!! (isset($page_active) AND $page_active == 'directory') ? " active" : "" !!}">
     <a href="{{ route('admin') }}/directory/"><i class="fa fa-phone"></i>&nbsp;Directory</a>
   </li>
+  <li class="admin-navigation-link{!! (isset($page_active) AND $page_active == 'location') ? " active" : "" !!}">
+    <a href="{{ route('admin') }}/location/"><i class="fa fa-building-o"></i>&nbsp;Organizations</a>
+  </li>
   <li class="admin-navigation-link{!! (isset($page_active) AND $page_active == 'department') ? " active" : "" !!}">
     <a href="{{ route('admin') }}/department/"><i class="fa fa-sitemap"></i>&nbsp;Departments</a>
-  </li>
-  <li class="admin-navigation-link{!! (isset($page_active) AND $page_active == 'location') ? " active" : "" !!}">
-    <a href="{{ route('admin') }}/location/"><i class="fa fa-map-marker"></i>&nbsp;Locations</a>
   </li>
 </ul>
 <p class="admin-navigation-title">Content Management</p>

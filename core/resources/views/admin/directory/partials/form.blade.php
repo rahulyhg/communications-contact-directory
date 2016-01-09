@@ -24,7 +24,7 @@
 </div>
 
 <div class="form-group">
-  {!! Form::label('location_id', 'Location', ['class'=>'required']) !!}
+  {!! Form::label('location_id', 'Organization', ['class'=>'required']) !!}
   {!! Form::select('location_id', $active_locations, null, ['class'=>'form-control required']) !!}
 </div>
 

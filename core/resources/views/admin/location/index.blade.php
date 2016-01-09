@@ -4,11 +4,11 @@
 
 <div class="content">
   <h1 class="page-title">{{ $title }}
-    <span class="pull-right"><a href="{{ route('admin.location.create') }}" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;Add Location</a></span>
+    <span class="pull-right"><a href="{{ route('admin.location.create') }}" class="btn btn-default"><i class="fa fa-plus"></i>&nbsp;Add Organization</a></span>
   </h1>
   @if ($locations)
   <table class="table table-striped table-bordered data-table dataTable">
-    <caption>{{ count($locations) }} location Entries</caption>
+    <caption>{{ count($locations) }} Organization Entries</caption>
     <thead>
       <tr>
         <th>Title</th>
@@ -35,7 +35,7 @@
   </table>
 
   @else
-  <h3>No locations</h3>
+  <h3>No Organizations</h3>
   @endif
 </div><!-- /.content -->
 
