@@ -7,11 +7,11 @@
 
 <div class="modal-body">
   @if ( strlen($entry->location_id) > 0 )
-  <p class="location"><i class="fa fa-map-marker"></i>&nbsp;{{ $entry->location->title }}</p>
+  <p class="location"><i class="fa fa-building-o"></i>&nbsp;{{ $entry->location->title }}</p>
   @endif
 
   @if ( strlen($entry->department_id) > 0 )
-  <p class="department"><i class="fa fa-building-o"></i>&nbsp;{{ $entry->department->title }}</p>
+  <p class="department"><i class="fa fa fa-sitemap"></i>&nbsp;{{ $entry->department->title }}</p>
   @endif
 
   @if ( strlen($entry->email) > 0 )

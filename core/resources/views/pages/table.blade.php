@@ -10,7 +10,7 @@
         <thead>
           <tr role="row">
             <th class="sorting_asc" tabindex="0" aria-controls="table-list" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 160px;"><i class="fa fa-user"></i>&nbsp;Name</th>
-            <th class="hidden-xs hidden-sm sorting" tabindex="0" aria-controls="table-list" rowspan="1" colspan="1" aria-label="Location: activate to sort column ascending" style="width: 173px;"><i class="fa fa-map-marker"></i>&nbsp;Location</th>
+            <th class="hidden-xs hidden-sm sorting" tabindex="0" aria-controls="table-list" rowspan="1" colspan="1" aria-label="Location: activate to sort column ascending" style="width: 173px;"><i class="fa fa-building-o"></i>&nbsp;Organization</th>
             <th class="hidden-xs hidden-sm sorting" tabindex="0" aria-controls="table-list" rowspan="1" colspan="1" aria-label="Department: activate to sort column ascending" style="width: 189px;"><i class="fa fa-sitemap"></i>&nbsp;Department</th>
             <th class="hidden-xs sorting" tabindex="0" aria-controls="table-list" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 306px;"><i class="fa fa-envelope"></i>&nbsp;Email</th>
             <th class="sorting" tabindex="0" aria-controls="table-list" rowspan="1" colspan="1" aria-label="Phone: activate to sort column ascending" style="width: 116px;"><i class="fa fa-phone"></i>&nbsp;Phone</th>
@@ -41,11 +41,11 @@
 
         <tfoot>
           <tr>
-            <th rowspan="1" colspan="1">Name</th>
-            <th class="hidden-xs hidden-sm" rowspan="1" colspan="1">Location</th>
-            <th class="hidden-xs hidden-sm" rowspan="1" colspan="1">Department</th>
-            <th class="hidden-xs" rowspan="1" colspan="1">Email</th>
-            <th rowspan="1" colspan="1">Phone</th>
+            <th rowspan="1" colspan="1"><i class="fa fa-user"></i>&nbsp;Name</th>
+            <th class="hidden-xs hidden-sm" rowspan="1" colspan="1"><i class="fa fa-building-o"></i>&nbsp;Organization</th>
+            <th class="hidden-xs hidden-sm" rowspan="1" colspan="1"><i class="fa fa-sitemap"></i>&nbsp;Department</th>
+            <th class="hidden-xs" rowspan="1" colspan="1"><i class="fa fa-envelope"></i>&nbsp;Email</th>
+            <th rowspan="1" colspan="1"><i class="fa fa-phone"></i>&nbsp;Phone</th>
           </tr>
         </tfoot>
       </table>
