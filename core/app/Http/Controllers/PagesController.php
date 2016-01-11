@@ -13,7 +13,7 @@ use App\Http\Controllers\Controller;
 class PagesController extends Controller
 {
   // homepage
-  public function Splash()
+  public function splash()
   {
     // $title = "Home Page";
     // $page_active = "home";
