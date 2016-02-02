@@ -33,7 +33,7 @@ class Tag extends Model
     *
     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
     */
-    public function directory()
+    public function directories()
     {
         return $this->belongsToMany('App\Directory');
     }
