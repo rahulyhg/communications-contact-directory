@@ -34,6 +34,11 @@
 </div>
 
 <div class="form-group">
+  {!! Form::label('tags[]', 'Tags') !!}
+  {!! Form::select('tags[]', $active_tags, null, ['class'=>'form-control required', 'multiple'=>'multiple']) !!}
+</div>
+
+<div class="form-group">
   {!! Form::label('primary_phone', 'Primary Phone Number') !!}
   {!! Form::text('primary_phone', null, ['class'=>'form-control', 'placeholder'=>'123-456-7890']) !!}
 </div>

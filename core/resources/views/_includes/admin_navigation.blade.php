@@ -24,6 +24,9 @@
   <li class="admin-navigation-link{!! (isset($page_active) AND $page_active == 'department') ? " active" : "" !!}">
     <a href="{{ route('admin') }}/department/"><i class="fa fa-sitemap"></i>&nbsp;Departments</a>
   </li>
+  <li class="admin-navigation-link{!! (isset($page_active) AND $page_active == 'tags') ? " active" : "" !!}">
+    <a href="{{ route('admin') }}/tag/"><i class="fa fa-tags"></i>&nbsp;Tags</a>
+  </li>
 </ul>
 <p class="admin-navigation-title">Content Management</p>
 <ul class="nav nav-sidebar">
