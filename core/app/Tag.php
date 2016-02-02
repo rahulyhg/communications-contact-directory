@@ -2,6 +2,7 @@
 
 namespace App;
 
+use DB;
 use Illuminate\Database\Eloquent\Model;
 
 class Tag extends Model
@@ -36,5 +37,15 @@ class Tag extends Model
     public function directories()
     {
         return $this->belongsToMany('App\Directory');
+    }
+
+    /**
+     * Get the location ID for the current directory entry
+     *
+     * @var array
+     */
+    public function getCountDirectoriesAttribute()
+    {
+      return DB::table('directory_tag')->where('tag_id',$this->id)->count();
     }
 }

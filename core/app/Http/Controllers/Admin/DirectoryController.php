@@ -8,6 +8,7 @@ use Excel;
 use App\Directory;
 use App\Department;
 use App\Location;
+use App\Tag;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -102,8 +103,9 @@ class DirectoryController extends Controller
     $entry = Directory::findOrFail($id);
     $active_departments = Department::orderBy('title')->lists('title', 'id');
     $active_locations = Location::orderBy('title')->lists('title', 'id');
+    $active_tags = Tag::orderBy('name')->lists('name', 'id');
 
-    return view('admin.directory.edit', compact('title','page_active','entry','active_departments','active_locations'));
+    return view('admin.directory.edit', compact('title','page_active','entry','active_departments','active_locations','active_tags'));
   }
 
   /**
