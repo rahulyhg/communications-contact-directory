@@ -73,6 +73,7 @@ class DirectoryController extends Controller
     $entry->instagram = $request->instagram;
     $entry->linkedin = $request->linkedin;
     $entry->note = $request->note;
+    $tags = $request->tags;
 
     $entry->save();
     session()->flash('flash_success','Entry saved!');
@@ -103,9 +104,10 @@ class DirectoryController extends Controller
     $entry = Directory::findOrFail($id);
     $active_departments = Department::orderBy('title')->lists('title', 'id');
     $active_locations = Location::orderBy('title')->lists('title', 'id');
-    $active_tags = Tag::orderBy('name')->lists('name', 'id');
+    $tags = Tag::orderBy('name')->lists('name', 'id');
+    $selected_tags = $entry->selected_tags;
 
-    return view('admin.directory.edit', compact('title','page_active','entry','active_departments','active_locations','active_tags'));
+    return view('admin.directory.edit', compact('title','page_active','entry','active_departments','active_locations','tags','selected_tags'));
   }
 
   /**
@@ -139,6 +141,8 @@ class DirectoryController extends Controller
     $entry->instagram = $request->instagram;
     $entry->linkedin = $request->linkedin;
     $entry->note = $request->note;
+
+    $entry->tags()->sync($request->selected_tags);
 
     $entry->save();
 

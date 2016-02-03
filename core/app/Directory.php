@@ -70,4 +70,14 @@ class Directory extends Model
     {
         return $this->belongsToMany('App\Tag')->withTimestamps();
     }
+
+    /**
+    * Get a list of tag ids associated with the current directory
+    *
+    * @return array
+    */
+    public function getSelectedTagsAttribute()
+    {
+        return $this->tags->lists('id')->toArray();
+    }
 }

@@ -34,8 +34,8 @@
 </div>
 
 <div class="form-group">
-  {!! Form::label('tags[]', 'Tags') !!}
-  {!! Form::select('tags[]', $active_tags, null, ['class'=>'form-control required', 'multiple'=>'multiple']) !!}
+  {!! Form::label('selected_tags', 'Tags') !!}
+  {!! Form::select('selected_tags[]', $tags, null, ['class'=>'form-control', 'multiple'=>'multiple']) !!}
 </div>
 
 <div class="form-group">
