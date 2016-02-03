@@ -73,7 +73,12 @@ class DirectoryController extends Controller
     $entry->instagram = $request->instagram;
     $entry->linkedin = $request->linkedin;
     $entry->note = $request->note;
-    $tags = $request->tags;
+
+
+    if($request->selected_tags){
+        $entry->tags()->attach($selected_tags);
+    }
+    // $tags = $request->tags;
 
     $entry->save();
     session()->flash('flash_success','Entry saved!');
@@ -142,7 +147,13 @@ class DirectoryController extends Controller
     $entry->linkedin = $request->linkedin;
     $entry->note = $request->note;
 
-    $entry->tags()->sync($request->selected_tags);
+    if($request->selected_tags){
+        $selected_tags = $request->selected_tags;
+    } else {
+        $selected_tags = array();
+    }
+
+    $entry->tags()->sync($selected_tags);
 
     $entry->save();
 

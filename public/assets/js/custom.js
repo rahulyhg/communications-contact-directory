@@ -2,7 +2,10 @@ $(document).ready(function(){
 
     // enhance specific dropdowns using Select2
     // Note: this has to come before the validation (parsley.js)
-    $(".select2_list").select2();
+    $(".select2_list").select2({
+        placeholder: 'Select from list',
+        // tags: true // allows user to add new tags inline
+    });
 
     $('.data-table').dataTable();
     $('.validate-form').parsley();
