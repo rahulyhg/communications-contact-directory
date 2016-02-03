@@ -9,6 +9,7 @@
 <link href="{{ asset('assets/css/dataTables.bootstrap.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/vendor/fontawesome/css/font-awesome.min.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/vendor/summernote/dist/summernote.css') }}" rel="stylesheet">
+<link href="{{ asset('assets/vendor/select2/dist/css/select2.min.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

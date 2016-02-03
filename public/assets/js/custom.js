@@ -20,4 +20,7 @@ $(document).ready(function(){
     $(this).find(".modal-content").empty();
   });
 
+  // enhance specific dropdowns using Select2
+  $(".select2_list").select2();
+
 });
