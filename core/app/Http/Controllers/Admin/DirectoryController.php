@@ -39,8 +39,9 @@ class DirectoryController extends Controller
     $page_active = "directory";
     $active_departments = Department::where('status', 1)->orderBy('title')->lists('title', 'id');
     $active_locations = Location::orderBy('title')->lists('title', 'id');
+    $tags = Tag::orderBy('name')->lists('name', 'id');
 
-    return view('admin.directory.create', compact('title','page_active','active_departments','active_locations'));
+    return view('admin.directory.create', compact('title','page_active','active_departments','active_locations','tags'));
   }
 
   /**
