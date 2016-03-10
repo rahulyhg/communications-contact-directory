@@ -4,7 +4,7 @@
   @include('_includes/head')
 </head>
 
-<body>
+<body class="fixed-navbar">
   @include('_includes/header')
 
   <div class="page-content">
