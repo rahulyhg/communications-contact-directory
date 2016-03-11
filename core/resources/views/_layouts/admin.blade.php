@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  @include('_includes/head')
+  @include('_includes/admin_head')
 </head>
 
-<body class="fixed-top">
+<body class="fixed-navbar">
   @include('_includes/admin_header')
 
   <div class="container-fluid admin-content">

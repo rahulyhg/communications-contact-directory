@@ -10,7 +10,7 @@
   <div class="col-sm-3">
     <a href="{{ route('admin.directory.index') }}" class="dashboard-link">
       <div class="dashboard-link-block">
-        <p class="text-center fa-3x"><i class="fa fa-phone"></i></p>
+        <div class="text-center fa-3x"><i class="fa fa-phone"></i></div>
         <h4 class="text-center fa-2x hidden-xs hidden-sm">Directory</h4>
       </div>
     </a>
@@ -18,7 +18,7 @@
   <div class="col-sm-3">
     <a href="{{ route('admin.cms.index') }}" class="dashboard-link">
       <div class="dashboard-link-block">
-        <p class="text-center fa-3x"><i class="fa fa-keyboard-o"></i></p>
+        <div class="text-center fa-3x"><i class="fa fa-keyboard-o"></i></div>
         <h4 class="text-center fa-2x hidden-xs hidden-sm">CMS</h4>
       </div>
     </a>
@@ -26,7 +26,7 @@
   <div class="col-sm-3">
     <a href="{{ route('admin.message.index') }}" class="dashboard-link">
       <div class="dashboard-link-block">
-        <p class="text-center fa-3x"><i class="fa fa-envelope"></i></p>
+        <div class="text-center fa-3x"><i class="fa fa-envelope"></i></div>
         <h4 class="text-center fa-2x hidden-xs hidden-sm">Messages</h4>
       </div>
     </a>
@@ -34,7 +34,7 @@
   <div class="col-sm-3">
     <a href="{{ route('admin.users.index') }}" class="dashboard-link">
       <div class="dashboard-link-block">
-        <p class="text-center fa-3x"><i class="fa fa-users"></i></p>
+        <div class="text-center fa-3x"><i class="fa fa-users"></i></div>
         <h4 class="text-center fa-2x hidden-xs hidden-sm">Users</h4>
       </div>
     </a>
