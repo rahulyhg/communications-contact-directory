@@ -7,8 +7,8 @@
             <div class="col-md-6">
                 <h4>Links</h4>
                 <ul class="list-unstyled">
-                    <li><a href="http://www.co.washington.or.us/" target="_blank"><i class="fa fa-external-link fa-pad-right"></i>Washington County Web Site</a></li>
-                    <li><a href="http://www.co.washington.or.us/lut" target="_blank"><i class="fa fa-external-link fa-pad-right"></i>LUT Website</a></li>
+                    <li><a href="http://www.co.washington.or.us/" target="_blank"><i class="fa fa-external-link fa-pad-right"></i>&nbsp;Washington County Web Site</a></li>
+                    <li><a href="http://www.co.washington.or.us/lut" target="_blank"><i class="fa fa-external-link fa-pad-right"></i>&nbsp;LUT Website</a></li>
                 </ul>
             </div>
             <div class="col-md-6">
