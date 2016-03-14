@@ -20,7 +20,7 @@
         <div class="container pre-post-padding">
             <div class="row">
                 <div class="col-sm-3">
-                    <a class="navbar-brand" href="{{ route('home') }}">
+                    <a href="{{ route('home') }}">
                         <img src="https://s3.amazonaws.com/washcomultimedia/web/img/logo.png" class="img-responsive img-center img-padded">
                     </a>
                 </div>

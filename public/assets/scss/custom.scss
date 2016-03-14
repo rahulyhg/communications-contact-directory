@@ -8,20 +8,33 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* Color palette from the styleguide page 5
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Colors */
+/* Basic elements from the guideline page #5 */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+$greyscalePalette1: rgb( 0,0,0 ); /*#000000*/
+$greyscalePalette2: rgb( 38,38,38 ); /*#262626*/
+$greyscalePalette3: rgb( 113,115,117 ); /*#717375*/
+$greyscalePalette4: rgb( 190,190,190 ); /*#bebebe*/
+$greyscalePalette5: rgb( 255,255,255 ); /*#ffffff*/
+
+$primaryLinkColor: rgb( 156,82,33 ); /*#9c5221*/
+
+$primaryPalette1: rgb( 53,75,86 ); /*#3545b6*/
+$primaryPalette2: rgb( 78,112,126 ); /*#4e707e*/
+$primaryPalette3: rgb( 224,181,69 ); /*#e0b545*/
+$primaryPalette4: rgb( 163,156,134 ); /*#a39c86*/
+$primaryPalette5: rgb( 219,214,199 ); /*#dbd6c7*/
+
+$secondaryPalette1: rgb( 155,166,171 ); /*#9ba6ab*/
+$secondaryPalette2: rgb( 167,184,190 ); /*#a7b8be*/
+$secondaryPalette3: rgb( 239,217,161 ); /*#efd9a1*/
+$secondaryPalette4: rgb( 208,204,194 ); /*#d0ccc2*/
+$secondaryPalette5: rgb( 237,204,226 ); /*#edeae2*/
+
 $linkPrimary: rgb(196,87,15); /*#c4570f*/
 $linkPrimaryHover: rgb(166,166,166); /*#a6a6a6*/
-
-$primaryPalette1: rgb(147,167,59); /*#93a73b*/
-$primaryPalette2: rgb(167,188,57); /*#a6bd39*/
-$primaryPalette3: rgb(0,120,174); /*#0078ae*/
-$primaryPalette4: rgb(66,66,66); /*#424242*/
-$primaryPalette5: rgb(242,240,237); /*#f2f0ed*/
-
-$secondaryPalette1: rgb(135,151,58); /*#87973a*/
-$secondaryPalette2: rgb(185,202,0); /*#b9ca00*/
-$secondaryPalette3: rgb(104,104,104); /*#686868*/
-$secondaryPalette4: rgb(155,155,155); /*#9b9b9b*/
-$secondaryPalette5: rgb(255,255,255); /*#fffff*/
 
 $standout: $primaryPalette1;
 $coreColor: $primaryPalette5;
@@ -31,6 +44,16 @@ $darkContrastColor: rgb(65, 65, 65);
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* Custom CSS
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+h1.page-title {
+  border-bottom: 1px solid #b6b6b6;
+  padding-bottom: .6em;
+  margin-bottom: .5em;
+}
+
+.copy-section {
+  margin-top: 1em;
+}
 
 .sign-in-form {
   max-width: 460px;
@@ -50,6 +73,11 @@ $darkContrastColor: rgb(65, 65, 65);
   overflow-x: hidden;
   overflow-y: auto;
   padding-top: 12px;
+}
+
+@media (max-width: 768px) {
+  .admin-sidebar { display: none; }
+  .nav-sidebar { margin-right: 0; margin-bottom: 0; margin-left: 0; }
 }
 
 .admin-sidebar>ul {
@@ -78,19 +106,19 @@ $darkContrastColor: rgb(65, 65, 65);
 .dropdown-menu {
   min-width: 200px;
   border-radius: 0px;
-  background-color: lighten( $primaryPalette4, 8% );
-  border: 1px solid $primaryPalette4;
-  -webkit-box-shadow: 0 9px 9px $primaryPalette4;
-  box-shadow: 0 9px 9px $primaryPalette4;
+  background-color: lighten( $primaryPalette1, 8% );
+  border: 1px solid $primaryPalette1;
+  -webkit-box-shadow: 0 9px 9px $primaryPalette1;
+  box-shadow: 0 9px 9px $primaryPalette1;
 }
 
 .dropdown-menu>li>a {
   font-size: 1.2em;
-  color: $secondaryPalette5;
+  color: $secondaryPalette1;
 }
 
 .dropdown-menu>li>a:hover {
-  background-color: $secondaryPalette4;
+  background-color: $secondaryPalette2;
 }
 
 .admin-content .content h1.page-title {
@@ -188,4 +216,18 @@ a.dashboard-link, a.dashboard-link:hover, a.dashboard-link:visited {
 p.usage {
   font-size: 0.9em;
   margin-top: 3em;
+}
+
+.dashboard-link-block>h4 {
+  margin-top: .5em;
+}
+
+.table-wrap {
+  border: 1px solid $greyscalePalette4;
+  padding: 1em;
+  margin-bottom: .5em;
+}
+
+.fa-pad-right{
+  padding-right: 6px;
 }
