@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddAddressFieldsToLocations extends Migration
+class AddAddressFieldToLocations extends Migration
 {
     /**
      * Run the migrations.
