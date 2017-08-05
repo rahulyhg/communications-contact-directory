@@ -15,7 +15,7 @@ class DirectoryTableSeeder extends Seeder
   public function run()
   {
     // truncate the directory table
-    DB::table('directory')->truncate();
+    // DB::table('directory')->truncate();
 
     for ($x = 1; $x <= $this->user_count; $x++) {
       DB::table('directory')->insert([
