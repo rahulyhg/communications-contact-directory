@@ -4,7 +4,7 @@
 # Configuration Settings #######################################################
 VAGRANTFILE_API_VERSION = "2"
 VAGRANT_SCRIPT_DIR = "vagrantinstall"
-VM_BOX = "ubuntu/trusty32"
+# VM_BOX = "ubuntu/trusty32"
 VM_BOX = "ubuntu/trusty64"
 SSH_PORT = 8022
 WEB_PORT = 8080
