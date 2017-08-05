@@ -16,8 +16,8 @@
 # WEB_STACK = 'emp' # Nginx, MySQL, and PHP-FPM
 
 # Operating system
-  VM_BOX = "ubuntu/trusty32"
-# VM_BOX = "ubuntu/trusty64"
+  # VM_BOX = "ubuntu/trusty32"
+VM_BOX = "ubuntu/trusty64"
 
 # Ports that services will be forwarded to
   SSH_PORT = 8022
@@ -25,7 +25,7 @@
   SQL_PORT = 33306
 
 # Allocate this amount of memory for the VM
-  MEMORY = "1024"
+  MEMORY = "2048"
 ################################################################################
 
 
