@@ -26,18 +26,12 @@ echo "Bootstrap.sh initialized."
 
 # System updates ###############################################################
 # Drop in ppa's here before the apt-get update later
+sudo add-apt-repository ppa:ondrej/php
 
 # Ubuntu/Debian system update
 echo System Update with apt-get
 apt-get -y update >/dev/null 2>&1
 apt-get -y upgrade >/dev/null 2>&1
-
-# Build essentials are required for some things like Redis
-inst 'Build Essentials Development Tools' build-essential
-
-# Install make
-inst 'Make' make
-################################################################################
 
 # Build essentials are required for some things like Redis
 inst 'Build Essentials Development Tools' build-essential
@@ -54,12 +48,8 @@ inst 'NodeJS' nodejs
 # Install the Node Package Manager
 inst 'Node Package Manager' npm
 
-# Fixes missing node/nodejs in path
-ln -s /usr/bin/nodejs /usr/bin/node
-
 # install With Bower, Grunt, and Gulp here
 npm install -g bower
-
 npm install -g grunt
 npm install -g gulp
 ################################################################################
@@ -68,10 +58,6 @@ npm install -g gulp
 # Git setup ####################################################################
 # Install Git
 inst 'Git' git
-
-# Fixes issue using bower behind a firewall/proxy
-# See: https://github.com/bower/bower/issues/731
-git config --global url.https://github.com/.insteadOf git://github.com/
 ################################################################################
 
 
@@ -83,7 +69,7 @@ inst 'Nginx' nginx
 sudo cat > /etc/nginx/sites-available/default <<'EOF'
 server {
   server_name localhost;
-  root /vagrant/public;
+  root /vagrant/project/public;
   sendfile off;
 
   gzip_static on;
@@ -126,7 +112,7 @@ server {
   location ~ \.php$ {
     fastcgi_split_path_info ^(.+\.php)(/.+)$;
     #NOTE: You should have "cgi.fix_pathinfo = 0;" in php.ini
-    fastcgi_pass unix:/var/run/php5-fpm.sock;
+    fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
     fastcgi_index index.php;
     include fastcgi_params;
     fastcgi_intercept_errors on;
@@ -160,22 +146,24 @@ debconf-set-selections <<< 'mysql-server mysql-server/root_password password roo
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
 
 # MySQL Server
-# inst 'MySQL Client Core' mysql-client-core-5.5
+# inst 'MySQL Client Core' mysql-clienpt-core-5.5
 inst 'MySQL Server' mysql-server
 inst 'MySQL Client Library' libmysqlclient-dev
+echo "create database laraveldb" | mysql -uroot -proot
 ################################################################################
 
 
 # PHP setup ####################################################################
 inst mcrypt
-inst 'Installing PHP-FPM' php5-fpm php5-mysql php5-common php5-json php5-curl php5-gd php5-imagick php5-imap php5-mcrypt php5-memcached
-sudo ln -s /etc/php5/mods-available/mcrypt.ini /etc/php5/php5/conf.d/mcrypt.ini
-sudo php5enmod mcrypt
+inst 'Installing PHP-FPM' php7.0 php7.0-fpm php7.0-cli php7.0-common php7.0-mbstring php7.0-gd php7.0-intl php7.0-xml php7.0-mysql php7.0-mcrypt php7.0-zip
+# sudo ln -s /etc/php7/mods-available/mcrypt.ini /etc/php7/php7/conf.d/mcrypt.ini
+# sudo php7enmod mcrypt
 echo Install Composer
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/
 mv /usr/local/bin/composer.phar /usr/local/bin/composer
-echo "Adding /vagrant/bin to path."
+echo "Adding Composer to path"
 echo 'export PATH="/home/vagrant/.composer/vendor/bin:$PATH"' >> /home/vagrant/.bashrc
+# composer global require drush/drush
 echo Composer update
 composer global update
 ################################################################################
@@ -188,7 +176,7 @@ service nginx restart
 
 # Restart PHP-FPM
 echo Restarting PHP-FPM
-service php5-fpm restart
+service php7.0-fpm restart
 
 # Restart MySQL
 echo Restarting MySQL
