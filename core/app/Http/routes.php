@@ -62,11 +62,12 @@ Route::group(['middleware' => ['auth', 'onlyenabledusers', 'onlyallowadmins']], 
 | Place routes that DO NOT require authentication here
 |--------------------------------------------------------------------------
 */
-// Route::get('/splash',['as'=>'splash', 'uses'=>'PagesController@splash']);
+Route::get('/splash',['as'=>'splash', 'uses'=>'PagesController@splash']);
 Route::get('sign-in',['as'=>'login', 'uses'=>'Auth\AuthController@getLogin']);
 Route::get('sign-out',['as'=>'logout', 'uses'=>'Auth\AuthController@getLogout']);
 Route::get('reset',['as'=>'reset', 'uses'=>'Auth\PasswordController@getEmail']);
-
+// testing routing
+Route::get('foo', function () { return 'Hello World'; });
 
 
 /*
