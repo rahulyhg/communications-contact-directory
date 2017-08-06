@@ -16,8 +16,8 @@ class CreateCmsTable extends Migration
       $table->increments('id');
       $table->string('title');
       $table->string('tag')->unique();
-      $table->text('content');
-      $table->boolean('status', 1);
+      $table->text('content')->nullable();
+      $table->boolean('status');
       $table->timestamps();
     });
   }

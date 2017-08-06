@@ -16,8 +16,14 @@ class CreateLocation extends Migration
     Schema::create('location', function (Blueprint $table) {
       $table->increments('id');
       $table->string('title');
-      $table->text('note');
-      $table->boolean('status', 1)->default(1);
+      $table->string('street_address_1',255);
+      $table->string('street_address_2',255)->nullable();
+      $table->string('city',255);
+      $table->integer('state_id')->unsigned();
+      $table->string('zipcode',255);
+      $table->string('url',255)->nullable();;
+      $table->text('note')->nullable();
+      $table->boolean('status')->default(1);
       $table->timestamps();
     });
   }
